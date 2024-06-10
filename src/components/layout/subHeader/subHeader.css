@@ -1,0 +1,37 @@
+.subHeader{
+    padding: 8px 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+.subHeader-info{
+    gap: 16px;
+}
+.subHeader-info span{
+    font-size: 14px;
+    font-weight: 500;
+}
+.subHeader-inner{
+    gap: 15px;
+}
+.subHeader-socials{
+    gap: 8px;
+}
+.subHeader-socials span{
+    cursor: pointer;
+}
+.subHeader-langs{
+    gap: 4px;
+}
+.subHeader-langs span{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 16px;
+    background: #F3F4F6;
+}
+@media screen and (max-width: 768px) {
+    .subHeader{
+        display: none;
+    }
+}

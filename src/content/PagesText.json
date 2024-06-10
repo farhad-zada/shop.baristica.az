@@ -1,0 +1,675 @@
+{
+    "header": {
+        "headerIntroText": {
+            "az": "Доставка кофе в течении 1 дня",
+            "ru": "Доставка кофе в течении 1 дня",
+            "en": "Доставка кофе в течении 1 дня"
+        },
+        "subHeaderLinks": {
+            "az": [
+                {
+                    "title": "Topdan qəhvə",
+                    "link": "/wholesale_coffee"
+                },
+                {
+                    "title": "Əlaqə",
+                    "link": "/contacts"
+                }
+            ],
+            "ru": [
+                {
+                    "title": "Кофе оптом",
+                    "link": "/wholesale_coffee"
+                },
+                {
+                    "title": "Контакты",
+                    "link": "/contacts"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Wholesale coffee",
+                    "link": "/wholesale_coffee"
+                },
+                {
+                    "title": "Contacts",
+                    "link": "/contacts"
+                }
+            ]
+        },
+        "headerPageLinks": {
+            "az": [
+                {
+                    "title": "Al",
+                    "link": "/buy"
+                },
+                {
+                    "title": "Bloq",
+                    "link": "/blog"
+                },
+                {
+                    "title": "Mükafatlar",
+                    "link": "/awards"
+                },
+                {
+                    "title": "Kviz",
+                    "link": "/quiz"
+                }
+            ],
+            "ru": [
+                {
+                    "title": "Купить",
+                    "link": "/buy"
+                },
+                {
+                    "title": "Блог",
+                    "link": "/blog"
+                },
+                {
+                    "title": "Награды",
+                    "link": "/awards"
+                },
+                {
+                    "title": "Квиз",
+                    "link": "/quiz"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Buy",
+                    "link": "/buy"
+                },
+                {
+                    "title": "Blog",
+                    "link": "/blog"
+                },
+                {
+                    "title": "Awards",
+                    "link": "/awards"
+                },
+                {
+                    "title": "Quiz",
+                    "link": "/quiz"
+                }
+            ]
+        }
+    },
+    "home": {
+        "head": {
+            "az": {
+                "title": "Qəhvə çatdırılması.\nDadı və rəngi.\nHər gün.",
+                "links": [
+                    {
+                        "title": "Mağaza",
+                        "link": "/store"
+                    },
+                    {
+                        "title": "Abunəlik",
+                        "link": "/subscription"
+                    },
+                    {
+                        "title": "Mükafatlar",
+                        "link": "/awards"
+                    }
+                ]
+            },
+            "ru": {
+                "title": "Доставка кофе.\nНа вкус и цвет.\nНа каждый день.",
+                "links": [
+                    {
+                        "title": "Магазин",
+                        "link": "/store"
+                    },
+                    {
+                        "title": "Подписка",
+                        "link": "/subscription"
+                    },
+                    {
+                        "title": "Награды",
+                        "link": "/awards"
+                    }
+                ]
+            },
+            "en": {
+                "title": "Coffee delivery.\nTaste and color.\nFor every day.",
+                "links": [
+                    {
+                        "title": "Store",
+                        "link": "/store"
+                    },
+                    {
+                        "title": "Subscription",
+                        "link": "/subscription"
+                    },
+                    {
+                        "title": "Awards",
+                        "link": "/awards"
+                    }
+                ]
+            }
+        },
+        "body": {
+            "az": {
+                "products": {
+                    "new": "Yeni məhsullar",
+                    "popular": "Məhşurlar",
+                    "btn": "Səbətə at"
+                },
+                "subscriptions": {
+                    "text": {
+                        "title": "Təzə qəhvə üçün abunə olun",
+                        "subtitle": "Dünya səviyyəli qəhvə birbaşa qapınıza çatdırılır",
+                        "btn": "Abunə ol"
+                    },
+                    "list": [
+                        {
+                            "img": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE5NjRfMjcwMzUiIHN0eWxlPSJtYXNrLXR5cGU6YWxwaGEiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iI0Q5RDlEOSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazBfMTk2NF8yNzAzNSkiPgo8cGF0aCBkPSJNNi4xMjQwMyAxOC42MjVIMTMuNDk5VjkuNDU3OTlINi4xMjQwM1YxOC42MjVaTTE2LjI5MSAxOC42MjVIMjMuNzA3VjkuNDU3OTlIMTYuMjkxVjE4LjYyNVpNMjYuNDk5IDE4LjYyNUgzMy44NzRWOS40NTc5OUgyNi40OTlWMTguNjI1Wk02LjEyNDAzIDMwLjU0MkgxMy40OTlWMjEuMzc1SDYuMTI0MDNWMzAuNTQyWk0xNi4yOTEgMzAuNTQySDIzLjcwN1YyMS4zNzVIMTYuMjkxVjMwLjU0MlpNMjYuNDk5IDMwLjU0MkgzMy44NzRWMjEuMzc1SDI2LjQ5OVYzMC41NDJaTTMuMzMyMDMgMzMuMzMzVjYuNjY2OTlIMzYuNjY2VjMzLjMzM0gzLjMzMjAzWiIgZmlsbD0iIzI5NDc0QyIvPgo8L2c+Cjwvc3ZnPgo=",
+                            "title": "Kofeni seç",
+                            "subtitle": "Nə qədər və nə qədər tez-tez olduğunu qərar ver və həmişəlik pulsuz çatdırılma əldə et.",
+                            "advantage": "Pulsuz çatdırılma"
+                        },
+                        {
+                            "img":"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAzMCAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5LjYyNSAyNy41NDJDMTguNDg2MyAyNy41NDIgMTcuNTIxIDI3LjE0NiAxNi43MjkgMjYuMzU0QzE1LjkzNzcgMjUuNTYyNyAxNS41NDIgMjQuNTk3MyAxNS41NDIgMjMuNDU4QzE1LjU0MiAyMi4zMTkzIDE1LjkzNzcgMjEuMzU0IDE2LjcyOSAyMC41NjJDMTcuNTIxIDE5Ljc3MDcgMTguNDg2MyAxOS4zNzUgMTkuNjI1IDE5LjM3NUMyMC43OTE3IDE5LjM3NSAyMS43NjQgMTkuNzcwNyAyMi41NDIgMjAuNTYyQzIzLjMxOTMgMjEuMzU0IDIzLjcwOCAyMi4zMTkzIDIzLjcwOCAyMy40NThDMjMuNzA4IDI0LjYyNDcgMjMuMzEyMyAyNS41OTcgMjIuNTIxIDI2LjM3NUMyMS43MjkgMjcuMTUzIDIwLjc2MzcgMjcuNTQyIDE5LjYyNSAyNy41NDJaTTAgMzMuNjY3VjMuMTI1MDFINS4xMjVWMC4zMzMwMDhIOC4wNDJWMy4xMjUwMUgyMS45NThWMC4zMzMwMDhIMjQuODc1VjMuMTI1MDFIMzBWMzMuNjY3SDBaTTIuNzkyIDMwLjg3NUgyNy4yMDhWMTMuMzc1SDIuNzkyVjMwLjg3NVpNMi43OTIgMTAuNjI1SDI3LjIwOFY1Ljg3NTAxSDIuNzkyVjEwLjYyNVoiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                            "title": "Qrafik qur",
+                            "subtitle": "Çatdırılmanı təxirə salma imkanı ilə çatdırılmadan bir gün əvvəl sifariş vaxtını dəyişdir.",
+                            "advantage": "Sifarişlə qovurma"
+                        },
+                        {
+                            "img":"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjEyNSAxMS44NzVMMTUgOS45MTdMMTguODc1IDExLjg3NVYyLjc5MkgxMS4xMjVWMTEuODc1Wk02LjY2NyAyMy4zMzNWMjBIMTVWMjMuMzMzSDYuNjY3Wk0wIDMwVjBIMzBWMzBIMFpNMi43OTIgMjcuMjA4SDI3LjIwOFYyLjc5MkgyMS42NjdWMTYuMzc1TDE1IDEzLjA0Mkw4LjMzMyAxNi4zNzVWMi43OTJIMi43OTJWMjcuMjA4WiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
+                            "title": "Kofeni qəbul et",
+                            "subtitle": "Qapına təzə çatdırılmış kofedən həzz al.",
+                            "advantage": "Rahat çatdırılma"
+                        }
+                    ]
+                },
+                "guides": {
+                    "titleLeft": "Filtr kofe fokusda",
+                    "titleRight": "Dəmləmə bələdçisi",
+                    "btn": "Daha ətraflı"
+                },
+                "instagram_btn": {
+                    "text": "Instagram abunə ol",
+                    "link": "instagram.com"
+                },
+                "interesting": {
+                    "title": "Sizə maraqlı olacaq",
+                    "btn": "Hamısına bax",
+                    "link": "/blogs"
+                },
+                "bonuses": {
+                    "text": {
+                        "title": "Alış-veriş üçün bonuslar əldə et",
+                        "subtitle": "Müntəzəm sifarişlər zamanı pulunuza qənaət edin",
+                        "btn": "Abunə ol"
+                    },
+                    "list": [
+                        {
+                            "title": "5%",
+                            "subtitle": "1-ci səviyyə",
+                            "advantage": "Saytda 5 sifariş, amma ilk sifarişdən 3 aydan əvvəl deyil və 6-cı sifariş 5% endirimlə olacaq"
+                        },
+                        {
+                            "title": "10%",
+                            "subtitle": "2-ci səviyyə",
+                            "advantage": "Saytda 10 sifariş, amma ilk sifarişdən 6 aydan əvvəl deyil və 11-ci sifariş 10% endirimlə olacaq"
+                        },
+                        {
+                            "title": "15%",
+                            "subtitle": "3-cü səviyyə",
+                            "advantage": "Saytda 15 sifariş, amma ilk sifarişdən 9 aydan əvvəl deyil və 16-cı sifariş 15% endirimlə olacaq"
+                        }
+                    ]
+                }
+            },
+            "ru": {
+                "products": {
+                    "new": "Новые товары",
+                    "popular": "Популярное",
+                    "btn": "В корзину"
+                },
+                "subscriptions": {
+                    "text": {
+                        "title": "Подпишись на свежий кофе",
+                        "subtitle": "Кофе мирового класса, доставленный прямо на дом",
+                        "btn": "Подписка"
+                    },
+                    "list": [
+                        {
+                            "img": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE5NjRfMjcwMzUiIHN0eWxlPSJtYXNrLXR5cGU6YWxwaGEiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iI0Q5RDlEOSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazBfMTk2NF8yNzAzNSkiPgo8cGF0aCBkPSJNNi4xMjQwMyAxOC42MjVIMTMuNDk5VjkuNDU3OTlINi4xMjQwM1YxOC42MjVaTTE2LjI5MSAxOC42MjVIMjMuNzA3VjkuNDU3OTlIMTYuMjkxVjE4LjYyNVpNMjYuNDk5IDE4LjYyNUgzMy44NzRWOS40NTc5OUgyNi40OTlWMTguNjI1Wk02LjEyNDAzIDMwLjU0MkgxMy40OTlWMjEuMzc1SDYuMTI0MDNWMzAuNTQyWk0xNi4yOTEgMzAuNTQySDIzLjcwN1YyMS4zNzVIMTYuMjkxVjMwLjU0MlpNMjYuNDk5IDMwLjU0MkgzMy44NzRWMjEuMzc1SDI2LjQ5OVYzMC41NDJaTTMuMzMyMDMgMzMuMzMzVjYuNjY2OTlIMzYuNjY2VjMzLjMzM0gzLjMzMjAzWiIgZmlsbD0iIzI5NDc0QyIvPgo8L2c+Cjwvc3ZnPgo=",
+                            "title": "Выбери кофе",
+                            "subtitle": "Решай, сколько и как часто, и получи бесплатную доставку - навсегда.",
+                            "advantage": "Бесплатная доставка"
+                        },
+                        {
+                            "img":"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAzMCAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5LjYyNSAyNy41NDJDMTguNDg2MyAyNy41NDIgMTcuNTIxIDI3LjE0NiAxNi43MjkgMjYuMzU0QzE1LjkzNzcgMjUuNTYyNyAxNS41NDIgMjQuNTk3MyAxNS41NDIgMjMuNDU4QzE1LjU0MiAyMi4zMTkzIDE1LjkzNzcgMjEuMzU0IDE2LjcyOSAyMC41NjJDMTcuNTIxIDE5Ljc3MDcgMTguNDg2MyAxOS4zNzUgMTkuNjI1IDE5LjM3NUMyMC43OTE3IDE5LjM3NSAyMS43NjQgMTkuNzcwNyAyMi41NDIgMjAuNTYyQzIzLjMxOTMgMjEuMzU0IDIzLjcwOCAyMi4zMTkzIDIzLjcwOCAyMy40NThDMjMuNzA4IDI0LjYyNDcgMjMuMzEyMyAyNS41OTcgMjIuNTIxIDI2LjM3NUMyMS43MjkgMjcuMTUzIDIwLjc2MzcgMjcuNTQyIDE5LjYyNSAyNy41NDJaTTAgMzMuNjY3VjMuMTI1MDFINS4xMjVWMC4zMzMwMDhIOC4wNDJWMy4xMjUwMUgyMS45NThWMC4zMzMwMDhIMjQuODc1VjMuMTI1MDFIMzBWMzMuNjY3SDBaTTIuNzkyIDMwLjg3NUgyNy4yMDhWMTMuMzc1SDIuNzkyVjMwLjg3NVpNMi43OTIgMTAuNjI1SDI3LjIwOFY1Ljg3NTAxSDIuNzkyVjEwLjYyNVoiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                            "title": "Установи график",
+                            "subtitle": "Откладывай доставку с возможностью изменить время заказа за день до доставки.",
+                            "advantage": "Обжарка на заказ"
+                        },
+                        {
+                            "img":"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjEyNSAxMS44NzVMMTUgOS45MTdMMTguODc1IDExLjg3NVYyLjc5MkgxMS4xMjVWMTEuODc1Wk02LjY2NyAyMy4zMzNWMjBIMTVWMjMuMzMzSDYuNjY3Wk0wIDMwVjBIMzBWMzBIMFpNMi43OTIgMjcuMjA4SDI3LjIwOFYyLjc5MkgyMS42NjdWMTYuMzc1TDE1IDEzLjA0Mkw4LjMzMyAxNi4zNzVWMi43OTJIMi43OTJWMjcuMjA4WiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
+                            "title": "Получай кофе",
+                            "subtitle": "Наслаждайся свежим кофе, доставленным прямо к твоей двери.",
+                            "advantage": "Удобная доставка"
+                        }
+                    ]
+                },
+                "guides": {
+                    "titleLeft": "Фильтр кофе в фокусе",
+                    "titleRight": "Гайд по заварке",
+                    "btn": "Подробнее"
+                },
+                "instagram_btn": {
+                    "text": "Подписаться на инстаграм",
+                    "link": "instagram.com"
+                },
+                "interesting": {
+                    "title": "Вам будет интересно",
+                    "btn": "Смотреть все",
+                    "link": "/blogs"
+                },
+                "bonuses": {
+                    "text": {
+                        "title": "Получай бонусы за покупки",
+                        "subtitle": "Экономь свои деньги при регулярных заказах",
+                        "btn": "Подписка"
+                    },
+                    "list": [
+                        {
+                            "title": "5%",
+                            "subtitle": "1й уровень",
+                            "advantage": "5 заказов на сайте, но не ранее 3-х месяцев с момента первого заказа и6-ой заказ будет со скидкой 5%"
+                        },
+                        {
+                            "title": "10%",
+                            "subtitle": "2й уровень",
+                            "advantage": "10 заказов на сайте, но не ранее 6-ти месяцев с момента первого заказа и11-й заказ будет со скидкой 10%"
+                        },
+                        {
+                            "title": "15%",
+                            "subtitle": "3й уровень",
+                            "advantage": "15 заказов на сайте, но не ранее 9-ти месяцев с момента первого заказа и 16-й заказ будет со скидкой 15%"
+                        }
+                    ]
+                }
+            },
+            "en": {
+                "products": {
+                    "new": "New Products",
+                    "popular": "Popular",
+                    "btn": "Add to Cart"
+                },
+                "subscriptions": {
+                    "text": {
+                        "title": "Subscribe for Fresh Coffee",
+                        "subtitle": "World-class coffee delivered right to your home",
+                        "btn": "Subscribe"
+                    },
+                    "list": [
+                        {
+                            "img": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE5NjRfMjcwMzUiIHN0eWxlPSJtYXNrLXR5cGU6YWxwaGEiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iI0Q5RDlEOSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazBfMTk2NF8yNzAzNSkiPgo8cGF0aCBkPSJNNi4xMjQwMyAxOC42MjVIMTMuNDk5VjkuNDU3OTlINi4xMjQwM1YxOC42MjVaTTE2LjI5MSAxOC42MjVIMjMuNzA3VjkuNDU3OTlIMTYuMjkxVjE4LjYyNVpNMjYuNDk5IDE4LjYyNUgzMy44NzRWOS40NTc5OUgyNi40OTlWMTguNjI1Wk02LjEyNDAzIDMwLjU0MkgxMy40OTlWMjEuMzc1SDYuMTI0MDNWMzAuNTQyWk0xNi4yOTEgMzAuNTQySDIzLjcwN1YyMS4zNzVIMTYuMjkxVjMwLjU0MlpNMjYuNDk5IDMwLjU0MkgzMy44NzRWMjEuMzc1SDI2LjQ5OVYzMC41NDJaTTMuMzMyMDMgMzMuMzMzVjYuNjY2OTlIMzYuNjY2VjMzLjMzM0gzLjMzMjAzWiIgZmlsbD0iIzI5NDc0QyIvPgo8L2c+Cjwvc3ZnPgo=",
+                            "title": "Choose Your Coffee",
+                            "subtitle": "Decide how much and how often, and get free delivery - forever.",
+                            "advantage": "Free Delivery"
+                        },
+                        {
+                            "img":"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAzMCAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5LjYyNSAyNy41NDJDMTguNDg2MyAyNy41NDIgMTcuNTIxIDI3LjE0NiAxNi43MjkgMjYuMzU0QzE1LjkzNzcgMjUuNTYyNyAxNS41NDIgMjQuNTk3MyAxNS41NDIgMjMuNDU4QzE1LjU0MiAyMi4zMTkzIDE1LjkzNzcgMjEuMzU0IDE2LjcyOSAyMC41NjJDMTcuNTIxIDE5Ljc3MDcgMTguNDg2MyAxOS4zNzUgMTkuNjI1IDE5LjM3NUMyMC43OTE3IDE5LjM3NSAyMS43NjQgMTkuNzcwNyAyMi41NDIgMjAuNTYyQzIzLjMxOTMgMjEuMzU0IDIzLjcwOCAyMi4zMTkzIDIzLjcwOCAyMy40NThDMjMuNzA4IDI0LjYyNDcgMjMuMzEyMyAyNS41OTcgMjIuNTIxIDI2LjM3NUMyMS43MjkgMjcuMTUzIDIwLjc2MzcgMjcuNTQyIDE5LjYyNSAyNy41NDJaTTAgMzMuNjY3VjMuMTI1MDFINS4xMjVWMC4zMzMwMDhIOC4wNDJWMy4xMjUwMUgyMS45NThWMC4zMzMwMDhIMjQuODc1VjMuMTI1MDFIMzBWMzMuNjY3SDBaTTIuNzkyIDMwLjg3NUgyNy4yMDhWMTMuMzc1SDIuNzkyVjMwLjg3NVpNMi43OTIgMTAuNjI1SDI3LjIwOFY1Ljg3NTAxSDIuNzkyVjEwLjYyNVoiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                            "title": "Set a Schedule",
+                            "subtitle": "Postpone delivery with the option to change the order time one day before delivery.",
+                            "advantage": "Custom Roasting"
+                        },
+                        {
+                            "img":"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjEyNSAxMS44NzVMMTUgOS45MTdMMTguODc1IDExLjg3NVYyLjc5MkgxMS4xMjVWMTEuODc1Wk02LjY2NyAyMy4zMzNWMjBIMTVWMjMuMzMzSDYuNjY3Wk0wIDMwVjBIMzBWMzBIMFpNMi43OTIgMjcuMjA4SDI3LjIwOFYyLjc5MkgyMS42NjdWMTYuMzc1TDE1IDEzLjA0Mkw4LjMzMyAxNi4zNzVWMi43OTJIMi43OTJWMjcuMjA4WiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
+                            "title": "Receive Your Coffee",
+                            "subtitle": "Enjoy fresh coffee delivered right to your door.",
+                            "advantage": "Convenient Delivery"
+                        }
+                    ]
+                },
+                "guides": {
+                    "titleLeft": "Filter Coffee in Focus",
+                    "titleRight": "Brewing Guide",
+                    "btn": "Learn More"
+                },
+                "instagram_btn": {
+                    "text": "Subscribe on Instagram",
+                    "link": "instagram.com"
+                },
+                "interesting": {
+                    "title": "You May Be Interested",
+                    "btn": "View All",
+                    "link": "/blogs"
+                },
+                "bonuses": {
+                    "text": {
+                        "title": "Earn Rewards for Purchases",
+                        "subtitle": "Save money with regular orders",
+                        "btn": "Subscribe"
+                    },
+                    "list": [
+                        {
+                            "title": "5%",
+                            "subtitle": "Level 1",
+                            "advantage": "5 orders on the website, but not earlier than 3 months from the first order, and the 6th order will be with a 5% discount"
+                        },
+                        {
+                            "title": "10%",
+                            "subtitle": "Level 2",
+                            "advantage": "10 orders on the website, but not earlier than 6 months from the first order, and the 11th order will be with a 10% discount"
+                        },
+                        {
+                            "title": "15%",
+                            "subtitle": "Level 3",
+                            "advantage": "15 orders on the website, but not earlier than 9 months from the first order, and the 16th order will be with a 15% discount"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "footer": {
+        "az": {
+            "discount": {
+                "title": "İlk qəhvə sifarişinizə 10% endirim qazanın.",
+                "subtitle": "Qəhvə ilə gündəmə qalın"
+            },
+            "input": {
+                "placeholder": "E-poçtunuzu daxil edin.",
+                "btn": "Abunə ol"
+            },
+            "menu": [
+                {
+                    "title": "Kömək",
+                    "list": [
+                        {
+                            "label": "Sual-cavab",
+                            "link": "/faq"
+                        },
+                        {
+                            "label": "Qəhvə jurnalı",
+                            "link": "/journal"
+                        },
+                        {
+                            "label": "Çatdırılma və ödəniş",
+                            "link": "/delivery"
+                        },
+                        {
+                            "label": "Endirim sistemi",
+                            "link": "/discounts"
+                        },
+                        {
+                            "label": "Geri qaytarma",
+                            "link": "/refund"
+                        },
+                        {
+                            "label": "Əlaqə",
+                            "link": "/contacts"
+                        }
+                    ]
+                },
+                {
+                    "title": "Şirkət",
+                    "list": [
+                        {
+                            "label": "Şirkət haqqında",
+                            "link": "/about"
+                        },
+                        {
+                            "label": "Bizim istehsalat",
+                            "link": "/production"
+                        },
+                        {
+                            "label": "Əməkdaşlıq proqramı",
+                            "link": "/partnership-program"
+                        }
+                    ]
+                },
+                {
+                    "title": "Kataloq",
+                    "list": [
+                        {
+                            "label": "Kofe",
+                            "link": "/coffee"
+                        },
+                        {
+                            "label": "Aksesuarlar",
+                            "link": "/accessories"
+                        },
+                        {
+                            "label": "Kofe-apparatları",
+                            "link": "/coffee-machines"
+                        },
+                        {
+                            "label": "Seçilmişlər",
+                            "link": "/favourites"
+                        }
+                    ]
+                }
+            ],
+            "side_info": {
+                "number": "+994 (50) 833 52 55",
+                "text": "Azərbaycan daxilində zəng pulsuzdur"
+            },
+            "bottom_menu": [
+                {
+                    "title": "RSS",
+                    "link": "/rss"
+                },
+                {
+                    "title": "Gizlilik Siyasəti",
+                    "link": "/privacy-policy"
+                },
+                {
+                    "title": "İstifadə qaydaları",
+                    "link": "/terms_of_use"
+                },
+                {
+                    "title": "İctimai təklif",
+                    "link": "/offer"
+                }
+            ]
+        },
+        "ru": {
+            "discount": {
+                "title": "Получите 10% скидку на первый заказ кофе.",
+                "subtitle": "Будьте в курсе кофе"
+            },
+            "input": {
+                "placeholder": "Введите e-mail.",
+                "btn": "Подписаться"
+            },
+            "menu": [
+                {
+                    "title": "Помощь",
+                    "list": [
+                        {
+                            "label": "Вопрос-ответ",
+                            "link": "/faq"
+                        },
+                        {
+                            "label": "Журнал о кофе",
+                            "link": "/journal"
+                        },
+                        {
+                            "label": "Доставка и оплата",
+                            "link": "/delivery"
+                        },
+                        {
+                            "label": "Система скидок",
+                            "link": "/discounts"
+                        },
+                        {
+                            "label": "Возврат денежных средств",
+                            "link": "/refund"
+                        },
+                        {
+                            "label": "Контакты",
+                            "link": "/contacts"
+                        }
+                    ]
+                },
+                {
+                    "title": "Компания",
+                    "list": [
+                        {
+                            "label": "О компании",
+                            "link": "/about"
+                        },
+                        {
+                            "label": "Наше производство",
+                            "link": "/production"
+                        },
+                        {
+                            "label": "Партнёрская программа",
+                            "link": "/partnership-program"
+                        }
+                    ]
+                },
+                {
+                    "title": "Каталог",
+                    "list": [
+                        {
+                            "label": "Кофе",
+                            "link": "/coffee"
+                        },
+                        {
+                            "label": "Аксессуары",
+                            "link": "/accessories"
+                        },
+                        {
+                            "label": "Кофе-машины",
+                            "link": "/coffee-machines"
+                        },
+                        {
+                            "label": "Избранное",
+                            "link": "/favourites"
+                        }
+                    ]
+                }
+            ],
+            "side_info": {
+                "number": "+994 (50) 833 52 55",
+                "text": "Бесплатный звонок по Азербайджану"
+            },
+            "bottom_menu": [
+                {
+                    "title": "RSS",
+                    "link": "/rss"
+                },
+                {
+                    "title": "Политика конфиденциальности",
+                    "link": "/privacy-policy"
+                },
+                {
+                    "title": "Пользовательское соглашение",
+                    "link": "/terms_of_use"
+                },
+                {
+                    "title": "Публичная оферта",
+                    "link": "/offer"
+                }
+            ]
+        },
+        "en": {
+            "discount": {
+                "title": "Get 10% off your first coffee order.",
+                "subtitle": "Stay up to date with coffee"
+            },
+            "input": {
+                "placeholder": "Enter e-mail",
+                "btn": "Subscribe"
+            },
+            "menu": [
+                {
+                    "title": "Help",
+                    "list": [
+                        {
+                            "label": "FAQ",
+                            "link": "/faq"
+                        },
+                        {
+                            "label": "Journal of coffee",
+                            "link": "/journal"
+                        },
+                        {
+                            "label": "Delivery and Payment",
+                            "link": "/delivery"
+                        },
+                        {
+                            "label": "Discount system",
+                            "link": "/discounts"
+                        },
+                        {
+                            "label": "Money Refund",
+                            "link": "/refund"
+                        },
+                        {
+                            "label": "Contacts",
+                            "link": "/contacts"
+                        }
+                    ]
+                },
+                {
+                    "title": "Company",
+                    "list": [
+                        {
+                            "label": "About Company",
+                            "link": "/about"
+                        },
+                        {
+                            "label": "Our Production",
+                            "link": "/production"
+                        },
+                        {
+                            "label": "Partnership Program",
+                            "link": "/partnership-program"
+                        }
+                    ]
+                },
+                {
+                    "title": "Catalogue",
+                    "list": [
+                        {
+                            "label": "Coffee",
+                            "link": "/coffee"
+                        },
+                        {
+                            "label": "Accessories",
+                            "link": "/accessories"
+                        },
+                        {
+                            "label": "Coffee Machines",
+                            "link": "/coffee-machines"
+                        },
+                        {
+                            "label": "Favourites",
+                            "link": "/favourites"
+                        }
+                    ]
+                }
+            ],
+            "side_info": {
+                "number": "+994 (50) 833 52 55",
+                "text": "Free call within Azerbaijan"
+            },
+            "bottom_menu": [
+                {
+                    "title": "RSS",
+                    "link": "/rss"
+                },
+                {
+                    "title": "Privacy Policy",
+                    "link": "/privacy-policy"
+                },
+                {
+                    "title": "Terms of use",
+                    "link": "/terms_of_use"
+                },
+                {
+                    "title": "Public offer",
+                    "link": "/offer"
+                }
+            ]
+        }
+    }
+}

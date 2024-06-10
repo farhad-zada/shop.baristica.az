@@ -1,0 +1,17 @@
+.homeBlogs{
+    margin-bottom: 64px;
+}
+.homeBlogs-top{
+    padding-bottom: 60px;
+}
+.homeBlogs-title{
+    font-weight: 700;
+}
+.homeBlogs-link{
+    text-decoration: underline;
+}
+.homeBlogs-bottom{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates a grid with 2 columns */
+    gap: 24px;
+}

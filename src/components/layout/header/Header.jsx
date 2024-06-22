@@ -21,9 +21,9 @@ export default function Header() {
     <header>
       <div className="container flex j-between">
         <div className="headerLeft flex a-center">
-          <div className="headerLogo">
+          <Link to={'/'} className="headerLogo">
             <img src={Logo} alt="" />
-          </div>
+          </Link>
           <nav className="flex">
             {headerPageLinks[lang] &&
               headerPageLinks[lang]?.map((link, index) => (
@@ -37,19 +37,19 @@ export default function Header() {
           <span>
             <img src={SearchIcon} alt="" />
           </span>
-          <span>
+          <Link to={'/compare'}>
             <img src={CompareIcon} alt="" />
-          </span>
-          <span>
+          </Link>
+          <Link to={'/favorites'}>
             <img src={FavoritesIcon} alt="" />
-          </span>
-          <span>
+          </Link>
+          <Link to={'/profile'}>
             <img src={ProfileIcon} alt="" />
-          </span>
-          <span className="headerCart">
+          </Link>
+          <Link to={'/cart'} className="headerCart">
             <span className="headerCart-count white f12">1</span>
             <img src={CartIcon} alt="" />
-          </span>
+          </Link>
         </div>
       </div>
     </header>

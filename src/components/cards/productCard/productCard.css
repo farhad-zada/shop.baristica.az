@@ -11,7 +11,9 @@
 .productCard-actions{
     gap: 10px;
 }
-
+.productCard-favorite_icon{
+    display: inline-block;
+}
 .productCard-img{
     margin-top: 16px;
     padding: 56px 70px;

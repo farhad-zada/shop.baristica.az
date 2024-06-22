@@ -1,0 +1,54 @@
+.loginBody{
+    width: 35%;
+    padding: 36px;
+    background-color: white;
+    border: 1px solid #E5E7EB;
+}
+.loginBody-tabs button{
+    font-size: 24px !important;
+}
+.loginBody-tabs .tabs-headings{
+    border: none;
+    padding: 0;
+    margin: 0 0 36px 0;
+}
+.loginBody input{
+    padding: 24px 20px;
+    border: 1px solid #E5E7EB;
+    margin-bottom: 16px;
+}
+.rememberBtn{
+    margin-bottom: 36px;
+}
+.rememberBtn input{
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    accent-color: #29474C;
+}
+.rememberBtn label{
+    padding-left: 12px;
+}
+.loginBtn{
+    color: white;
+    padding: 24px;
+    background-color: #33686E;
+}
+.additional-logins{
+    gap: 16px;
+    margin:16px 0 24px;
+}
+.additional-logins a{
+    width: 100%;
+    padding: 26px 44px;
+    background-color: #F3F4F6;
+}
+.additional-logins span{
+    padding-left: 12px;
+}
+.forgetBtn{
+    margin-bottom: 16px;
+}
+.enterByEmailBtn{
+    padding-top: 24px;
+}

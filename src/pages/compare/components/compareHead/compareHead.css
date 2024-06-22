@@ -1,0 +1,9 @@
+.compareHead{
+    padding: 24px 0;
+    margin-bottom: 48px;
+    background: #F9FAFB;
+}
+.compareHead-content_left h3{
+    gap: 5px;
+    font-weight: 400;
+}

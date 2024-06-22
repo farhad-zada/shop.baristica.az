@@ -72,7 +72,6 @@ export default function Footer() {
                             <Link className="gray300 f16" to={elem.link}>{elem.title}</Link>
                         </li>
                     ))}
-                    <li>{RIDS}</li>
                 </ul>
             </div>
         </div>

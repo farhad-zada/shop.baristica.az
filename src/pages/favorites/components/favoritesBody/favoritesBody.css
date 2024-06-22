@@ -1,0 +1,13 @@
+.favoritesBody-products .productCard{
+    width: 32%;
+    margin: 64px 0;
+}
+.loadMore-btn{
+    gap: 18px;
+    padding: 12px 24px;
+    background: #F3F4F6;
+    cursor: pointer;
+}
+.favoritesBody{
+    margin-bottom: 60px;
+}

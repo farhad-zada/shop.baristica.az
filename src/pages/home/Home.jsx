@@ -6,17 +6,18 @@ import HomeBlogs from './components/homeBlogs/HomeBlogs'
 import HomeBonuses from './components/homeBonuses/HomeBonuses'
 import HomeSubscriptions from './components/homeSubscriptions/HomeSubscriptions'
 import HomeGuides from './components/homeGuides/HomeGuides'
+import Subscriptions from '../../components/subscriptions/Subscriptions'
 
 export default function Home() {
   return (
     <div>
       <HomeBanner />
       <HomeProducts />
-      <HomeSubscriptions />
+      <Subscriptions />
       <HomeGuides />
       <HomeInstagram />
       <HomeBlogs />
-      <HomeBonuses />
+      {/* <HomeBonuses /> */}
     </div>
   )
 }

@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Calendar, Clock } from '../../../assets/images/icons/icons'
 import InterestingImg from "../../../assets/images/interesting.png"
 import "./blogCard.css"
 
 const BlogCard = () => {
   return (
-    <div className='blogCard'>
+    <Link className='blogCard'>
         <div className="blogCard-img flex a-center j-center">
             <img src={InterestingImg} alt="" className="border24"/>
         </div>
@@ -24,7 +25,7 @@ const BlogCard = () => {
                 <p className='gray400 f16'>5 мин</p>
             </div>
         </div>
-    </div>
+    </Link>
   )
 }
 

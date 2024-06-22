@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import './productCard.css'
 
+
 import StarIcon from '../../../assets/images/icons/star.svg'
 import FeedbackIcon from '../../../assets/images/icons/feedback.svg'
 import CompareIcon from '../../../assets/images/icons/compare.svg'
@@ -14,7 +15,8 @@ import PagesText from '../../../content/PagesText.json'
 const { home } = PagesText;
 const { body } = home;
 
-export default function ProductCard() {
+export default function ProductCard(props) {
+  const { favorite } = props
   const { lang } = useSelector((state) => state.baristica);
 
     console.log(body)
@@ -37,7 +39,7 @@ export default function ProductCard() {
                 <span>
                     <img src={CompareIcon} alt="" />
                 </span>
-                <span>
+                <span className={favorite ? 'productCard-favorite_icon active' : 'productCard-favorite_icon'}>
                     <img src={FavoritesIcon} alt="" />
                 </span>
             </div>

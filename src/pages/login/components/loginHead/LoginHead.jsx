@@ -12,10 +12,10 @@ const LoginHead = () => {
     <div className='loginHead'>
         <div className="loginHead-nav flex a-center">
             <p className='gray600'>Baristica /</p>
-            <p className='gray600'>&nbsp;{head[lang].nav}</p>
+            <p className='gray600'>&nbsp;{lang ? head[lang].nav : ''}</p>
         </div>
-        <div className='loginHead-title'><h1 className='green800 f36'>{head[lang].title}</h1></div>
-        <div className='loginHead-subtitle'><p className='green800 f18'>{head[lang].subtitle}</p></div>
+        <div className='loginHead-title'><h1 className='green800 f36'>{lang ? head[lang].title : ''}</h1></div>
+        <div className='loginHead-subtitle'><p className='green800 f18'>{lang ? head[lang].subtitle : ''}</p></div>
     </div>
   )
 }

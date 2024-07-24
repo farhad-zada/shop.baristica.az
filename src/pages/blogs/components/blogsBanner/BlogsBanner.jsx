@@ -8,7 +8,7 @@ const { head } = blogs;
 
 const BlogsBanner = () => {
     const { lang } = useSelector((state) => state.baristica);
-    const [activeTab, setActiveTab] = useState(head[lang].tabs[0].link);
+    const [activeTab, setActiveTab] = useState(lang ? head[lang].tabs[0].link : '');
 
     const handleTabClick = (link) => {
         setActiveTab(link);
@@ -21,9 +21,9 @@ const BlogsBanner = () => {
                     <p className='gray600'>Baristica /</p>
                     <p className='gray600'>&nbsp;{head[lang].nav}</p>
                 </div>
-                <div className='blogsBanner-title'><h1 className='green800 f72'>{head[lang].title}</h1></div>
+                <div className='blogsBanner-title'><h1 className='green800 f72'>{lang ? head[lang].title : ''}</h1></div>
                 <div className='blogsBanner-tabs flex a-center'>
-                    {head[lang].tabs?.map((tab) => (
+                    {lang &&  head[lang].tabs?.map((tab) => (
                         <div className={`blogsBanner-tab gray400 f20 ${activeTab === tab.link ? 'activeTab' : ''}`} id={tab.link}
                             onClick={() => handleTabClick(tab.link)}>{tab.title}</div>
                     ))}

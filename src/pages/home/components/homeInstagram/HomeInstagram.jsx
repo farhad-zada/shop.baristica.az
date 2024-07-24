@@ -10,13 +10,12 @@ const { body } = home;
 
 const HomeInstagram = () => {
   const { lang } = useSelector((state) => state.baristica);
-  console.log(body, 'body')
   return (
     <div className='homeInstagram'>
         <div className='container'>
             <div className='homeInstagram-top flex a-center j-between'>
                 <h6 className='f30 white'>#baristicashop</h6>
-                <Link className='homeInstagram-link white f18' to={body[lang]?.instagram_btn?.link}>{body[lang]?.instagram_btn?.text}</Link>
+                <Link className='homeInstagram-link white f18' to={lang ? body[lang]?.instagram_btn?.link : ''}>{lang ? body[lang]?.instagram_btn?.text : ''}</Link>
             </div>
             <div className='homeInstagram-bottom flex a-center'>
                 <div className='homeInstagram-post'>

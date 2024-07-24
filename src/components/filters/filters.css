@@ -1,0 +1,11 @@
+.filterHeading{
+    padding: 20px 22px;
+    gap: 7px;
+    cursor: pointer;
+}
+.filterHeading.active{
+    padding: 20px 22px;
+    border: 1px solid #E5E7EB;
+    border-radius: 24px;
+    background: #FFFFFF;
+}

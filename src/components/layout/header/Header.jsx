@@ -11,11 +11,13 @@ import ProfileIcon from '../../../assets/images/icons/profile.svg'
 import CartIcon from '../../../assets/images/icons/cart.svg'
 
 import PagesText from "../../../content/PagesText.json";
+import ProfileDropdown from "../../profileDropdown/ProfileDropdown";
 const { header } = PagesText;
 const { headerPageLinks } = header;
 
 export default function Header() {
-  const { lang } = useSelector((state) => state.baristica);
+  const [profileDropdown, setProfileDropdown] = useState(false)
+  const { lang, compareProducts, cartProducts } = useSelector((state) => state.baristica);
 
   return (
     <header>
@@ -25,7 +27,7 @@ export default function Header() {
             <img src={Logo} alt="" />
           </Link>
           <nav className="flex">
-            {headerPageLinks[lang] &&
+            {lang &&
               headerPageLinks[lang]?.map((link, index) => (
                 <Link className="green800" to={link.link} key={index}>
                   {link.title}
@@ -34,20 +36,22 @@ export default function Header() {
           </nav>
         </div>
         <div className="headerActions flex">
+          <ProfileDropdown status={profileDropdown} setStatus={setProfileDropdown} />
           <span>
             <img src={SearchIcon} alt="" />
           </span>
-          <Link to={'/compare'}>
+          <Link to={'/compare'} className="headerCart">
+            <span className="headerCart-count white f12">{compareProducts?.length}</span>
             <img src={CompareIcon} alt="" />
           </Link>
           <Link to={'/favorites'}>
             <img src={FavoritesIcon} alt="" />
           </Link>
-          <Link to={'/profile'}>
+          <span onClick={() => setProfileDropdown(!profileDropdown)}>
             <img src={ProfileIcon} alt="" />
-          </Link>
+          </span>
           <Link to={'/cart'} className="headerCart">
-            <span className="headerCart-count white f12">1</span>
+            <span className="headerCart-count white f12">{cartProducts?.length}</span>
             <img src={CartIcon} alt="" />
           </Link>
         </div>

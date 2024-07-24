@@ -16,10 +16,10 @@ export default function Filter({status,setStatus}) {
     <div className={status ? 'filter active' : 'filter'}>
         <div className="container">
         <Tabs>
-            <div label={filter[lang]?.mainFilter.simpleFilter.heading} activeColor={'white'}>
+            <div label={lang ? filter[lang]?.mainFilter.simpleFilter.heading : ''} activeColor={'white'}>
               <MainFilter />
             </div>
-            <div label={filter[lang]?.mainFilter.advancedFilter.heading} activeColor={'white'}>
+            <div label={lang ? filter[lang]?.mainFilter.advancedFilter.heading : ''} activeColor={'white'}>
               
             </div>
         </Tabs>

@@ -31,7 +31,7 @@ export default function SubHeader() {
         <div className="subHeader-info flex a-center">
           <span className="green800">+994 (12) 444 44 44</span>
 
-          {subHeaderLinks[lang] &&
+          {lang &&
             subHeaderLinks[lang]?.map((link, index) => (
               <Link className="green800" to={link.link} key={index}>
                 {link.title}

@@ -16,10 +16,10 @@ export default function HomeProducts() {
       <div className="container">
         <div className="homeProducts-tabs">
           <Tabs>
-            <div label={body[lang]?.products.new}>
+            <div label={lang ? body[lang]?.products.new : ''}>
               <HomeProductsElements />
             </div>
-            <div label={body[lang]?.products.popular}></div>
+            <div label={lang ? body[lang]?.products.popular : ''}></div>
           </Tabs>
         </div>
       </div>

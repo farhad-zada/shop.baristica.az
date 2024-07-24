@@ -12,8 +12,8 @@ const BlogComments = () => {
     <div className='blogComments'>
         <div className='container'>
             <div className='blogComments-title'>
-                <h3 className='f30 green800'>{blog.comments[lang].title}</h3>
-                <p className='a-center flex f18 green800'><span>{Lock} &nbsp;</span> {blog.comments[lang].subtitle}</p>
+                <h3 className='f30 green800'>{lang ? blog.comments[lang].title : ''}</h3>
+                <p className='a-center flex f18 green800'><span>{Lock} &nbsp;</span> {lang ? blog.comments[lang].subtitle :''}</p>
             </div>
             <div className='blogComments-section'>
                 <div className='blogComment flex a-center'>
@@ -40,12 +40,12 @@ const BlogComments = () => {
             </div>
             <form action="" className='blogComments-form border36'>
                 <div className='flex a-center j-between'>
-                    <h4 className='blogComments-form_title f24 green800 flex a-center'><span>{Rate}</span>{blog.comments[lang].form.title}</h4>
+                    <h4 className='blogComments-form_title f24 green800 flex a-center'><span>{Rate}</span>{lang ? blog.comments[lang].form.title : ''}</h4>
                     <button className='defaultBtn'>
                         {Up}
                     </button>
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder={blog.comments[lang].form.placeholder} className="w-100 f18 gray600 border20"></textarea>
+                <textarea name="" id="" cols="30" rows="10" placeholder={lang ? blog.comments[lang].form.placeholder : ''} className="w-100 f18 gray600 border20"></textarea>
             </form>
         </div>
     </div>

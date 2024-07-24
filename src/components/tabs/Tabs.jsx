@@ -24,7 +24,6 @@
 
     const Tabs = ({ children }) => {
         const [selectedTab, setSelectedTab] = useState(children[0]?.props?.label);
-        console.log(children)
         useEffect(() => {
             setSelectedTab(children[0]?.props?.label)
         },[children])

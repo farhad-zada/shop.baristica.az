@@ -13,7 +13,7 @@ const BlogHead = () => {
         <div className='container'>
             <div className="blog-nav flex a-center">
                 <p className='gray600'>Baristica /</p>
-                <p className='gray600'>&nbsp;{head[lang].nav}</p>
+                <p className='gray600'>&nbsp;{lang ? head[lang].nav : ''}</p>
             </div>
             <div className='blog-title'><h1 className='green800 f72'>Как проводят чайные церемонии в Японии</h1></div>
             <div className='blog-subtitle'><p className='gray600 f30'>Как проводят чайные церемонии в Японии</p></div>

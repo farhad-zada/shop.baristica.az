@@ -9,7 +9,6 @@ const { footer } = PagesText;
 
 export default function Footer() {
   const { lang } = useSelector((state) => state.baristica)
-  console.log(footer[lang].menu)
   return (
     <footer>
       <div className="container">
@@ -32,19 +31,19 @@ export default function Footer() {
             </div>
             <div className="footerTop-right flex">
                 <div className="footerTop-text w-100">
-                    <p className="gray300 f16 footerTop-title">{footer[lang].discount.title}</p>
-                    <h3 className="white f36 footerTop-subtitle">{footer[lang].discount.subtitle}</h3>
+                    <p className="gray300 f16 footerTop-title">{lang ? footer[lang].discount.title : ''}</p>
+                    <h3 className="white f36 footerTop-subtitle">{lang ? footer[lang].discount.subtitle : ''}</h3>
                 </div>
                 <form action="" className="footerTop-form flex w-100">
-                    <input type="text" name="" id="" placeholder={footer[lang].input.placeholder} className="w-100 border16 gray300 f18"/>
-                    <button className="footerTop-form_button defaultBtn border16 white">{footer[lang].input.btn}</button>
+                    <input type="text" name="" id="" placeholder={lang ? footer[lang].input.placeholder : ''} className="w-100 border16 gray300 f18"/>
+                    <button className="footerTop-form_button defaultBtn border16 white">{lang ? footer[lang].input.btn : ''}</button>
                 </form>
             </div>
         </div>
         <hr/>
         <div className="footerCenter flex a-start j-between w-100">
             <div className="footerCenter-left flex a-start">
-                {footer[lang]?.menu?.map((elem) => (
+                { lang && footer[lang]?.menu?.map((elem) => (
                     <div className="footerCeneter-menu" key={elem?.title}>
                         <h6 className="white f18">{elem?.title}</h6>
                         <ul>
@@ -56,8 +55,8 @@ export default function Footer() {
                 ))}
             </div>
             <div className="footerCenter-right">
-                <h1 className="f36 white">{footer[lang].side_info.number}</h1>
-                <p className="f16 gray300">{footer[lang].side_info.text}</p>
+                <h1 className="f36 white">{lang ? footer[lang].side_info.number : ''}</h1>
+                <p className="f16 gray300">{lang ? footer[lang].side_info.text : ''}</p>
             </div>
         </div>
         <hr />
@@ -67,7 +66,7 @@ export default function Footer() {
             </div>
             <div className="footerBottom-right">
                 <ul className="footerBottom-menu flex">
-                    {footer[lang].bottom_menu?.map((elem) => (
+                    { lang && footer[lang].bottom_menu?.map((elem) => (
                         <li key={elem}>
                             <Link className="gray300 f16" to={elem.link}>{elem.title}</Link>
                         </li>

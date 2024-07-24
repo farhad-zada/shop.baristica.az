@@ -19,9 +19,9 @@ const HomeBonuses = () => {
         <div className='container'>
             <div className='homeBonuses-section flex border24'>
                 <div className='homeBonuses-left'>
-                    <h1 className='homeBonuses-title green800'>{body[lang]?.bonuses.text.title}</h1>
-                    <p className='homeBonuses-subtitle green800'>{body[lang]?.bonuses.text.subtitle}</p>
-                    <button className='homeBonuses-btn defaultBtn white f18 border16'>{body[lang]?.bonuses.text.btn}</button>
+                    <h1 className='homeBonuses-title green800'>{lang ? body[lang]?.bonuses.text.title : ''}</h1>
+                    <p className='homeBonuses-subtitle green800'>{lang ? body[lang]?.bonuses.text.subtitle : ''}</p>
+                    <button className='homeBonuses-btn defaultBtn white f18 border16'>{lang ? body[lang]?.bonuses.text.btn : ''}</button>
                 </div>
                 <div className='homeBonuses-right'>
                     <Swiper
@@ -45,7 +45,7 @@ const HomeBonuses = () => {
                         },
                         }}
                     >
-                        {body[lang]?.bonuses?.list?.map((link, index) => (
+                        {lang && body[lang]?.bonuses?.list?.map((link, index) => (
                             <SwiperSlide key={index}>
                                 <HomeBonusCard content={link}/>
                             </SwiperSlide>

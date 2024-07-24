@@ -1,0 +1,17 @@
+.profileBody{
+    padding: 64px 0;
+    background-color: white;
+}
+.profileBody-links{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.profileBody-link{
+    padding: 46px 20px;
+    background-color: #F3F4F6;
+}
+.profileBody-link h5{
+    padding-top: 16px;
+}

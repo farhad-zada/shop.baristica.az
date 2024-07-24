@@ -1,4 +1,4 @@
-.favoritesBody-products .productCard{
+.productsCatalog-products .productCard{
     width: 32%;
     margin: 64px 0;
 }
@@ -8,6 +8,6 @@
     background: #F3F4F6;
     cursor: pointer;
 }
-.favoritesBody{
+.productsCatalog{
     margin-bottom: 60px;
 }

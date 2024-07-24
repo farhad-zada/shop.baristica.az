@@ -1,0 +1,32 @@
+/* Counter.css */
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    font-family: 'Arial', sans-serif;
+    gap: 20px;
+  }
+  
+  .counter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4B5563;
+    cursor: pointer;
+  }
+  
+  .counter-value {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4B5563;
+  }
+  

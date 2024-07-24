@@ -12,7 +12,7 @@ export default function MainFilter() {
   return (
     <div className='mainFilter flex j-between wrap'>
         {
-            filter[lang]?.mainFilter?.simpleFilter?.content.map(
+            lang && filter[lang]?.mainFilter?.simpleFilter?.content.map(
                 (content,index) => <MainFilterCard img={content?.img} text={content?.text} index={index} activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
             )
         }

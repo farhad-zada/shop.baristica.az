@@ -41,7 +41,7 @@
             "az": [
                 {
                     "title": "Al",
-                    "link": "/buy"
+                    "link": "/catalog"
                 },
                 {
                     "title": "Bloq",
@@ -59,7 +59,7 @@
             "ru": [
                 {
                     "title": "Купить",
-                    "link": "/buy"
+                    "link": "/catalog"
                 },
                 {
                     "title": "Блог",
@@ -77,7 +77,7 @@
             "en": [
                 {
                     "title": "Buy",
-                    "link": "/buy"
+                    "link": "/catalog"
                 },
                 {
                     "title": "Blog",
@@ -92,6 +92,20 @@
                     "link": "/quiz"
                 }
             ]
+        },
+        "profileDropdown": {
+            "az": {
+                "myProfileBtn": "Mənim profilim",
+                "logoutBtn": "Çıxış et"
+            },
+            "ru": {
+                "myProfileBtn": "Мой профиль",
+                "logoutBtn": "Выйти из профиля"
+            },
+            "en": {
+                "myProfileBtn": "My profile",
+                "logoutBtn": "Logout"
+            }
         }
     },
     "home": {
@@ -101,7 +115,7 @@
                 "links": [
                     {
                         "title": "Mağaza",
-                        "link": "/store"
+                        "link": "/catalog"
                     },
                     {
                         "title": "Abunəlik",
@@ -118,7 +132,7 @@
                 "links": [
                     {
                         "title": "Магазин",
-                        "link": "/store"
+                        "link": "/catalog"
                     },
                     {
                         "title": "Подписка",
@@ -135,7 +149,7 @@
                 "links": [
                     {
                         "title": "Store",
-                        "link": "/store"
+                        "link": "/catalog"
                     },
                     {
                         "title": "Subscription",
@@ -947,6 +961,627 @@
             }
         }
     },
+    "profile": {
+        "head": {
+            "az": {
+                "nav": "Şəxsi kabinet",
+                "title": "Xoş gəldiz",
+                "stats": {
+                    "title": "Mənim statistikam",
+                    "labels": [
+                        {
+                            "id": 0,
+                            "label": "Sifarişlər verilib:",
+                            "value": "245"
+                        },
+                        {
+                            "id": 1,
+                            "label": "Saytda olan müddət:",
+                            "value": "365 gün"
+                        },
+                        {
+                            "id": 2,
+                            "label": "Endirimlərim:",
+                            "value": "20%"
+                        },
+                        {
+                            "id": 3,
+                            "label": "Xərclənib:",
+                            "value": "1654.99 AZN"
+                        },
+                        {
+                            "id": 4,
+                            "label": "Qənaət olunan məbləğ:",
+                            "value": "1600 AZN"
+                        },
+                        {
+                            "id": 5,
+                            "label": "Neçə kiloqram:",
+                            "value": "15 kq"
+                        }
+                    ]
+                }
+            },
+            "ru": {
+                "nav": "Личный кабинет",
+                "title": "Добро пожаловать",
+                "stats": {
+                    "title": "Моя статистика",
+                    "labels": [
+                        {
+                            "id": 0,
+                            "label": "Оформлено заказов:",
+                            "value": "245"
+                        },
+                        {
+                            "id": 1,
+                            "label": "На сайте:",
+                            "value": "365 дней"
+                        },
+                        {
+                            "id": 2,
+                            "label": "Моя скидка:",
+                            "value": "20%"
+                        },
+                        {
+                            "id": 3,
+                            "label": "Всего потрачено:",
+                            "value": "1654.99 AZN"
+                        },
+                        {
+                            "id": 4,
+                            "label": "Сколько сэкономлено:",
+                            "value": "1600 AZN"
+                        },
+                        {
+                            "id": 5,
+                            "label": "Сколько кг:",
+                            "value": "15 кг"
+                        }
+                    ]
+                }
+            },
+            "en": {
+                "nav": "Profile",
+                "title": "Welcome",
+                "stats": {
+                    "title": "My statistics",
+                    "labels": [
+                        {
+                            "id": 0,
+                            "label": "Orders placed:",
+                            "value": "245"
+                        },
+                        {
+                            "id": 1,
+                            "label": "In website:",
+                            "value": "365 days"
+                        },
+                        {
+                            "id": 2,
+                            "label": "My discounts:",
+                            "value": "20%"
+                        },
+                        {
+                            "id": 3,
+                            "label": "Total spent:",
+                            "value": "1654.99 AZN"
+                        },
+                        {
+                            "id": 4,
+                            "label": "Total saved:",
+                            "value": "1600 AZN"
+                        },
+                        {
+                            "id": 5,
+                            "label": "How many kg:",
+                            "value": "15 kg"
+                        }
+                    ]
+                }
+            }
+        },
+        "body": {
+            "az": {
+                "links": [
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAzNiAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMzRWMzFIMjRWMzRIMFpNMjYgMTkuNUMyMy4zNjY3IDE5LjUgMjEuMTI1IDE4LjU3NSAxOS4yNzUgMTYuNzI1QzE3LjQyNSAxNC44NzUgMTYuNSAxMi42MzMzIDE2LjUgMTBDMTYuNSA3LjM2NjY3IDE3LjQyNSA1LjEyNSAxOS4yNzUgMy4yNzVDMjEuMTI1IDEuNDI1IDIzLjM2NjcgMC41IDI2IDAuNUMyOC42MzMzIDAuNSAzMC44NzUgMS40MjUgMzIuNzI1IDMuMjc1QzM0LjU3NSA1LjEyNSAzNS41IDcuMzY2NjcgMzUuNSAxMEMzNS41IDEyLjYzMzMgMzQuNTc1IDE0Ljg3NSAzMi43MjUgMTYuNzI1QzMwLjg3NSAxOC41NzUgMjguNjMzMyAxOS41IDI2IDE5LjVaTTAgMTdWMTRIMTMuMUMxMy4yNjY3IDE0LjUzMzMgMTMuNDY2NyAxNS4wNSAxMy43IDE1LjU1QzEzLjkzMzMgMTYuMDUgMTQuMTgzMyAxNi41MzMzIDE0LjQ1IDE3SDBaTTAgMjUuNVYyMi41SDIwLjk1QzIxLjQxNjcgMjIuNyAyMS45MDgzIDIyLjg3NSAyMi40MjUgMjMuMDI1QzIyLjk0MTcgMjMuMTc1IDIzLjQ2NjcgMjMuMjgzMyAyNCAyMy4zNVYyNS41SDBaTTI1IDE2SDI3VjhIMjVWMTZaTTI2IDZDMjYuMjY2NyA2IDI2LjUgNS45IDI2LjcgNS43QzI2LjkgNS41IDI3IDUuMjY2NjcgMjcgNUMyNyA0LjczMzMzIDI2LjkgNC41IDI2LjcgNC4zQzI2LjUgNC4xIDI2LjI2NjcgNCAyNiA0QzI1LjczMzMgNCAyNS41IDQuMSAyNS4zIDQuM0MyNS4xIDQuNSAyNSA0LjczMzMzIDI1IDVDMjUgNS4yNjY2NyAyNS4xIDUuNSAyNS4zIDUuN0MyNS41IDUuOSAyNS43MzMzIDYgMjYgNloiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                        "title": "Məlumatlarım",
+                        "link": "/profileInner"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzIDE0LjZMMTggMTIuMUwyMyAxNC42VjNIMTNWMTQuNlpNOCAyOFYyNEgxOFYyOEg4Wk0wIDM2VjBIMzZWMzZIMFpNMyAzM0gzM1YzSDI2VjE5LjQ1TDE4IDE1LjQ1TDEwIDE5LjQ1VjNIM1YzM1oiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                        "title": "Sifarişlərim",
+                        "link": "/profileInner"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCA0NCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyIDIxLjM1QzIzIDIwLjUxNjcgMjMuODc1IDE5LjcgMjQuNjI1IDE4LjlDMjUuMzc1IDE4LjEgMjYgMTcuMzI1IDI2LjUgMTYuNTc1QzI3IDE1LjgyNSAyNy4zNzUgMTUuMTA4MyAyNy42MjUgMTQuNDI1QzI3Ljg3NSAxMy43NDE3IDI4IDEzLjEgMjggMTIuNUMyOCAxMC44MzMzIDI3LjQxNjcgOS40MTY2NyAyNi4yNSA4LjI1QzI1LjA4MzMgNy4wODMzMyAyMy42NjY3IDYuNSAyMiA2LjVDMjAuMzMzMyA2LjUgMTguOTE2NyA3LjA4MzMzIDE3Ljc1IDguMjVDMTYuNTgzMyA5LjQxNjY3IDE2IDEwLjgzMzMgMTYgMTIuNUMxNiAxMy4yNjY3IDE2LjEyNSAxNC4wMDgzIDE2LjM3NSAxNC43MjVDMTYuNjI1IDE1LjQ0MTcgMTcgMTYuMTUgMTcuNSAxNi44NUMxOCAxNy41NSAxOC42MjUgMTguMjY2NyAxOS4zNzUgMTlDMjAuMTI1IDE5LjczMzMgMjEgMjAuNTE2NyAyMiAyMS4zNVpNMjIgMTRDMjEuNDMzMyAxNCAyMC45NTgzIDEzLjgwODMgMjAuNTc1IDEzLjQyNUMyMC4xOTE3IDEzLjA0MTcgMjAgMTIuNTY2NyAyMCAxMkMyMCAxMS40MzMzIDIwLjE5MTcgMTAuOTU4MyAyMC41NzUgMTAuNTc1QzIwLjk1ODMgMTAuMTkxNyAyMS40MzMzIDEwIDIyIDEwQzIyLjU2NjcgMTAgMjMuMDQxNyAxMC4xOTE3IDIzLjQyNSAxMC41NzVDMjMuODA4MyAxMC45NTgzIDI0IDExLjQzMzMgMjQgMTJDMjQgMTIuNTY2NyAyMy44MDgzIDEzLjA0MTcgMjMuNDI1IDEzLjQyNUMyMy4wNDE3IDEzLjgwODMgMjIuNTY2NyAxNCAyMiAxNFpNMTQgMjhDMTAuMSAyOCA2Ljc5MTY3IDI2LjY0MTcgNC4wNzUgMjMuOTI1QzEuMzU4MzMgMjEuMjA4MyAwIDE3LjkgMCAxNEMwIDEwLjEgMS4zNTgzMyA2Ljc5MTY3IDQuMDc1IDQuMDc1QzYuNzkxNjcgMS4zNTgzMyAxMC4xIDAgMTQgMEgzMEMzMy45IDAgMzcuMjA4MyAxLjM1ODMzIDM5LjkyNSA0LjA3NUM0Mi42NDE3IDYuNzkxNjcgNDQgMTAuMSA0NCAxNEM0NCAxNy45IDQyLjY0MTcgMjEuMjA4MyAzOS45MjUgMjMuOTI1QzM3LjIwODMgMjYuNjQxNyAzMy45IDI4IDMwIDI4SDE0Wk0xNCAyNUgzMEMzMy4wMzMzIDI1IDM1LjYyNSAyMy45MjUgMzcuNzc1IDIxLjc3NUMzOS45MjUgMTkuNjI1IDQxIDE3LjAzMzMgNDEgMTRDNDEgMTAuOTY2NyAzOS45MjUgOC4zNzUgMzcuNzc1IDYuMjI1QzM1LjYyNSA0LjA3NSAzMy4wMzMzIDMgMzAgM0gxNEMxMC45NjY3IDMgOC4zNzUgNC4wNzUgNi4yMjUgNi4yMjVDNC4wNzUgOC4zNzUgMyAxMC45NjY3IDMgMTRDMyAxNy4wMzMzIDQuMDc1IDE5LjYyNSA2LjIyNSAyMS43NzVDOC4zNzUgMjMuOTI1IDEwLjk2NjcgMjUgMTQgMjVaIiBmaWxsPSIjMjk0NzRDIi8+Cjwvc3ZnPgo=",
+                        "title": "Ünvanlarım",
+                        "link": "/profileInner"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyMCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuNSA0MEw2LjYgMzMuM0wxLjE1IDI5LjI1SDcuOUw5LjE1IDI0LjRMMCAxOS4wNVYwSDIwVjE5LjA1TDEwLjggMjQuNEwxMi4xIDI5LjI1SDE4LjhMMTMuMzUgMzMuM0wxNS40NSA0MEwxMCAzNS45NUw0LjUgNDBaTTMgM1YxNy4zNUw4LjcgMjAuNVYzSDNaTTE3IDNIMTEuN1YyMC41TDE3IDE3LjNWM1oiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                        "title": "Endirim Sistemi",
+                        "link": "/discount_system"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyLjIgMzAuOUwyOS4yIDIzLjlDMjkuNTY2NyAyMy41MzMzIDI5LjgzMzMgMjMuMTI1IDMwIDIyLjY3NUMzMC4xNjY3IDIyLjIyNSAzMC4yNSAyMS43NSAzMC4yNSAyMS4yNUMzMC4yNSAyMC4xODMzIDI5Ljg3NSAxOS4yNzUgMjkuMTI1IDE4LjUyNUMyOC4zNzUgMTcuNzc1IDI3LjQ2NjcgMTcuNCAyNi40IDE3LjRDMjUuNzMzMyAxNy40IDI1LjA2NjcgMTcuNjE2NyAyNC40IDE4LjA1QzIzLjczMzMgMTguNDgzMyAyMyAxOS4xODMzIDIyLjIgMjAuMTVDMjEuNCAxOS4xODMzIDIwLjY2NjcgMTguNDgzMyAyMCAxOC4wNUMxOS4zMzMzIDE3LjYxNjcgMTguNjY2NyAxNy40IDE4IDE3LjRDMTYuOTMzMyAxNy40IDE2LjAyNSAxNy43NzUgMTUuMjc1IDE4LjUyNUMxNC41MjUgMTkuMjc1IDE0LjE1IDIwLjE4MzMgMTQuMTUgMjEuMjVDMTQuMTUgMjEuNzUgMTQuMjMzMyAyMi4yMjUgMTQuNCAyMi42NzVDMTQuNTY2NyAyMy4xMjUgMTQuODMzMyAyMy41MzMzIDE1LjIgMjMuOUwyMi4yIDMwLjlaTTIxLjggNDEuM0wwIDE5LjU1VjBIMTkuNjVMNDEuNCAyMS43TDIxLjggNDEuM1pNMjEuOCAzN0wzNyAyMS44TDE4LjIgM0gzVjE4LjJMMjEuOCAzN1pNOC4yNSAxMC44QzguOTUgMTAuOCA5LjU1ODMzIDEwLjU0MTcgMTAuMDc1IDEwLjAyNUMxMC41OTE3IDkuNTA4MzMgMTAuODUgOC45IDEwLjg1IDguMkMxMC44NSA3LjUgMTAuNTkxNyA2Ljg5MTY3IDEwLjA3NSA2LjM3NUM5LjU1ODMzIDUuODU4MzMgOC45NSA1LjYgOC4yNSA1LjZDNy41NSA1LjYgNi45NDE2NyA1Ljg1ODMzIDYuNDI1IDYuMzc1QzUuOTA4MzMgNi44OTE2NyA1LjY1IDcuNSA1LjY1IDguMkM1LjY1IDguOSA1LjkwODMzIDkuNTA4MzMgNi40MjUgMTAuMDI1QzYuOTQxNjcgMTAuNTQxNyA3LjU1IDEwLjggOC4yNSAxMC44WiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
+                        "title": "Abunəlik",
+                        "link": "/subscription"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI3LjMgMjYuNzVMMjUuMTUgMjQuNkwzMC4yNSAxOS41SDEyLjc1VjE2LjVIMzAuMTVMMjUuMDUgMTEuNEwyNy4yIDkuMjVMMzYgMTguMDVMMjcuMyAyNi43NVpNMCAzNlYwSDE3LjU1VjNIM1YzM0gxNy41NVYzNkgwWiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
+                        "title": "Profildən Çıxış",
+                        "link": "/logout"
+                    }
+                ]
+            },
+            "ru": {
+                "links": [
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAzNiAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMzRWMzFIMjRWMzRIMFpNMjYgMTkuNUMyMy4zNjY3IDE5LjUgMjEuMTI1IDE4LjU3NSAxOS4yNzUgMTYuNzI1QzE3LjQyNSAxNC44NzUgMTYuNSAxMi42MzMzIDE2LjUgMTBDMTYuNSA3LjM2NjY3IDE3LjQyNSA1LjEyNSAxOS4yNzUgMy4yNzVDMjEuMTI1IDEuNDI1IDIzLjM2NjcgMC41IDI2IDAuNUMyOC42MzMzIDAuNSAzMC44NzUgMS40MjUgMzIuNzI1IDMuMjc1QzM0LjU3NSA1LjEyNSAzNS41IDcuMzY2NjcgMzUuNSAxMEMzNS41IDEyLjYzMzMgMzQuNTc1IDE0Ljg3NSAzMi43MjUgMTYuNzI1QzMwLjg3NSAxOC41NzUgMjguNjMzMyAxOS41IDI2IDE5LjVaTTAgMTdWMTRIMTMuMUMxMy4yNjY3IDE0LjUzMzMgMTMuNDY2NyAxNS4wNSAxMy43IDE1LjU1QzEzLjkzMzMgMTYuMDUgMTQuMTgzMyAxNi41MzMzIDE0LjQ1IDE3SDBaTTAgMjUuNVYyMi41SDIwLjk1QzIxLjQxNjcgMjIuNyAyMS45MDgzIDIyLjg3NSAyMi40MjUgMjMuMDI1QzIyLjk0MTcgMjMuMTc1IDIzLjQ2NjcgMjMuMjgzMyAyNCAyMy4zNVYyNS41SDBaTTI1IDE2SDI3VjhIMjVWMTZaTTI2IDZDMjYuMjY2NyA2IDI2LjUgNS45IDI2LjcgNS43QzI2LjkgNS41IDI3IDUuMjY2NjcgMjcgNUMyNyA0LjczMzMzIDI2LjkgNC41IDI2LjcgNC4zQzI2LjUgNC4xIDI2LjI2NjcgNCAyNiA0QzI1LjczMzMgNCAyNS41IDQuMSAyNS4zIDQuM0MyNS4xIDQuNSAyNSA0LjczMzMzIDI1IDVDMjUgNS4yNjY2NyAyNS4xIDUuNSAyNS4zIDUuN0MyNS41IDUuOSAyNS43MzMzIDYgMjYgNloiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                        "title": "Мои данные",
+                        "link": "/profileInner"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzIDE0LjZMMTggMTIuMUwyMyAxNC42VjNIMTNWMTQuNlpNOCAyOFYyNEgxOFYyOEg4Wk0wIDM2VjBIMzZWMzZIMFpNMyAzM0gzM1YzSDI2VjE5LjQ1TDE4IDE1LjQ1TDEwIDE5LjQ1VjNIM1YzM1oiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                        "title": "Мои заказы",
+                        "link": "/profileInner"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCA0NCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyIDIxLjM1QzIzIDIwLjUxNjcgMjMuODc1IDE5LjcgMjQuNjI1IDE4LjlDMjUuMzc1IDE4LjEgMjYgMTcuMzI1IDI2LjUgMTYuNTc1QzI3IDE1LjgyNSAyNy4zNzUgMTUuMTA4MyAyNy42MjUgMTQuNDI1QzI3Ljg3NSAxMy43NDE3IDI4IDEzLjEgMjggMTIuNUMyOCAxMC44MzMzIDI3LjQxNjcgOS40MTY2NyAyNi4yNSA4LjI1QzI1LjA4MzMgNy4wODMzMyAyMy42NjY3IDYuNSAyMiA2LjVDMjAuMzMzMyA2LjUgMTguOTE2NyA3LjA4MzMzIDE3Ljc1IDguMjVDMTYuNTgzMyA5LjQxNjY3IDE2IDEwLjgzMzMgMTYgMTIuNUMxNiAxMy4yNjY3IDE2LjEyNSAxNC4wMDgzIDE2LjM3NSAxNC43MjVDMTYuNjI1IDE1LjQ0MTcgMTcgMTYuMTUgMTcuNSAxNi44NUMxOCAxNy41NSAxOC42MjUgMTguMjY2NyAxOS4zNzUgMTlDMjAuMTI1IDE5LjczMzMgMjEgMjAuNTE2NyAyMiAyMS4zNVpNMjIgMTRDMjEuNDMzMyAxNCAyMC45NTgzIDEzLjgwODMgMjAuNTc1IDEzLjQyNUMyMC4xOTE3IDEzLjA0MTcgMjAgMTIuNTY2NyAyMCAxMkMyMCAxMS40MzMzIDIwLjE5MTcgMTAuOTU4MyAyMC41NzUgMTAuNTc1QzIwLjk1ODMgMTAuMTkxNyAyMS40MzMzIDEwIDIyIDEwQzIyLjU2NjcgMTAgMjMuMDQxNyAxMC4xOTE3IDIzLjQyNSAxMC41NzVDMjMuODA4MyAxMC45NTgzIDI0IDExLjQzMzMgMjQgMTJDMjQgMTIuNTY2NyAyMy44MDgzIDEzLjA0MTcgMjMuNDI1IDEzLjQyNUMyMy4wNDE3IDEzLjgwODMgMjIuNTY2NyAxNCAyMiAxNFpNMTQgMjhDMTAuMSAyOCA2Ljc5MTY3IDI2LjY0MTcgNC4wNzUgMjMuOTI1QzEuMzU4MzMgMjEuMjA4MyAwIDE3LjkgMCAxNEMwIDEwLjEgMS4zNTgzMyA2Ljc5MTY3IDQuMDc1IDQuMDc1QzYuNzkxNjcgMS4zNTgzMyAxMC4xIDAgMTQgMEgzMEMzMy45IDAgMzcuMjA4MyAxLjM1ODMzIDM5LjkyNSA0LjA3NUM0Mi42NDE3IDYuNzkxNjcgNDQgMTAuMSA0NCAxNEM0NCAxNy45IDQyLjY0MTcgMjEuMjA4MyAzOS45MjUgMjMuOTI1QzM3LjIwODMgMjYuNjQxNyAzMy45IDI4IDMwIDI4SDE0Wk0xNCAyNUgzMEMzMy4wMzMzIDI1IDM1LjYyNSAyMy45MjUgMzcuNzc1IDIxLjc3NUMzOS45MjUgMTkuNjI1IDQxIDE3LjAzMzMgNDEgMTRDNDEgMTAuOTY2NyAzOS45MjUgOC4zNzUgMzcuNzc1IDYuMjI1QzM1LjYyNSA0LjA3NSAzMy4wMzMzIDMgMzAgM0gxNEMxMC45NjY3IDMgOC4zNzUgNC4wNzUgNi4yMjUgNi4yMjVDNC4wNzUgOC4zNzUgMyAxMC45NjY3IDMgMTRDMyAxNy4wMzMzIDQuMDc1IDE5LjYyNSA2LjIyNSAyMS43NzVDOC4zNzUgMjMuOTI1IDEwLjk2NjcgMjUgMTQgMjVaIiBmaWxsPSIjMjk0NzRDIi8+Cjwvc3ZnPgo=",
+                        "title": "Мои адреса",
+                        "link": "/profileInner"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyMCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuNSA0MEw2LjYgMzMuM0wxLjE1IDI5LjI1SDcuOUw5LjE1IDI0LjRMMCAxOS4wNVYwSDIwVjE5LjA1TDEwLjggMjQuNEwxMi4xIDI5LjI1SDE4LjhMMTMuMzUgMzMuM0wxNS40NSA0MEwxMCAzNS45NUw0LjUgNDBaTTMgM1YxNy4zNUw4LjcgMjAuNVYzSDNaTTE3IDNIMTEuN1YyMC41TDE3IDE3LjNWM1oiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                        "title": "Система скидок",
+                        "link": "/discount_system"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyLjIgMzAuOUwyOS4yIDIzLjlDMjkuNTY2NyAyMy41MzMzIDI5LjgzMzMgMjMuMTI1IDMwIDIyLjY3NUMzMC4xNjY3IDIyLjIyNSAzMC4yNSAyMS43NSAzMC4yNSAyMS4yNUMzMC4yNSAyMC4xODMzIDI5Ljg3NSAxOS4yNzUgMjkuMTI1IDE4LjUyNUMyOC4zNzUgMTcuNzc1IDI3LjQ2NjcgMTcuNCAyNi40IDE3LjRDMjUuNzMzMyAxNy40IDI1LjA2NjcgMTcuNjE2NyAyNC40IDE4LjA1QzIzLjczMzMgMTguNDgzMyAyMyAxOS4xODMzIDIyLjIgMjAuMTVDMjEuNCAxOS4xODMzIDIwLjY2NjcgMTguNDgzMyAyMCAxOC4wNUMxOS4zMzMzIDE3LjYxNjcgMTguNjY2NyAxNy40IDE4IDE3LjRDMTYuOTMzMyAxNy40IDE2LjAyNSAxNy43NzUgMTUuMjc1IDE4LjUyNUMxNC41MjUgMTkuMjc1IDE0LjE1IDIwLjE4MzMgMTQuMTUgMjEuMjVDMTQuMTUgMjEuNzUgMTQuMjMzMyAyMi4yMjUgMTQuNCAyMi42NzVDMTQuNTY2NyAyMy4xMjUgMTQuODMzMyAyMy41MzMzIDE1LjIgMjMuOUwyMi4yIDMwLjlaTTIxLjggNDEuM0wwIDE5LjU1VjBIMTkuNjVMNDEuNCAyMS43TDIxLjggNDEuM1pNMjEuOCAzN0wzNyAyMS44TDE4LjIgM0gzVjE4LjJMMjEuOCAzN1pNOC4yNSAxMC44QzguOTUgMTAuOCA5LjU1ODMzIDEwLjU0MTcgMTAuMDc1IDEwLjAyNUMxMC41OTE3IDkuNTA4MzMgMTAuODUgOC45IDEwLjg1IDguMkMxMC44NSA3LjUgMTAuNTkxNyA2Ljg5MTY3IDEwLjA3NSA2LjM3NUM5LjU1ODMzIDUuODU4MzMgOC45NSA1LjYgOC4yNSA1LjZDNy41NSA1LjYgNi45NDE2NyA1Ljg1ODMzIDYuNDI1IDYuMzc1QzUuOTA4MzMgNi44OTE2NyA1LjY1IDcuNSA1LjY1IDguMkM1LjY1IDguOSA1LjkwODMzIDkuNTA4MzMgNi40MjUgMTAuMDI1QzYuOTQxNjcgMTAuNTQxNyA3LjU1IDEwLjggOC4yNSAxMC44WiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
+                        "title": "Подписка",
+                        "link": "/subscription"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI3LjMgMjYuNzVMMjUuMTUgMjQuNkwzMC4yNSAxOS41SDEyLjc1VjE2LjVIMzAuMTVMMjUuMDUgMTEuNEwyNy4yIDkuMjVMMzYgMTguMDVMMjcuMyAyNi43NVpNMCAzNlYwSDE3LjU1VjNIM1YzM0gxNy41NVYzNkgwWiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
+                        "title": "Выйти из профиля",
+                        "link": "/logout"
+                    }
+                ]
+            },
+            "en": {
+                "links": [
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAzNiAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMzRWMzFIMjRWMzRIMFpNMjYgMTkuNUMyMy4zNjY3IDE5LjUgMjEuMTI1IDE4LjU3NSAxOS4yNzUgMTYuNzI1QzE3LjQyNSAxNC44NzUgMTYuNSAxMi42MzMzIDE2LjUgMTBDMTYuNSA3LjM2NjY3IDE3LjQyNSA1LjEyNSAxOS4yNzUgMy4yNzVDMjEuMTI1IDEuNDI1IDIzLjM2NjcgMC41IDI2IDAuNUMyOC42MzMzIDAuNSAzMC44NzUgMS40MjUgMzIuNzI1IDMuMjc1QzM0LjU3NSA1LjEyNSAzNS41IDcuMzY2NjcgMzUuNSAxMEMzNS41IDEyLjYzMzMgMzQuNTc1IDE0Ljg3NSAzMi43MjUgMTYuNzI1QzMwLjg3NSAxOC41NzUgMjguNjMzMyAxOS41IDI2IDE5LjVaTTAgMTdWMTRIMTMuMUMxMy4yNjY3IDE0LjUzMzMgMTMuNDY2NyAxNS4wNSAxMy43IDE1LjU1QzEzLjkzMzMgMTYuMDUgMTQuMTgzMyAxNi41MzMzIDE0LjQ1IDE3SDBaTTAgMjUuNVYyMi41SDIwLjk1QzIxLjQxNjcgMjIuNyAyMS45MDgzIDIyLjg3NSAyMi40MjUgMjMuMDI1QzIyLjk0MTcgMjMuMTc1IDIzLjQ2NjcgMjMuMjgzMyAyNCAyMy4zNVYyNS41SDBaTTI1IDE2SDI3VjhIMjVWMTZaTTI2IDZDMjYuMjY2NyA2IDI2LjUgNS45IDI2LjcgNS43QzI2LjkgNS41IDI3IDUuMjY2NjcgMjcgNUMyNyA0LjczMzMzIDI2LjkgNC41IDI2LjcgNC4zQzI2LjUgNC4xIDI2LjI2NjcgNCAyNiA0QzI1LjczMzMgNCAyNS41IDQuMSAyNS4zIDQuM0MyNS4xIDQuNSAyNSA0LjczMzMzIDI1IDVDMjUgNS4yNjY2NyAyNS4xIDUuNSAyNS4zIDUuN0MyNS41IDUuOSAyNS43MzMzIDYgMjYgNloiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                        "title": "My Data",
+                        "link": "/profileInner"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzIDE0LjZMMTggMTIuMUwyMyAxNC42VjNIMTNWMTQuNlpNOCAyOFYyNEgxOFYyOEg4Wk0wIDM2VjBIMzZWMzZIMFpNMyAzM0gzM1YzSDI2VjE5LjQ1TDE4IDE1LjQ1TDEwIDE5LjQ1VjNIM1YzM1oiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                        "title": "My Orders",
+                        "link": "/profileInner"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCA0NCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyIDIxLjM1QzIzIDIwLjUxNjcgMjMuODc1IDE5LjcgMjQuNjI1IDE4LjlDMjUuMzc1IDE4LjEgMjYgMTcuMzI1IDI2LjUgMTYuNTc1QzI3IDE1LjgyNSAyNy4zNzUgMTUuMTA4MyAyNy42MjUgMTQuNDI1QzI3Ljg3NSAxMy43NDE3IDI4IDEzLjEgMjggMTIuNUMyOCAxMC44MzMzIDI3LjQxNjcgOS40MTY2NyAyNi4yNSA4LjI1QzI1LjA4MzMgNy4wODMzMyAyMy42NjY3IDYuNSAyMiA2LjVDMjAuMzMzMyA2LjUgMTguOTE2NyA3LjA4MzMzIDE3Ljc1IDguMjVDMTYuNTgzMyA5LjQxNjY3IDE2IDEwLjgzMzMgMTYgMTIuNUMxNiAxMy4yNjY3IDE2LjEyNSAxNC4wMDgzIDE2LjM3NSAxNC43MjVDMTYuNjI1IDE1LjQ0MTcgMTcgMTYuMTUgMTcuNSAxNi44NUMxOCAxNy41NSAxOC42MjUgMTguMjY2NyAxOS4zNzUgMTlDMjAuMTI1IDE5LjczMzMgMjEgMjAuNTE2NyAyMiAyMS4zNVpNMjIgMTRDMjEuNDMzMyAxNCAyMC45NTgzIDEzLjgwODMgMjAuNTc1IDEzLjQyNUMyMC4xOTE3IDEzLjA0MTcgMjAgMTIuNTY2NyAyMCAxMkMyMCAxMS40MzMzIDIwLjE5MTcgMTAuOTU4MyAyMC41NzUgMTAuNTc1QzIwLjk1ODMgMTAuMTkxNyAyMS40MzMzIDEwIDIyIDEwQzIyLjU2NjcgMTAgMjMuMDQxNyAxMC4xOTE3IDIzLjQyNSAxMC41NzVDMjMuODA4MyAxMC45NTgzIDI0IDExLjQzMzMgMjQgMTJDMjQgMTIuNTY2NyAyMy44MDgzIDEzLjA0MTcgMjMuNDI1IDEzLjQyNUMyMy4wNDE3IDEzLjgwODMgMjIuNTY2NyAxNCAyMiAxNFpNMTQgMjhDMTAuMSAyOCA2Ljc5MTY3IDI2LjY0MTcgNC4wNzUgMjMuOTI1QzEuMzU4MzMgMjEuMjA4MyAwIDE3LjkgMCAxNEMwIDEwLjEgMS4zNTgzMyA2Ljc5MTY3IDQuMDc1IDQuMDc1QzYuNzkxNjcgMS4zNTgzMyAxMC4xIDAgMTQgMEgzMEMzMy45IDAgMzcuMjA4MyAxLjM1ODMzIDM5LjkyNSA0LjA3NUM0Mi42NDE3IDYuNzkxNjcgNDQgMTAuMSA0NCAxNEM0NCAxNy45IDQyLjY0MTcgMjEuMjA4MyAzOS45MjUgMjMuOTI1QzM3LjIwODMgMjYuNjQxNyAzMy45IDI4IDMwIDI4SDE0Wk0xNCAyNUgzMEMzMy4wMzMzIDI1IDM1LjYyNSAyMy45MjUgMzcuNzc1IDIxLjc3NUMzOS45MjUgMTkuNjI1IDQxIDE3LjAzMzMgNDEgMTRDNDEgMTAuOTY2NyAzOS45MjUgOC4zNzUgMzcuNzc1IDYuMjI1QzM1LjYyNSA0LjA3NSAzMy4wMzMzIDMgMzAgM0gxNEMxMC45NjY3IDMgOC4zNzUgNC4wNzUgNi4yMjUgNi4yMjVDNC4wNzUgOC4zNzUgMyAxMC45NjY3IDMgMTRDMyAxNy4wMzMzIDQuMDc1IDE5LjYyNSA2LjIyNSAyMS43NzVDOC4zNzUgMjMuOTI1IDEwLjk2NjcgMjUgMTQgMjVaIiBmaWxsPSIjMjk0NzRDIi8+Cjwvc3ZnPgo=",
+                        "title": "My Addresses",
+                        "link": "/profileInner"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyMCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuNSA0MEw2LjYgMzMuM0wxLjE1IDI5LjI1SDcuOUw5LjE1IDI0LjRMMCAxOS4wNVYwSDIwVjE5LjA1TDEwLjggMjQuNEwxMi4xIDI5LjI1SDE4LjhMMTMuMzUgMzMuM0wxNS40NSA0MEwxMCAzNS45NUw0LjUgNDBaTTMgM1YxNy4zNUw4LjcgMjAuNVYzSDNaTTE3IDNIMTEuN1YyMC41TDE3IDE3LjNWM1oiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
+                        "title": "Discount System",
+                        "link": "/discount_system"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyLjIgMzAuOUwyOS4yIDIzLjlDMjkuNTY2NyAyMy41MzMzIDI5LjgzMzMgMjMuMTI1IDMwIDIyLjY3NUMzMC4xNjY3IDIyLjIyNSAzMC4yNSAyMS43NSAzMC4yNSAyMS4yNUMzMC4yNSAyMC4xODMzIDI5Ljg3NSAxOS4yNzUgMjkuMTI1IDE4LjUyNUMyOC4zNzUgMTcuNzc1IDI3LjQ2NjcgMTcuNCAyNi40IDE3LjRDMjUuNzMzMyAxNy40IDI1LjA2NjcgMTcuNjE2NyAyNC40IDE4LjA1QzIzLjczMzMgMTguNDgzMyAyMyAxOS4xODMzIDIyLjIgMjAuMTVDMjEuNCAxOS4xODMzIDIwLjY2NjcgMTguNDgzMyAyMCAxOC4wNUMxOS4zMzMzIDE3LjYxNjcgMTguNjY2NyAxNy40IDE4IDE3LjRDMTYuOTMzMyAxNy40IDE2LjAyNSAxNy43NzUgMTUuMjc1IDE4LjUyNUMxNC41MjUgMTkuMjc1IDE0LjE1IDIwLjE4MzMgMTQuMTUgMjEuMjVDMTQuMTUgMjEuNzUgMTQuMjMzMyAyMi4yMjUgMTQuNCAyMi42NzVDMTQuNTY2NyAyMy4xMjUgMTQuODMzMyAyMy41MzMzIDE1LjIgMjMuOUwyMi4yIDMwLjlaTTIxLjggNDEuM0wwIDE5LjU1VjBIMTkuNjVMNDEuNCAyMS43TDIxLjggNDEuM1pNMjEuOCAzN0wzNyAyMS44TDE4LjIgM0gzVjE4LjJMMjEuOCAzN1pNOC4yNSAxMC44QzguOTUgMTAuOCA5LjU1ODMzIDEwLjU0MTcgMTAuMDc1IDEwLjAyNUMxMC41OTE3IDkuNTA4MzMgMTAuODUgOC45IDEwLjg1IDguMkMxMC44NSA3LjUgMTAuNTkxNyA2Ljg5MTY3IDEwLjA3NSA2LjM3NUM5LjU1ODMzIDUuODU4MzMgOC45NSA1LjYgOC4yNSA1LjZDNy41NSA1LjYgNi45NDE2NyA1Ljg1ODMzIDYuNDI1IDYuMzc1QzUuOTA4MzMgNi44OTE2NyA1LjY1IDcuNSA1LjY1IDguMkM1LjY1IDguOSA1LjkwODMzIDkuNTA4MzMgNi40MjUgMTAuMDI1QzYuOTQxNjcgMTAuNTQxNyA3LjU1IDEwLjggOC4yNSAxMC44WiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
+                        "title": "Subscription",
+                        "link": "/subscription"
+                    },
+                    {
+                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI3LjMgMjYuNzVMMjUuMTUgMjQuNkwzMC4yNSAxOS41SDEyLjc1VjE2LjVIMzAuMTVMMjUuMDUgMTEuNEwyNy4yIDkuMjVMMzYgMTguMDVMMjcuMyAyNi43NVpNMCAzNlYwSDE3LjU1VjNIM1YzM0gxNy41NVYzNkgwWiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
+                        "title": "Logout",
+                        "link": "/logout"
+                    }
+                ]
+            }
+        }
+    },
+    "profileInner": {
+        "head": {
+            "az": {
+                "nav": "Mənim məlumatlarım",
+                "tabs": {
+                    "personal": "Şəxsi məlumatlarım",
+                    "orders": "Sifarişlər",
+                    "address": "Ünvanlar"
+                }
+            },
+            "ru": {
+                "nav": "Мои данные",
+                "tabs": {
+                    "personal": "Личные данные",
+                    "orders": "Заказы",
+                    "address": "Адреса"
+                }
+            },
+            "en": {
+                "nav": "My details",
+                "tabs": {
+                    "personal": "Personal details",
+                    "orders": "Orders",
+                    "address": "Addresses"
+                }
+            }
+        },
+        "body": {
+            "az": {
+                "personal": {
+                    "title": "Məlumatı redaktə edin",
+                    "form": {
+                        "name": "Ad",
+                        "surname": "Soyad",
+                        "mail": "E-mail",
+                        "phone": "Telefon nömrə",
+                        "password": "Şifrə",
+                        "password2": "Təkrar şifrə"
+                    },
+                    "btn": "Yadda saxla"
+                },
+                "orders": {
+                    "tabs": {
+                        "current": "Текущие",
+                        "ready": "Выполненные",
+                        "canceled": "Отмененные"
+                    },
+                    "table": {
+                        "number": "Sifarişin nömrəsi",
+                        "products": "Mal(lar) - SKU",
+                        "date": "Sifarişin tarixi və vaxtı",
+                        "price": "Sifarişin qiyməti",
+                        "status": "Sifarişin statusu"
+                    },
+                    "current": [
+                        {
+                            "number": "№134653",
+                            "products": "ELX127331, ELX127...",
+                            "date": "03/07/2021; 16:05",
+                            "price": "154.65₼",
+                            "status": "Ждёт обработки"
+                        },
+                        {
+                            "number": "№134123",
+                            "products": "ELX132732, ELX127...",
+                            "date": "23/06/2021; 16:05",
+                            "price": "99.25₼",
+                            "status": "Обрабатывается"
+                        }
+                    ],
+                    "ready": [
+                        {
+                            "number": "№134654",
+                            "products": "ELX127331, ELX127...",
+                            "date": "04/07/2021; 16:05",
+                            "price": "154.65₼",
+                            "status": "Ждёт обработки"
+                        },
+                        {
+                            "number": "№134124",
+                            "products": "ELX132732, ELX127...",
+                            "date": "24/06/2021; 16:05",
+                            "price": "99.25₼",
+                            "status": "Обрабатывается"
+                        }
+                    ],
+                    "canceled": [
+                        {
+                            "number": "№134655",
+                            "products": "ELX127331, ELX127...",
+                            "date": "01/07/2021; 16:05",
+                            "price": "154.65₼",
+                            "status": "Ждёт обработки"
+                        },
+                        {
+                            "number": "№134125",
+                            "products": "ELX132732, ELX127...",
+                            "date": "23/06/2021; 16:05",
+                            "price": "99.25₼",
+                            "status": "Обрабатывается"
+                        }
+                    ],
+                    "firstOrder": {
+                        "title": "İlk sifarişinizi verin və endirim əldə edin",
+                        "btn": "Alış-verişə gedin"
+                    }
+                },
+                "address": {
+                    "title": "Mənim ünvanlarım",
+                    "addresses": [
+                        {
+                            "title": "Xutordakı ev",
+                            "description": "Ünvan: Rusiya, Moskva, Moskva, Admiral Lazarev küçəsi, 123",
+                            "edit": "Ünvanı redaktə edin",
+                            "selected": true
+                        },
+                        {
+                            "title": "Xutordakı ev 2",
+                            "description": "Ünvan: Rusiya, Moskva, Moskva, Admiral Lazarev küçəsi, 123",
+                            "edit": "Ünvanı redaktə edin",
+                            "selected": false
+                        },
+                        {
+                            "title": "Xutordakı ev 3",
+                            "description": "Ünvan: Rusiya, Moskva, Moskva, Admiral Lazarev küçəsi, 123",
+                            "edit": "Ünvanı redaktə edin",
+                            "selected": false
+                        }
+                    ],
+                    "newAddress": {
+                        "title": "Ünvan əlavə et",
+                        "form": {
+                            "addressName": "Ünvan adı",
+                            "city": "Şəhəri daxil edin",
+                            "address": "Ünvanı daxil edin",
+                            "section": "Giriş",
+                            "flat": "Mənzil",
+                            "more": "Əlavə",
+                            "makePriority": {
+                                "title": "Əsas etmək?",
+                                "yes": "Bəli",
+                                "no": "Xeyr"
+                            },
+                            "addBtn": "Ünvan əlavə edin",
+                            "cancelBtn": "Ləğv edin"
+                        }
+                    },
+                    "firstAddress": "Yeni ünvan əlavə et"
+                }
+            },
+            "ru": {
+                "personal": {
+                    "title": "Редактировать данные",
+                    "form": {
+                        "name": "Имя",
+                        "surname": "Фамилия",
+                        "mail": "E-mail",
+                        "phone": "Номер телефона",
+                        "password": "Пароль",
+                        "password2": "Пароль"
+                    },
+                    "btn": "Сохранить"
+                },
+                "orders": {
+                    "tabs": {
+                        "current": "Текущие",
+                        "ready": "Выполненные",
+                        "canceled": "Отмененные"
+                    },
+                    "table": {
+                        "number": "Номер заказа",
+                        "products": "Товар(ы) - SKU",
+                        "date": "Дата и время заказа",
+                        "price": "Сумма заказа",
+                        "status": "Статус заказа"
+                    },
+                    "current": [
+                        {
+                            "number": "№134653",
+                            "products": "ELX127331, ELX127...",
+                            "date": "03/07/2021; 16:05",
+                            "price": "154.65₼",
+                            "status": "Ждёт обработки"
+                        },
+                        {
+                            "number": "№134123",
+                            "products": "ELX132732, ELX127...",
+                            "date": "23/06/2021; 16:05",
+                            "price": "99.25₼",
+                            "status": "Обрабатывается"
+                        }
+                    ],
+                    "ready": [
+                        {
+                            "number": "№134654",
+                            "products": "ELX127331, ELX127...",
+                            "date": "04/07/2021; 16:05",
+                            "price": "154.65₼",
+                            "status": "Ждёт обработки"
+                        },
+                        {
+                            "number": "№134124",
+                            "products": "ELX132732, ELX127...",
+                            "date": "24/06/2021; 16:05",
+                            "price": "99.25₼",
+                            "status": "Обрабатывается"
+                        }
+                    ],
+                    "canceled": [
+                        {
+                            "number": "№134655",
+                            "products": "ELX127331, ELX127...",
+                            "date": "01/07/2021; 16:05",
+                            "price": "154.65₼",
+                            "status": "Ждёт обработки"
+                        },
+                        {
+                            "number": "№134125",
+                            "products": "ELX132732, ELX127...",
+                            "date": "23/06/2021; 16:05",
+                            "price": "99.25₼",
+                            "status": "Обрабатывается"
+                        }
+                    ],
+                    "firstOrder": {
+                        "title": "Сделайте первый заказ и получите скидку",
+                        "btn": "Вперед за покупками"
+                    }
+                },
+                "address": {
+                    "title": "Мои адреса",
+                    "addresses": [
+                        {
+                            "title": "Дом на Хуторе",
+                            "description": "Адрес: Россия, Москва, г Москва, ул Адмирала Лазарева, 123",
+                            "edit": "Редактировать адрес",
+                            "selected": true
+                        },
+                        {
+                            "title": "Дом на Хуторе 2",
+                            "description": "Адрес: Россия, Москва, г Москва, ул Адмирала Лазарева, 123",
+                            "edit": "Редактировать адрес",
+                            "selected": false
+                        },
+                        {
+                            "title": "Дом на Хуторе 3",
+                            "description": "Адрес: Россия, Москва, г Москва, ул Адмирала Лазарева, 123",
+                            "edit": "Редактировать адрес",
+                            "selected": false
+                        }
+                    ],
+                    "newAddress": {
+                        "title": "Добавить адрес",
+                        "form": {
+                            "addressName": "Название адреса",
+                            "city": "Введите город",
+                            "address": "Введите адрес",
+                            "section": "Подьезд",
+                            "flat": "Квартира",
+                            "more": "Дополнительно",
+                            "makePriority": {
+                                "title": "Сделать основным?",
+                                "yes": "Да",
+                                "no": "Нет"
+                            },
+                            "addBtn": "Добавить адрес",
+                            "cancelBtn": "Отменить"
+                        }
+                    },
+                    "firstAddress": "Добавить новый адрес"
+                }
+            },
+            "en": {
+                "personal": {
+                    "title": "Edit info",
+                    "form": {
+                        "name": "Name",
+                        "surname": "Surname",
+                        "mail": "E-mail",
+                        "phone": "Phone",
+                        "password": "Password",
+                        "password2": "Repeat password"
+                    },
+                    "btn": "Save"
+                },
+                "orders": {
+                    "tabs": {
+                        "current": "Current",
+                        "ready": "Ready",
+                        "canceled": "Canceled"
+                    },
+                    "table": {
+                        "number": "Product's number",
+                        "products": "Product(s) - SKU",
+                        "date": "Date and time of product",
+                        "price": "Product price",
+                        "status": "Product status"
+                    },
+                    "current": [
+                        {
+                            "number": "№134653",
+                            "products": "ELX127331, ELX127...",
+                            "date": "03/07/2021; 16:05",
+                            "price": "154.65₼",
+                            "status": "Ждёт обработки"
+                        },
+                        {
+                            "number": "№134123",
+                            "products": "ELX132732, ELX127...",
+                            "date": "23/06/2021; 16:05",
+                            "price": "99.25₼",
+                            "status": "Обрабатывается"
+                        }
+                    ],
+                    "ready": [
+                        {
+                            "number": "№134654",
+                            "products": "ELX127331, ELX127...",
+                            "date": "04/07/2021; 16:05",
+                            "price": "154.65₼",
+                            "status": "Ждёт обработки"
+                        },
+                        {
+                            "number": "№134124",
+                            "products": "ELX132732, ELX127...",
+                            "date": "24/06/2021; 16:05",
+                            "price": "99.25₼",
+                            "status": "Обрабатывается"
+                        }
+                    ],
+                    "canceled": [
+                        {
+                            "number": "№134655",
+                            "products": "ELX127331, ELX127...",
+                            "date": "01/07/2021; 16:05",
+                            "price": "154.65₼",
+                            "status": "Ждёт обработки"
+                        },
+                        {
+                            "number": "№134125",
+                            "products": "ELX132732, ELX127...",
+                            "date": "23/06/2021; 16:05",
+                            "price": "99.25₼",
+                            "status": "Обрабатывается"
+                        }
+                    ],
+                    "firstOrder": {
+                        "title": "Place your first order and get a discount",
+                        "btn": "Go shopping"
+                    }
+                },
+                "address": {
+                    "title": "My addresses",
+                    "addresses": [
+                        {
+                            "title": "House on Khutor",
+                            "description": "Address: Russia, Moscow, Moscow, Admiral Lazarev street, 123",
+                            "edit": "Edit address",
+                            "selected": true
+                        },
+                        {
+                            "title": "House on Khutor 2",
+                            "description": "Address: Russia, Moscow, Moscow, Admiral Lazarev street, 123",
+                            "edit": "Edit address",
+                            "selected": false
+                        },
+                        {
+                            "title": "House on Khutor 3",
+                            "description": "Address: Russia, Moscow, Moscow, Admiral Lazarev street, 123",
+                            "edit": "Edit address",
+                            "selected": false
+                        }
+                    ],
+                    "newAddress": {
+                        "title": "Add address",
+                        "form": {
+                            "addressName": "Address Name",
+                            "city": "Enter City",
+                            "address": "Enter Address",
+                            "section": "Entrance",
+                            "flat": "Apartment",
+                            "more": "Additional Info",
+                            "makePriority": {
+                                "title": "Make Primary?",
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "addBtn": "Add Address",
+                            "cancelBtn": "Cancel"
+                        }
+                    },
+                    "firstAddress": "Add new address"
+                }
+            }
+        }
+    },
     "favorites": {
         "az": {
             "head": {
@@ -1010,11 +1645,427 @@
                 "sweetnessHeading": "Sweetness:",
                 "tasteHeading": "Taste",
                 "processingMethodHeading": "Processing method",
-                "roastingLevelHeading":"Roastin level",
+                "roastingLevelHeading": "Roastin level",
                 "varietyHeading": "Variety:",
-                "growingHeightHeading":"Growing height",
+                "growingHeightHeading": "Growing height",
                 "QGraderRatingHeading": "Q-grader rating:"
             }
+        }
+    },
+    "catalog": {
+        "az": {
+            "head": {
+                "pageName": "Kofe"
+            },
+            "loadMore_btn": "Daha çox"
+        },
+        "ru": {
+            "head": {
+                "pageName": "Кофе"
+            },
+            "loadMore_btn": "Загрузить больше"
+        },
+        "en": {
+            "head": {
+                "pageName": "Coffee"
+            },
+            "loadMore_btn": "Load more"
+        }
+    },
+    "cart": {
+        "az": {
+            "head": {
+                "pageName": "Sifarişin verilməsi"
+            },
+            "authorization": {
+                "heading": "Daimi müştəri?",
+                "paragraph": "Daxil olun və ya qeydiyyatdan keçin",
+                "loginBtn": "Daxil ol",
+                "registerBtn": "Qeydiyyat"
+            },
+            "userInfo": {
+                "heading": "Alıcının məlumatları",
+                "nameInput": "Ad",
+                "lastNameInput": "Soyad",
+                "emailInput": "E-mail",
+                "phoneNumberInput": "Telefon",
+                "orderTo": {
+                    "label": "Sifariş:",
+                    "content": [
+                        {
+                            "text": "Mənim üçün",
+                            "value": "me"
+                        },
+                        {
+                            "text": "Dostum üçün",
+                            "value": "friend"
+                        }
+                    ]
+                }
+            },
+            "delivery": {
+                "heading": "Çatdırılma",
+                "deliveryDate": {
+                    "heading": "Nə vaxt çatdırmaq",
+                    "timeInput": "Vaxt",
+                    "dateInput": "Tarix"
+                },
+                "deliveryLocation": {
+                    "heading": "Haraya çatdırmaq",
+                    "addressInput": "Ünvanı daxil edin",
+                    "entranceInput": "Giriş",
+                    "apartamentInput": "Mənzil"
+                },
+                "chooseOnMapBtn": "Xəritədə ünvanı seçin"
+            },
+            "orderInfo": {
+                "headings": [
+                    "Sifarişin məbləği",
+                    "Çatdırılma",
+                    "Endirim",
+                    "Cəmi"
+                ],
+                "orderBtn": "Sifariş et",
+                "termsConditions": "Şəxsi məlumatların işlənməsi şərtlərinə, İstifadəçi razılaşmasına və Açıq təklifə razıyam"
+            },
+            "cartMain": {
+                "heading": "Səbət",
+                "deliveryDetails": {
+                    "roasting": "Qovurmağa göndəririk",
+                    "forwarding": "Göndərmə"
+                },
+                "orderInfo": [
+                    "Sifarişin məbləği",
+                    "Çatdırılma",
+                    "Endirim",
+                    "Cəmi"
+                ],
+                "coupon": {
+                    "heading": "Kupon",
+                    "couponInput": "Kuponu daxil edin",
+                    "couponBtn": "Tətbiq et"
+                },
+                "repeatOrder": {
+                    "checkbox": "Bu sifarişi təkrar et",
+                    "selectValues": [
+                        {
+                            "text": "Həftədə bir dəfə",
+                            "value": "once"
+                        },
+                        {
+                            "text": "Həftədə iki dəfə",
+                            "value": "twice"
+                        }
+                    ],
+                    "hint": "Biz sizə seçiminizə görə mütəmadi olaraq qəhvə göndərəcəyik. Abunəliyi istənilən vaxt şəxsi kabinetdə ləğv edə bilərsiniz. Sifarişdən bir gün əvvəl biz sizə xatırladacağıq."
+                }
+            },
+            "orderComment": {
+                "heading": "Sifarişə şərh",
+                "commentInput": "Məlumat"
+            }
+        },
+        "ru": {
+            "head": {
+                "pageName": "Оформление заказа"
+            },
+            "authorization": {
+                "heading": "Постоянный покупатель?",
+                "paragraph": "Войдите или зарегистрируйтесь",
+                "loginBtn": "Вход",
+                "registerBtn": "Регистрация"
+            },
+            "userInfo": {
+                "heading": "Данные покупателя",
+                "nameInput": "Имя",
+                "lastNameInput": "Фамилия",
+                "emailInput": "E-mail",
+                "phoneNumberInput": "Телефон",
+                "orderTo": {
+                    "label": "Заказ на:",
+                    "content": [
+                        {
+                            "text": "Меня",
+                            "value": "me"
+                        },
+                        {
+                            "text": "Друга",
+                            "value": "friend"
+                        }
+                    ]
+                }
+            },
+            "delivery": {
+                "heading": "Доставка",
+                "deliveryDate": {
+                    "heading": "Когда доставить",
+                    "timeInput": "Время",
+                    "dateInput": "Дата"
+                },
+                "deliveryLocation": {
+                    "heading": "Куда доставить",
+                    "addressInput": "Введите адрес",
+                    "entranceInput": "Подъезд",
+                    "apartamentInput": "Квартира"
+                },
+                "chooseOnMapBtn": "Выбрать адрес на карте"
+            },
+            "orderInfo": {
+                "headings": [
+                    "Сумма заказа",
+                    "Доставка",
+                    "Скидка",
+                    "Итого"
+                ],
+                "orderBtn": "Оформить заказ",
+                "termsConditions": "Согласен с условиями обработки персональных данных, Пользовательского соглашения и Публичной оферты"
+            },
+            "cartMain": {
+                "heading": "Корзина",
+                "deliveryDetails": {
+                    "roasting": "Передаем на обжарку",
+                    "forwarding": "Отправка"
+                },
+                "orderInfo": [
+                    "Сумма заказа",
+                    "Доставка",
+                    "Скидка",
+                    "Итого"
+                ],
+                "coupon": {
+                    "heading": "Купон",
+                    "couponInput": "Введите купон",
+                    "couponBtn": "Применить"
+                },
+                "repeatOrder": {
+                    "checkbox": "Повторять этот заказ",
+                    "selectValues": [
+                        {
+                            "text": "Раз в неделю",
+                            "value": "once"
+                        },
+                        {
+                            "text": "Два раза в неделю",
+                            "value": "twice"
+                        }
+                    ],
+                    "hint": "Мы будем регулярно отправлять вам кофе по вашему выбору. Отменить подписку можно в любой момент в Личном кабинете. За день до заказа мы о нём напомним."
+                }
+            },
+            "orderComment": {
+                "heading": "Комментарий к заказу",
+                "commentInput": "Данные"
+            }
+        },
+        "en": {
+            "head": {
+                "pageName": "Placing an order"
+            },
+            "authorization": {
+                "heading": "Returning customer?",
+                "paragraph": "Log in or register",
+                "loginBtn": "Login",
+                "registerBtn": "Register"
+            },
+            "userInfo": {
+                "heading": "Customer Information",
+                "nameInput": "First Name",
+                "lastNameInput": "Last Name",
+                "emailInput": "E-mail",
+                "phoneNumberInput": "Phone Number",
+                "orderTo": {
+                    "label": "Order for:",
+                    "content": [
+                        {
+                            "text": "Me",
+                            "value": "me"
+                        },
+                        {
+                            "text": "Friend",
+                            "value": "friend"
+                        }
+                    ]
+                }
+            },
+            "delivery": {
+                "heading": "Delivery",
+                "deliveryDate": {
+                    "heading": "When to deliver",
+                    "timeInput": "Time",
+                    "dateInput": "Date"
+                },
+                "deliveryLocation": {
+                    "heading": "Where to deliver",
+                    "addressInput": "Enter address",
+                    "entranceInput": "Entrance",
+                    "apartamentInput": "Apartment"
+                },
+                "chooseOnMapBtn": "Choose address on map"
+            },
+            "orderInfo": {
+                "headings": [
+                    "Order Amount",
+                    "Delivery",
+                    "Discount",
+                    "Total"
+                ],
+                "orderBtn": "Place Order",
+                "termsConditions": "I agree to the terms of personal data processing, User Agreement and Public Offer"
+            },
+            "cartMain": {
+                "heading": "Cart",
+                "deliveryDetails": {
+                    "roasting": "Sending for roasting",
+                    "forwarding": "Forwarding"
+                },
+                "orderInfo": [
+                    "Order Amount",
+                    "Delivery",
+                    "Discount",
+                    "Total"
+                ],
+                "coupon": {
+                    "heading": "Coupon",
+                    "couponInput": "Enter coupon",
+                    "couponBtn": "Apply"
+                },
+                "repeatOrder": {
+                    "checkbox": "Repeat this order",
+                    "selectValues": [
+                        {
+                            "text": "Once a week",
+                            "value": "once"
+                        },
+                        {
+                            "text": "Twice a week",
+                            "value": "twice"
+                        }
+                    ],
+                    "hint": "We will regularly send you coffee of your choice. You can cancel the subscription at any time in the Personal Account. We will remind you about the order one day in advance."
+                }
+            },
+            "orderComment": {
+                "heading": "Order Comment",
+                "commentInput": "Data"
+            }
+        }
+    },
+    "productDetail": {
+        "az": {
+            "heading": "qəhvə",
+            "productMainInfo": {
+                "compound": {
+                    "acidity": "Turşuluq",
+                    "dencity": "Qatılıq",
+                    "sweetness": "Şirinlik"
+                },
+                "addToCartBtn": "Səbətə əlavə et"
+            },
+            "body": {
+                "navigation": {
+                    "description": "Təsvir",
+                    "delivery": "Çatdırılma",
+                    "guarantee": "Zəmanət",
+                    "keeping": "Necə saxlamalı"
+                },
+                "middlePart": {
+                    "tabs": {
+                        "about": "Məhsul haqqında",
+                        "feedbacks": "Rəylər",
+                        "recipes": "Reseptlər"
+                    }
+                },
+                "rightPart": {
+                    "roasterForRoasting": "Qovurma üçün qovurma maşını:",
+                    "roastingLevel": "Qovurma dərəcəsi:",
+                    "region": "Region:",
+                    "processingMethod": "Emal üsulu:",
+                    "grainSize": "Taxıl ölçüsü:",
+                    "growingHeight": "Böyümə hündürlüyü:",
+                    "qGrader": "Q-gradinin qiymətləndirməsi:"
+                }
+            }
+        },
+        "ru": {
+            "heading": "кофе",
+            "productMainInfo": {
+                "compound": {
+                    "acidity": "Кислотность",
+                    "dencity": "Плотность",
+                    "sweetness": "Сладость"
+                },
+                "addToCartBtn": "Добавить в корзину"
+            },
+            "body": {
+                "navigation": {
+                    "description": "Описание",
+                    "delivery": "Доставка",
+                    "guarantee": "Гарантия",
+                    "keeping": "Как хранить"
+                },
+                "middlePart": {
+                    "tabs": {
+                        "about": "О товаре",
+                        "feedbacks": "Отзывы",
+                        "recipes": "Рецепты"
+                    }
+                },
+                "rightPart": {
+                    "roasterForRoasting": "Ростер для обжарки:",
+                    "roastingLevel": "Степень обжарки:",
+                    "region": "Регион:",
+                    "processingMethod": "Способ обработки:",
+                    "grainSize": "Размер зерен:",
+                    "growingHeight": "Высота произрастания:",
+                    "qGrader": "Оценка Q-грейдера:"
+                }
+            }
+        },
+        "en": {
+            "heading": "coffee",
+            "productMainInfo": {
+                "compound": {
+                    "acidity": "Acidity",
+                    "dencity": "Density",
+                    "sweetness": "Sweetness"
+                },
+                "addToCartBtn": "Add to cart"
+            },
+            "body": {
+                "navigation": {
+                    "description": "Description",
+                    "delivery": "Delivery",
+                    "guarantee": "Guarantee",
+                    "keeping": "How to store"
+                },
+                "middlePart": {
+                    "tabs": {
+                        "about": "About the product",
+                        "feedbacks": "Reviews",
+                        "recipes": "Recipes"
+                    }
+                },
+                "rightPart": {
+                    "roasterForRoasting": "Roaster for roasting:",
+                    "roastingLevel": "Roasting level:",
+                    "region": "Region:",
+                    "processingMethod": "Processing method:",
+                    "grainSize": "Grain size:",
+                    "growingHeight": "Growing height:",
+                    "qGrader": "Q-grader rating:"
+                }
+            }
+        }
+    },
+    "interested": {
+        "az": {
+            "heading": "Sizə marağlı ola bilər"
+        },
+        "ru": {
+            "heading": "Вам будет интересно"
+        },
+        "en": {
+            "heading": "You may be interested"
         }
     },
     "filter": {
@@ -1147,6 +2198,17 @@
             "productCountFilter": {
                 "heading": 12
             }
+        }
+    },
+    "loading": {
+        "az": {
+            "text": "Məlumatlar yüklənir"
+        },
+        "ru": {
+            "text": "Происходит загрузка"
+        },
+        "en": {
+            "text": "Loading"
         }
     },
     "footer": {

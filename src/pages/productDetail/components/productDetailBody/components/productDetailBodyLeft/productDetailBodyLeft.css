@@ -1,0 +1,20 @@
+.productDetail-body_left{
+    padding-top: 115px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%;
+}
+.productDetail-body_left svg{
+    width: 17px;
+    height: 17px;
+}
+.productDetail-body_left svg path{
+    fill: #9CA3AF;
+}
+.productDetail-body_left a.active span{
+    color: #29474C !important;
+}
+.productDetail-body_left a.active svg path{
+    fill: #29474C;
+}

@@ -20,9 +20,9 @@ const HomeSubscriptions = () => {
         <div className='container'>
             <div className='homeSubscriptions-section flex border24'>
                 <div className='homeSubscriptions-left'>
-                    <h1 className='homeSubscriptions-title green800'>{body[lang]?.subscriptions.text.title}</h1>
-                    <p className='homeSubscriptions-subtitle green800'>{body[lang]?.subscriptions.text.subtitle}</p>
-                    <button className='homeSubscriptions-btn defaultBtn white f18 border16'>{body[lang]?.subscriptions.text.btn}</button>
+                    <h1 className='homeSubscriptions-title green800'>{lang ? body[lang]?.subscriptions.text.title : ''}</h1>
+                    <p className='homeSubscriptions-subtitle green800'>{lang ? body[lang]?.subscriptions.text.subtitle : ''}</p>
+                    <button className='homeSubscriptions-btn defaultBtn white f18 border16'>{lang ? body[lang]?.subscriptions.text.btn : ''}</button>
                 </div>
                 <div className='homeSubscriptions-right'>
                     <Swiper
@@ -46,7 +46,7 @@ const HomeSubscriptions = () => {
                         },
                         }}
                     >
-                        {body[lang]?.subscriptions?.list?.map((link, index) => (
+                        {lang && body[lang]?.subscriptions?.list?.map((link, index) => (
                             <SwiperSlide key={index}>
                                 <HomeSubscriptionCard content={link}/>
                             </SwiperSlide>

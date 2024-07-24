@@ -22,7 +22,7 @@ export default function HomeGuides() {
         <div className="homeGuides-content flex ">
           <div className="homeGuides-left w-100">
             <h2 className="homeGuides-title f30 green800">
-              {body[lang]?.guides?.titleLeft}
+              {lang ? body[lang]?.guides?.titleLeft : ''}
             </h2>
             <div className="homeGuides-left_content flex">
               <div className="homeGuides-left_first w-100">
@@ -41,7 +41,7 @@ export default function HomeGuides() {
           </div>
           <div className="homeGuides-right">
             <h2 className="homeGuides-title f30 green800">
-              {body[lang]?.guides?.titleRight}
+              {lang ? body[lang]?.guides?.titleRight : ''}
             </h2>
             <div className="homeGuides-right_content w-100">
                 <div>
@@ -53,7 +53,7 @@ export default function HomeGuides() {
                 <p className="f16 gray600">
                 AeroPress - это превосходная кофеварка на одну чашку, которая использует экстракцию под высоким давлением для приготовления невероятной чашки кофе.
                 </p>
-                <Link to={'/'} className='border16 white f18'> {body[lang]?.guides?.btn} </Link>
+                <Link to={'/'} className='border16 white f18'> {lang ? body[lang]?.guides?.btn : ''} </Link>
             </div>
           </div>
         </div>

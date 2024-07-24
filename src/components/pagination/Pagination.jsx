@@ -20,7 +20,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
           </button>
         );
       } else if (i === currentPage - 2 || i === currentPage + 2) {
-        pages.push(<span key={i}>...</span>);
+        pages.push(<span className='f16' key={i}>...</span>);
       }
     }
     return pages;

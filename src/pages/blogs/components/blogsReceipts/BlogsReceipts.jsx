@@ -14,8 +14,8 @@ const BlogsReceipts = () => {
     <div className='blogs'>
         <div className='container'>
             <div className='blogs-top flex j-between a-center'>
-                <div className='blogs-title f30 green800'>{body[lang]?.blogsReceipts?.title}</div>
-                <Link className='blogs-link f18 green800' to={body[lang]?.blogsReceipts?.link}>{body[lang]?.blogsReceipts?.btn}</Link>
+                <div className='blogs-title f30 green800'>{lang ? body[lang]?.blogsReceipts?.title : ''}</div>
+                <Link className='blogs-link f18 green800' to={lang ? body[lang]?.blogsReceipts?.link : ''}>{lang ? body[lang]?.blogsReceipts?.btn : ''}</Link>
             </div>
             <div className='blogs-bottom flex a-center'>
                 <BlogCard />

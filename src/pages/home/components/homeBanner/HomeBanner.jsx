@@ -23,7 +23,7 @@ export default function HomeBanner() {
     <div className="homeBanner">
       <div className="container">
         <div className="homeBanner-head">
-            <h2 className="white">{head[lang]?.title}</h2>
+            <h2 className="white">{lang ? head[lang]?.title : ''}</h2>
         </div>
         <div className="homeBanner-cards">
             <Swiper
@@ -50,7 +50,7 @@ export default function HomeBanner() {
                   },
                 }}
             >
-                {head[lang]?.links?.map((link, index) => (
+                { lang && head[lang]?.links?.map((link, index) => (
                     <SwiperSlide key={index}>
                         <HomeBannerCard content={link} />
                     </SwiperSlide>

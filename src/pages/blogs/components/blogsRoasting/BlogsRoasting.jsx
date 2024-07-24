@@ -14,8 +14,8 @@ const BlogsRoasting = () => {
     <div className='blogs'>
         <div className='container'>
             <div className='blogs-top flex j-between a-center'>
-                <div className='blogs-title f30 green800'>{body[lang]?.blogsRoasting?.title}</div>
-                <Link className='blogs-link f18 green800' to={body[lang]?.blogsRoasting?.link}>{body[lang]?.blogsRoasting?.btn}</Link>
+                <div className='blogs-title f30 green800'>{lang ? body[lang]?.blogsRoasting?.title : ''}</div>
+                <Link className='blogs-link f18 green800' to={lang ? body[lang]?.blogsRoasting?.link : ''}>{lang ? body[lang]?.blogsRoasting?.btn : ''}</Link>
             </div>
             <div className='blogs-bottom flex a-center'>
                 <BlogCard />

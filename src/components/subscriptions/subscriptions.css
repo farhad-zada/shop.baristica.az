@@ -1,5 +1,6 @@
 .homeBonuses,.homeSubscriptions{
-    margin-bottom: 48px;
+
+    margin: 48px 0;
 }
 .homeBonuses-section, .homeSubscriptions-section{
     padding: 36px;

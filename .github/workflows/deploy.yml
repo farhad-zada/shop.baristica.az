@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CI: ""
+      REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
+      PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
 
     steps:
       - name: Checkout repository

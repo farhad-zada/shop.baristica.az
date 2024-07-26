@@ -14,11 +14,39 @@ export default function CartMainProduct(props) {
 
     const { product, key, lang } = props
 
-    const [productTypes, setProductTypes] = useState([
-        { text: 'Все в зернах', value: 'all' },
-        { text: 'Пример 2', value: 'example' }
-    ])
-    
+    const [productTypes, setProductTypes] = useState({
+        "az": [
+            { "text": "Fincan üçün (orta)", "value": "forCupMiddle" },
+            { "text": "Cezvə üçün (incə)", "value": "forTurkMiddle" },
+            { "text": "French Press üçün (iri)", "value": "forFrenchPress" },
+            { "text": "Kafel kofenanı üçün (iri)", "value": "forTileMachine" },
+            { "text": "Kemeks üçün (iri)", "value": "forKemeks" },
+            { "text": "Pour Over üçün (orta)", "value": "forPourover" },
+            { "text": "AeroPress üçün (orta)", "value": "forAeropress" },
+            { "text": "Dənələrdə", "value": "forAeropress" }
+        ],
+        "en": [
+            { "text": "For cup (medium)", "value": "forCupMiddle" },
+            { "text": "For cezve (fine)", "value": "forTurkMiddle" },
+            { "text": "For French press (coarse)", "value": "forFrenchPress" },
+            { "text": "For tile coffee maker (coarse)", "value": "forTileMachine" },
+            { "text": "For Chemex (coarse)", "value": "forKemeks" },
+            { "text": "For pour over (medium)", "value": "forPourover" },
+            { "text": "For AeroPress (medium)", "value": "forAeropress" },
+            { "text": "In beans", "value": "forAeropress" }
+        ],
+        "ru": [
+            { "text": "Для чашки (средний)", "value": "forCupMiddle" },
+            { "text": "Для турки (мелкий)", "value": "forTurkMiddle" },
+            { "text": "Для френч пресса (крупный)", "value": "forFrenchPress" },
+            { "text": "Для кафельной кофеварки (крупный)", "value": "forTileMachine" },
+            { "text": "Для кемекса (крупный)", "value": "forKemeks" },
+            { "text": "Для пуровера (средний)", "value": "forPourover" },
+            { "text": "Для аэропресса (средний)", "value": "forAeropress" },
+            { "text": "В зернах", "value": "forAeropress" }
+        ]
+    })
+
 
     const dispatch = useDispatch()
 
@@ -80,7 +108,7 @@ export default function CartMainProduct(props) {
 
             <div className="cartMain-product_body mt12 flex j-between">
                 <div className="cartMain-product_type w-48">
-                    <CustomSelect options={productTypes} onOptionSelect={handleOptionSelect} />
+                    <CustomSelect options={lang ? productTypes[lang] : []} onOptionSelect={handleOptionSelect} />
                 </div>
                 <div className="cartMain-product_counter">
                     <CustomCounter initialValue={product?.cartCount} onChange={handleCounterChange} />

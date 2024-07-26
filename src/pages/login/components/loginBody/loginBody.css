@@ -52,3 +52,12 @@
 .enterByEmailBtn{
     padding-top: 24px;
 }
+.hintMessage{
+    display: none;
+    color: red;
+    font-weight: 600;
+    margin: 15px 0;
+}
+.hintMessage.active{
+    display: block;
+}

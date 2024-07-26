@@ -1,10 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  token: '',
   lang: "",
   compareProducts: [],
   favoritesProducts: [],
-  cartProducts: []
+  cartProducts: [],
+  user: {}
 };
 
 const baristicaSlice = createSlice({
@@ -14,13 +16,18 @@ const baristicaSlice = createSlice({
     setLang: (state, action) => {
       state.lang = action.payload;
     },
-    
+    setToken: (state, action) => {
+      state.token = action.payload
+    },
+    setUser: (state, action) => {
+      state.user = action.payload
+    },
     setCart: (state, action) => {
       state.cartProducts = action.payload
     },
 
     setFavorites: (state, action) => {
-      state.compareProducts = action.payload
+      state.favoritesProducts = action.payload
     },
     changeFavorites: (state, action) => {
       const { payload } = action
@@ -59,5 +66,5 @@ const baristicaSlice = createSlice({
   },
 });
 
-export const { setLang, setCompare, changeCompare, setCart } = baristicaSlice.actions;
+export const { setLang, setCompare, changeCompare, setCart, setToken, setUser } = baristicaSlice.actions;
 export default baristicaSlice.reducer;

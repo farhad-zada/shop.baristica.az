@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../src/assets/css/main.css";
 import AppRoutes from "./AppRoutes";
@@ -10,15 +10,29 @@ import Footer from "./components/layout/footer/Footer";
 import { addCart } from "./utils/cartActions/cartActions";
 
 
-import { setCart, setCompare, setLang } from "./redux/slice";
+import { setCart, setCompare, setLang, setToken, setUser } from "./redux/slice";
 import { addCompare } from "./utils/compare/compare.util";
+import UsersService from "./services/users.service";
+import Loading from "./components/loading/Loading";
 
 function App() {
-  const { lang } = useSelector((state) => state.baristica);
-
-
-
+  const { lang, token } = useSelector((state) => state.baristica);
+  const [loading, setLoading] = useState(false)
   const dispatch = useDispatch()
+
+  const usersService = new UsersService()
+
+  const getUser = async (token) => {
+    setLoading(state => state = true)
+    try {
+      const response = await usersService.getUserInfo(token)
+      dispatch(setUser(response.data))
+      setLoading(state => state = false)
+
+    } catch (error) {
+      setLoading(state => state = false)
+    }
+  }
 
 
   useEffect(() => {
@@ -30,6 +44,11 @@ function App() {
       return;
     }
     dispatch(setLang(lang));
+    //add token
+    const token = localStorage.getItem('baristicaToken')
+    if (token) {
+      dispatch(setToken(token))
+    }
     // set cart array to storage
     const cart = addCart()
     dispatch(setCart(JSON.parse(cart)))
@@ -42,12 +61,19 @@ function App() {
     addCompare()
   }, []);
 
+  useEffect(() => {
+    if (token) {
+      getUser(token)
+    }
+  }, [token])
+
   return (
     <div className="App">
+      <Loading status={loading} />
       <HeadBanner />
       <SubHeader />
       <Header />
-      <AppRoutes />
+      <AppRoutes token={token} />
       <Footer />
     </div>
   );

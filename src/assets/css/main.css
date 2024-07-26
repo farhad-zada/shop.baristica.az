@@ -134,7 +134,9 @@
   .mt12{
     margin-top: 12px;
   }
-
+  .mt15{
+    margin-top: 15px;
+  }
   .reversed-row{
     flex-direction: row-reverse;
   }

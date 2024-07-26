@@ -96,15 +96,18 @@
         "profileDropdown": {
             "az": {
                 "myProfileBtn": "Mənim profilim",
-                "logoutBtn": "Çıxış et"
+                "logoutBtn": "Çıxış et",
+                "login":"Daxil ol"
             },
             "ru": {
                 "myProfileBtn": "Мой профиль",
-                "logoutBtn": "Выйти из профиля"
+                "logoutBtn": "Выйти из профиля",
+                "login":"Войти"
             },
             "en": {
                 "myProfileBtn": "My profile",
-                "logoutBtn": "Logout"
+                "logoutBtn": "Logout",
+                "login":"Sign in"
             }
         }
     },
@@ -903,9 +906,12 @@
                         "phone": "Telefon nömrə"
                     },
                     "registration": {
+                        "name": "Ad",
+                        "lastName": "Soyad",
                         "email": "E-poçtunuzu daxil edin",
                         "password": "Şifrə yaradın",
                         "password2": "Şifrəni təsdiq edin",
+                        "phone": "Telefon nömrə",
                         "btn": "Hesab yarat",
                         "backToLogin": "Mövcud hesaba daxil olun"
                     }
@@ -927,9 +933,12 @@
                         "phone": "Телефон"
                     },
                     "registration": {
+                        "name": "Имя",
+                        "lastName": "Фамилия",
                         "email": "Укажите ваш e-mail",
                         "password": "Придумайте пароль",
                         "password2": "Подтвердите пароль",
+                        "phone": "Телефон",
                         "btn": "Создать аккаунт",
                         "backToLogin": "Войти в существующий аккаунт"
                     }
@@ -951,9 +960,12 @@
                         "phone": "Phone number"
                     },
                     "registration": {
+                        "name": "Name",
+                        "lastName": "Last name",
                         "email": "Enter your email",
                         "password": "Create a password",
                         "password2": "Confirm the password",
+                        "phone": "Phone number",
                         "btn": "Create an account",
                         "backToLogin": "Login to existing account"
                     }
@@ -1100,11 +1112,6 @@
                         "link": "/profileInner"
                     },
                     {
-                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyMCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuNSA0MEw2LjYgMzMuM0wxLjE1IDI5LjI1SDcuOUw5LjE1IDI0LjRMMCAxOS4wNVYwSDIwVjE5LjA1TDEwLjggMjQuNEwxMi4xIDI5LjI1SDE4LjhMMTMuMzUgMzMuM0wxNS40NSA0MEwxMCAzNS45NUw0LjUgNDBaTTMgM1YxNy4zNUw4LjcgMjAuNVYzSDNaTTE3IDNIMTEuN1YyMC41TDE3IDE3LjNWM1oiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
-                        "title": "Endirim Sistemi",
-                        "link": "/discount_system"
-                    },
-                    {
                         "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyLjIgMzAuOUwyOS4yIDIzLjlDMjkuNTY2NyAyMy41MzMzIDI5LjgzMzMgMjMuMTI1IDMwIDIyLjY3NUMzMC4xNjY3IDIyLjIyNSAzMC4yNSAyMS43NSAzMC4yNSAyMS4yNUMzMC4yNSAyMC4xODMzIDI5Ljg3NSAxOS4yNzUgMjkuMTI1IDE4LjUyNUMyOC4zNzUgMTcuNzc1IDI3LjQ2NjcgMTcuNCAyNi40IDE3LjRDMjUuNzMzMyAxNy40IDI1LjA2NjcgMTcuNjE2NyAyNC40IDE4LjA1QzIzLjczMzMgMTguNDgzMyAyMyAxOS4xODMzIDIyLjIgMjAuMTVDMjEuNCAxOS4xODMzIDIwLjY2NjcgMTguNDgzMyAyMCAxOC4wNUMxOS4zMzMzIDE3LjYxNjcgMTguNjY2NyAxNy40IDE4IDE3LjRDMTYuOTMzMyAxNy40IDE2LjAyNSAxNy43NzUgMTUuMjc1IDE4LjUyNUMxNC41MjUgMTkuMjc1IDE0LjE1IDIwLjE4MzMgMTQuMTUgMjEuMjVDMTQuMTUgMjEuNzUgMTQuMjMzMyAyMi4yMjUgMTQuNCAyMi42NzVDMTQuNTY2NyAyMy4xMjUgMTQuODMzMyAyMy41MzMzIDE1LjIgMjMuOUwyMi4yIDMwLjlaTTIxLjggNDEuM0wwIDE5LjU1VjBIMTkuNjVMNDEuNCAyMS43TDIxLjggNDEuM1pNMjEuOCAzN0wzNyAyMS44TDE4LjIgM0gzVjE4LjJMMjEuOCAzN1pNOC4yNSAxMC44QzguOTUgMTAuOCA5LjU1ODMzIDEwLjU0MTcgMTAuMDc1IDEwLjAyNUMxMC41OTE3IDkuNTA4MzMgMTAuODUgOC45IDEwLjg1IDguMkMxMC44NSA3LjUgMTAuNTkxNyA2Ljg5MTY3IDEwLjA3NSA2LjM3NUM5LjU1ODMzIDUuODU4MzMgOC45NSA1LjYgOC4yNSA1LjZDNy41NSA1LjYgNi45NDE2NyA1Ljg1ODMzIDYuNDI1IDYuMzc1QzUuOTA4MzMgNi44OTE2NyA1LjY1IDcuNSA1LjY1IDguMkM1LjY1IDguOSA1LjkwODMzIDkuNTA4MzMgNi40MjUgMTAuMDI1QzYuOTQxNjcgMTAuNTQxNyA3LjU1IDEwLjggOC4yNSAxMC44WiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
                         "title": "Abunəlik",
                         "link": "/subscription"
@@ -1134,11 +1141,6 @@
                         "link": "/profileInner"
                     },
                     {
-                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyMCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuNSA0MEw2LjYgMzMuM0wxLjE1IDI5LjI1SDcuOUw5LjE1IDI0LjRMMCAxOS4wNVYwSDIwVjE5LjA1TDEwLjggMjQuNEwxMi4xIDI5LjI1SDE4LjhMMTMuMzUgMzMuM0wxNS40NSA0MEwxMCAzNS45NUw0LjUgNDBaTTMgM1YxNy4zNUw4LjcgMjAuNVYzSDNaTTE3IDNIMTEuN1YyMC41TDE3IDE3LjNWM1oiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
-                        "title": "Система скидок",
-                        "link": "/discount_system"
-                    },
-                    {
                         "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyLjIgMzAuOUwyOS4yIDIzLjlDMjkuNTY2NyAyMy41MzMzIDI5LjgzMzMgMjMuMTI1IDMwIDIyLjY3NUMzMC4xNjY3IDIyLjIyNSAzMC4yNSAyMS43NSAzMC4yNSAyMS4yNUMzMC4yNSAyMC4xODMzIDI5Ljg3NSAxOS4yNzUgMjkuMTI1IDE4LjUyNUMyOC4zNzUgMTcuNzc1IDI3LjQ2NjcgMTcuNCAyNi40IDE3LjRDMjUuNzMzMyAxNy40IDI1LjA2NjcgMTcuNjE2NyAyNC40IDE4LjA1QzIzLjczMzMgMTguNDgzMyAyMyAxOS4xODMzIDIyLjIgMjAuMTVDMjEuNCAxOS4xODMzIDIwLjY2NjcgMTguNDgzMyAyMCAxOC4wNUMxOS4zMzMzIDE3LjYxNjcgMTguNjY2NyAxNy40IDE4IDE3LjRDMTYuOTMzMyAxNy40IDE2LjAyNSAxNy43NzUgMTUuMjc1IDE4LjUyNUMxNC41MjUgMTkuMjc1IDE0LjE1IDIwLjE4MzMgMTQuMTUgMjEuMjVDMTQuMTUgMjEuNzUgMTQuMjMzMyAyMi4yMjUgMTQuNCAyMi42NzVDMTQuNTY2NyAyMy4xMjUgMTQuODMzMyAyMy41MzMzIDE1LjIgMjMuOUwyMi4yIDMwLjlaTTIxLjggNDEuM0wwIDE5LjU1VjBIMTkuNjVMNDEuNCAyMS43TDIxLjggNDEuM1pNMjEuOCAzN0wzNyAyMS44TDE4LjIgM0gzVjE4LjJMMjEuOCAzN1pNOC4yNSAxMC44QzguOTUgMTAuOCA5LjU1ODMzIDEwLjU0MTcgMTAuMDc1IDEwLjAyNUMxMC41OTE3IDkuNTA4MzMgMTAuODUgOC45IDEwLjg1IDguMkMxMC44NSA3LjUgMTAuNTkxNyA2Ljg5MTY3IDEwLjA3NSA2LjM3NUM5LjU1ODMzIDUuODU4MzMgOC45NSA1LjYgOC4yNSA1LjZDNy41NSA1LjYgNi45NDE2NyA1Ljg1ODMzIDYuNDI1IDYuMzc1QzUuOTA4MzMgNi44OTE2NyA1LjY1IDcuNSA1LjY1IDguMkM1LjY1IDguOSA1LjkwODMzIDkuNTA4MzMgNi40MjUgMTAuMDI1QzYuOTQxNjcgMTAuNTQxNyA3LjU1IDEwLjggOC4yNSAxMC44WiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",
                         "title": "Подписка",
                         "link": "/subscription"
@@ -1166,11 +1168,6 @@
                         "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCA0NCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyIDIxLjM1QzIzIDIwLjUxNjcgMjMuODc1IDE5LjcgMjQuNjI1IDE4LjlDMjUuMzc1IDE4LjEgMjYgMTcuMzI1IDI2LjUgMTYuNTc1QzI3IDE1LjgyNSAyNy4zNzUgMTUuMTA4MyAyNy42MjUgMTQuNDI1QzI3Ljg3NSAxMy43NDE3IDI4IDEzLjEgMjggMTIuNUMyOCAxMC44MzMzIDI3LjQxNjcgOS40MTY2NyAyNi4yNSA4LjI1QzI1LjA4MzMgNy4wODMzMyAyMy42NjY3IDYuNSAyMiA2LjVDMjAuMzMzMyA2LjUgMTguOTE2NyA3LjA4MzMzIDE3Ljc1IDguMjVDMTYuNTgzMyA5LjQxNjY3IDE2IDEwLjgzMzMgMTYgMTIuNUMxNiAxMy4yNjY3IDE2LjEyNSAxNC4wMDgzIDE2LjM3NSAxNC43MjVDMTYuNjI1IDE1LjQ0MTcgMTcgMTYuMTUgMTcuNSAxNi44NUMxOCAxNy41NSAxOC42MjUgMTguMjY2NyAxOS4zNzUgMTlDMjAuMTI1IDE5LjczMzMgMjEgMjAuNTE2NyAyMiAyMS4zNVpNMjIgMTRDMjEuNDMzMyAxNCAyMC45NTgzIDEzLjgwODMgMjAuNTc1IDEzLjQyNUMyMC4xOTE3IDEzLjA0MTcgMjAgMTIuNTY2NyAyMCAxMkMyMCAxMS40MzMzIDIwLjE5MTcgMTAuOTU4MyAyMC41NzUgMTAuNTc1QzIwLjk1ODMgMTAuMTkxNyAyMS40MzMzIDEwIDIyIDEwQzIyLjU2NjcgMTAgMjMuMDQxNyAxMC4xOTE3IDIzLjQyNSAxMC41NzVDMjMuODA4MyAxMC45NTgzIDI0IDExLjQzMzMgMjQgMTJDMjQgMTIuNTY2NyAyMy44MDgzIDEzLjA0MTcgMjMuNDI1IDEzLjQyNUMyMy4wNDE3IDEzLjgwODMgMjIuNTY2NyAxNCAyMiAxNFpNMTQgMjhDMTAuMSAyOCA2Ljc5MTY3IDI2LjY0MTcgNC4wNzUgMjMuOTI1QzEuMzU4MzMgMjEuMjA4MyAwIDE3LjkgMCAxNEMwIDEwLjEgMS4zNTgzMyA2Ljc5MTY3IDQuMDc1IDQuMDc1QzYuNzkxNjcgMS4zNTgzMyAxMC4xIDAgMTQgMEgzMEMzMy45IDAgMzcuMjA4MyAxLjM1ODMzIDM5LjkyNSA0LjA3NUM0Mi42NDE3IDYuNzkxNjcgNDQgMTAuMSA0NCAxNEM0NCAxNy45IDQyLjY0MTcgMjEuMjA4MyAzOS45MjUgMjMuOTI1QzM3LjIwODMgMjYuNjQxNyAzMy45IDI4IDMwIDI4SDE0Wk0xNCAyNUgzMEMzMy4wMzMzIDI1IDM1LjYyNSAyMy45MjUgMzcuNzc1IDIxLjc3NUMzOS45MjUgMTkuNjI1IDQxIDE3LjAzMzMgNDEgMTRDNDEgMTAuOTY2NyAzOS45MjUgOC4zNzUgMzcuNzc1IDYuMjI1QzM1LjYyNSA0LjA3NSAzMy4wMzMzIDMgMzAgM0gxNEMxMC45NjY3IDMgOC4zNzUgNC4wNzUgNi4yMjUgNi4yMjVDNC4wNzUgOC4zNzUgMyAxMC45NjY3IDMgMTRDMyAxNy4wMzMzIDQuMDc1IDE5LjYyNSA2LjIyNSAyMS43NzVDOC4zNzUgMjMuOTI1IDEwLjk2NjcgMjUgMTQgMjVaIiBmaWxsPSIjMjk0NzRDIi8+Cjwvc3ZnPgo=",
                         "title": "My Addresses",
                         "link": "/profileInner"
-                    },
-                    {
-                        "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyMCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuNSA0MEw2LjYgMzMuM0wxLjE1IDI5LjI1SDcuOUw5LjE1IDI0LjRMMCAxOS4wNVYwSDIwVjE5LjA1TDEwLjggMjQuNEwxMi4xIDI5LjI1SDE4LjhMMTMuMzUgMzMuM0wxNS40NSA0MEwxMCAzNS45NUw0LjUgNDBaTTMgM1YxNy4zNUw4LjcgMjAuNVYzSDNaTTE3IDNIMTEuN1YyMC41TDE3IDE3LjNWM1oiIGZpbGw9IiMyOTQ3NEMiLz4KPC9zdmc+Cg==",
-                        "title": "Discount System",
-                        "link": "/discount_system"
                     },
                     {
                         "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyLjIgMzAuOUwyOS4yIDIzLjlDMjkuNTY2NyAyMy41MzMzIDI5LjgzMzMgMjMuMTI1IDMwIDIyLjY3NUMzMC4xNjY3IDIyLjIyNSAzMC4yNSAyMS43NSAzMC4yNSAyMS4yNUMzMC4yNSAyMC4xODMzIDI5Ljg3NSAxOS4yNzUgMjkuMTI1IDE4LjUyNUMyOC4zNzUgMTcuNzc1IDI3LjQ2NjcgMTcuNCAyNi40IDE3LjRDMjUuNzMzMyAxNy40IDI1LjA2NjcgMTcuNjE2NyAyNC40IDE4LjA1QzIzLjczMzMgMTguNDgzMyAyMyAxOS4xODMzIDIyLjIgMjAuMTVDMjEuNCAxOS4xODMzIDIwLjY2NjcgMTguNDgzMyAyMCAxOC4wNUMxOS4zMzMzIDE3LjYxNjcgMTguNjY2NyAxNy40IDE4IDE3LjRDMTYuOTMzMyAxNy40IDE2LjAyNSAxNy43NzUgMTUuMjc1IDE4LjUyNUMxNC41MjUgMTkuMjc1IDE0LjE1IDIwLjE4MzMgMTQuMTUgMjEuMjVDMTQuMTUgMjEuNzUgMTQuMjMzMyAyMi4yMjUgMTQuNCAyMi42NzVDMTQuNTY2NyAyMy4xMjUgMTQuODMzMyAyMy41MzMzIDE1LjIgMjMuOUwyMi4yIDMwLjlaTTIxLjggNDEuM0wwIDE5LjU1VjBIMTkuNjVMNDEuNCAyMS43TDIxLjggNDEuM1pNMjEuOCAzN0wzNyAyMS44TDE4LjIgM0gzVjE4LjJMMjEuOCAzN1pNOC4yNSAxMC44QzguOTUgMTAuOCA5LjU1ODMzIDEwLjU0MTcgMTAuMDc1IDEwLjAyNUMxMC41OTE3IDkuNTA4MzMgMTAuODUgOC45IDEwLjg1IDguMkMxMC44NSA3LjUgMTAuNTkxNyA2Ljg5MTY3IDEwLjA3NSA2LjM3NUM5LjU1ODMzIDUuODU4MzMgOC45NSA1LjYgOC4yNSA1LjZDNy41NSA1LjYgNi45NDE2NyA1Ljg1ODMzIDYuNDI1IDYuMzc1QzUuOTA4MzMgNi44OTE2NyA1LjY1IDcuNSA1LjY1IDguMkM1LjY1IDguOSA1LjkwODMzIDkuNTA4MzMgNi40MjUgMTAuMDI1QzYuOTQxNjcgMTAuNTQxNyA3LjU1IDEwLjggOC4yNSAxMC44WiIgZmlsbD0iIzI5NDc0QyIvPgo8L3N2Zz4K",

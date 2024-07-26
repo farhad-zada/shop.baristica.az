@@ -21,7 +21,7 @@ const { body } = home;
 
 export default function ProductCard(props) {
     const { favorite, product } = props
-    const { lang } = useSelector((state) => state.baristica);
+    const { lang, token } = useSelector((state) => state.baristica);
 
     const [productForCart, setProductForCart] = useState({ ...product, cartCount: 1 })
 
@@ -70,9 +70,16 @@ export default function ProductCard(props) {
                     <span onClick={(e) => addToCompare(e)} className='pointer'>
                         <img src={CompareIcon} alt="" />
                     </span>
-                    <span className={favorite ? 'productCard-favorite_icon pointer active' : 'productCard-favorite_icon pointer'}>
-                        <img src={FavoritesIcon} alt="" />
-                    </span>
+                    {
+                        token
+                            ?
+                            <span className={favorite ? 'productCard-favorite_icon pointer active' : 'productCard-favorite_icon pointer'}>
+                                <img src={FavoritesIcon} alt="" />
+                            </span>
+                            :
+                            <></>
+                    }
+
                 </div>
             </div>
 
@@ -112,7 +119,7 @@ export default function ProductCard(props) {
                 </div>
             </div>
 
-            <div className="productCard-foot flex a-center" onClick={(e) => {e.stopPropagation()}}>
+            <div className="productCard-foot flex a-center" onClick={(e) => { e.stopPropagation() }}>
                 <button type='button' className="add-to_cart flex a-center white f16" onClick={(e) => dispatchCart(e, { ...productForCart, selectedOption: selectedOption })}>
                     {CartIcon}
                     <span >{body[lang]?.products?.btn}</span>

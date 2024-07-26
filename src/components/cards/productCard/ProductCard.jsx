@@ -84,7 +84,7 @@ export default function ProductCard(props) {
             </div>
 
             <div className="productCard-img flex a-center j-center">
-                <img src={product?.image} alt="" />
+                <img src={selectedOption?.image} alt="" />
             </div>
 
             <div className="productCard-body">

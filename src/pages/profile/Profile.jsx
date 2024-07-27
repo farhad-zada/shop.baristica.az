@@ -4,7 +4,7 @@ import "./profile.css"
 import { useSelector } from 'react-redux'
 
 const Profile = () => {
-  const { user } = useSelector((state) => state.baristica);
+  const { user,token } = useSelector((state) => state.baristica);
 
   return (
     <div className='profile'>

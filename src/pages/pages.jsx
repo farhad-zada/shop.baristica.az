@@ -11,6 +11,8 @@ import Profile from './profile/Profile'
 import ProfileInner from './profile/components/profileInner/ProfileInner'
 import Cart from './cart/Cart'
 import ProductDetail from './productDetail/ProductDetail'
+import Cancel from './cancel/Cancel'
+import Success from './success/Success'
 
 export const HomePage = () => {
     return (
@@ -81,5 +83,17 @@ export const ProfileInnerPage = () => {
 export const ProductDetailPage = () => {
     return (
         <ProductDetail />
+    )
+}
+
+export const CancelPage = () => {
+    return (
+        <Cancel />
+    )
+}
+
+export const SuccessPage = () => {
+    return (
+        <Success />
     )
 }

@@ -97,17 +97,17 @@
             "az": {
                 "myProfileBtn": "Mənim profilim",
                 "logoutBtn": "Çıxış et",
-                "login":"Daxil ol"
+                "login": "Daxil ol"
             },
             "ru": {
                 "myProfileBtn": "Мой профиль",
                 "logoutBtn": "Выйти из профиля",
-                "login":"Войти"
+                "login": "Войти"
             },
             "en": {
                 "myProfileBtn": "My profile",
                 "logoutBtn": "Logout",
-                "login":"Sign in"
+                "login": "Sign in"
             }
         }
     },
@@ -1686,7 +1686,7 @@
                 "lastNameInput": "Soyad",
                 "emailInput": "E-mail",
                 "phoneNumberInput": "Telefon",
-                "orderTo": {
+                "orderFor": {
                     "label": "Sifariş:",
                     "content": [
                         {
@@ -1705,6 +1705,8 @@
                 "deliveryDate": {
                     "heading": "Nə vaxt çatdırmaq",
                     "timeInput": "Vaxt",
+                    "from":"From",
+                    "to": "To",
                     "dateInput": "Tarix"
                 },
                 "deliveryLocation": {
@@ -1778,7 +1780,7 @@
                 "lastNameInput": "Фамилия",
                 "emailInput": "E-mail",
                 "phoneNumberInput": "Телефон",
-                "orderTo": {
+                "orderFor": {
                     "label": "Заказ на:",
                     "content": [
                         {
@@ -1796,6 +1798,8 @@
                 "heading": "Доставка",
                 "deliveryDate": {
                     "heading": "Когда доставить",
+                    "from":"С",
+                    "to": "До",
                     "timeInput": "Время",
                     "dateInput": "Дата"
                 },
@@ -1870,7 +1874,7 @@
                 "lastNameInput": "Last Name",
                 "emailInput": "E-mail",
                 "phoneNumberInput": "Phone Number",
-                "orderTo": {
+                "orderFor": {
                     "label": "Order for:",
                     "content": [
                         {
@@ -1889,6 +1893,8 @@
                 "deliveryDate": {
                     "heading": "When to deliver",
                     "timeInput": "Time",
+                    "from":"From",
+                    "to": "To",
                     "dateInput": "Date"
                 },
                 "deliveryLocation": {
@@ -2511,6 +2517,43 @@
                     "link": "/offer"
                 }
             ]
+        }
+    },
+    "cancel": {
+        "az": {
+            "heading": "Ödənişiniz uğursuzdu",
+            "paragraph": "Səbəb: Balansınızda kifayət qədər vefait yoxdur",
+            "repeatBtn": "Təkrar et",
+            "toHome": "Ana səhifə"
+        },
+        "ru": {
+            "heading": "Платёж не прошел",
+            "paragraph": "Причина: Недостаточно средств на карте",
+            "repeatBtn": "Повторить платёж",
+            "toHome": "На главную"
+        },
+        "en": {
+            "heading": "Ödənişiniz uğursuzdu",
+            "paragraph": "Причина: Недостаточно средств на карте",
+            "repeatBtn": "Repeat payment",
+            "toHome": "Home"
+        }
+    },
+    "success": {
+        "az": {
+            "heading": "ÖDƏMƏ UĞURLA HƏYATA KEÇİRİLDİ",
+            "paragraph": "Çox tezliklə sifarişinizi emal edəcəyik və ən qısa zamanda sizinlə əlaqə saxlayacağıq",
+            "toHome": "Ana səhifə"
+        },
+        "ru": {
+            "heading": "ОПЛАТА ПРОВЕДЕНА УСПЕШНО",
+            "paragraph": "Очень скоро мы обработаем ваш заказ и свяжемся с вами в ближайшее время",
+            "toHome": "На главную"
+        },
+        "en": {
+            "heading": "PAYMENT SUCCESSFUL",
+            "paragraph": "We will process your order very soon and contact you shortly",
+            "toHome": "Home"
         }
     }
 }

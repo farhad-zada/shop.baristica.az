@@ -16,6 +16,7 @@ import { changeCompare, changeFavorites, setCart } from '../../../redux/slice'
 import { useNavigate } from 'react-router-dom'
 import { OptionsBlock } from './components/OptionsBlock'
 import FavoritesService from '../../../services/favories.service'
+import Loading from '../../loading/Loading'
 
 const { home } = PagesText;
 const { body } = home;
@@ -25,13 +26,13 @@ export default function ProductCard(props) {
     const { lang, token, favoritesProducts } = useSelector((state) => state.baristica);
 
     const [productForCart, setProductForCart] = useState({ ...product, cartCount: 1 })
-
+    const [loading, setLoading] = useState(false)
     const [options, setOptions] = useState(product?.options)
     const [selectedOption, setSelectedOption] = useState(null)
     const [price, setPrice] = useState(0)
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    
+
     const favoritesService = new FavoritesService()
 
     const counter = (e, type) => {
@@ -61,16 +62,32 @@ export default function ProductCard(props) {
     }
 
     const postFavorite = async (product) => {
+        setLoading(true)
         try {
             const response = await favoritesService.postFavorite(token, product._id)
-            console.log(response)
+            setLoading(false)
         } catch (error) {
-            
+            setLoading(false)
+        }
+    }
+
+    const deleteFavorite = async (product) => {
+        setLoading(true)
+        try {
+            const response = await favoritesService.deleteFavorite(token, product._id)
+            setLoading(false)
+        } catch (error) {
+            setLoading(false)
         }
     }
 
     const setFavorites = (e, product) => {
         e.stopPropagation();
+        if (!product?.favorited) {
+            postFavorite(product)
+        } else {
+            deleteFavorite(product)
+        }
         dispatch(changeFavorites(product));
 
         if (setProducts) {
@@ -78,14 +95,11 @@ export default function ProductCard(props) {
                 el._id === product._id ? { ...el, favorited: !el.favorited } : el
             ));
         }
-        if(!product?.favorited){
-            postFavorite(product)
-        }
     };
 
     return (
         <div className='productCard pointer' onClick={() => { navigate(`/products/${product?._id}`) }}>
-
+            <Loading status={loading} />
             <div className="productCard-head flex j-between a-center">
                 <div className="productCard-info flex a-center">
 
@@ -125,9 +139,9 @@ export default function ProductCard(props) {
 
                 <h3 className='blueAccent f18'>для эспрессо</h3>
                 {/* product name  */}
-                <h2 className='green800 f20'>{product?.name[lang]}</h2>
+                <h2 className='green800 f20'>{product?.name[lang] ? product?.name[lang] : ''}</h2>
                 {/* product description  */}
-                <p className='gray600 f16'>{product?.description[lang]}</p>
+                <p className='gray600 f16'>{product?.description[lang] ? product?.description[lang] : ''}</p>
                 {/* actual price  */}
                 {
                     product?.discount > 0

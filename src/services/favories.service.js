@@ -13,7 +13,13 @@ class FavoritesService {
         httpRequest.headers = {
             Authorization: "Bearer " + token,
         };
-        return await httpRequest.getAll(`${this.#requestUrl}/${id}`);
+        return await httpRequest.post(`${this.#requestUrl}/${id}`);
+    }
+    deleteFavorite = async (token,id) => {
+        httpRequest.headers = {
+            Authorization: "Bearer " + token,
+        };
+        return await httpRequest.deleteOne(`${this.#requestUrl}`, id);
     }
 }
 

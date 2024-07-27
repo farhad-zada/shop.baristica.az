@@ -7,10 +7,11 @@ import CatalogHead from './components/catalogHead/CatalogHead'
 
 import ProductsService from '../../services/products.service'
 import Loading from '../../components/loading/Loading'
+import { useSelector } from 'react-redux'
 
 const { catalog } = PageText
 export default function Catalog() {
-
+  
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(false)
 
@@ -19,7 +20,8 @@ export default function Catalog() {
   const getProducts = async () => {
     setLoading(state => state = true)
     try {
-      const response = await productsService.getProducts()
+      const token = localStorage.getItem('baristicaToken')
+      const response = await productsService.getProducts(token)
       setProducts(response.data)
       setLoading(state => state = false)
     } catch (error) {

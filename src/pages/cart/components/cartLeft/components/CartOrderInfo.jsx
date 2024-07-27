@@ -3,10 +3,11 @@ import React, { useState } from 'react'
 import { RocketIcon } from '../../../../../assets/images/icons/icons'
 import { Link } from 'react-router-dom'
 import CustomCheckbox from '../../../../../components/form/customCheckbox/CustomCheckBox'
+import { calculateTotalDiscount, calculateTotalPrice } from '../../../../../utils/price/price';
 
 export default function CartOrderInfo(props) {
   const [checked, setChecked] = useState(false);
-  const { info } = props
+  const { info, cart } = props
 
   const handleCheckboxChange = () => {
     setChecked(!checked);
@@ -27,17 +28,17 @@ export default function CartOrderInfo(props) {
           }
         </ul>
         <ul className="cartOrder-info_values flex column">
-          <li className='white f20'>40 AZN</li>
+          <li className='white f20'>{calculateTotalPrice(cart)?.toFixed(2)} AZN</li>
           <li className='white f20'>Бесплатно</li>
-          <li className='white f20'>0 AZN</li>
-          <li className='white f20'>40 AZN</li>
+          <li className='white f20'>{calculateTotalDiscount(cart)?.toFixed(2)} AZN</li>
+          <li className='white f20'>{(calculateTotalPrice(cart) - calculateTotalDiscount(cart))?.toFixed(2)} AZN</li>
         </ul>
       </div>
 
       <div className="cartOrder-info_orderBtn">
         <Link className='flex a-center j-center f20 green800 border20' to={''}>
           {RocketIcon}
-          <span>{info.orderBtn} - 40 AZN</span>
+          <span>{info.orderBtn} - {(calculateTotalPrice(cart) - calculateTotalDiscount(cart))?.toFixed(2)} AZN</span>
         </Link>
       </div>
 

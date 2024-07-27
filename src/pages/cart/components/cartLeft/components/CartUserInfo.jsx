@@ -19,18 +19,18 @@ export default function CartUserInfo(props) {
 
     const handleOptionSelect = (value) => {
         setCartUserInfo((state) => {
-            return { ...state, orderTo: value }
+            return { ...state, orderFor: value }
         })
     };
 
     useEffect(() => {
-        if (user && cartUserInfo.orderTo === 'me') {
+        if (user && cartUserInfo.orderFor === 'me') {
             setCartUserInfo({
                 name: user?.name,
                 lastName: user?.lastName ? user?.lastName : '',
                 email: user?.email ? user?.email : '',
-                phoneNumber: user?.phone ? user?.phone : '',
-                orderTo: 'me'
+                phone: user?.phone ? user?.phone : '',
+                orderFor: 'me'
             })
         }
     }, [user])
@@ -85,16 +85,16 @@ export default function CartUserInfo(props) {
 
                         <div className="w-48 mt12">
                             <CustomInput
-                                name='phoneNumber'
+                                name='phone'
                                 placeholder={info?.phoneNumberInput}
                                 onChange={onInputChange}
-                                value={cartUserInfo?.phoneNumber}
+                                value={cartUserInfo?.phone}
                             />
                         </div>
 
                         <div className="cartUser-info_form-select flex a-center">
-                            <span className='f20 green800'>{info?.orderTo?.label}</span>
-                            <CustomSelect options={info?.orderTo?.content} onOptionSelect={handleOptionSelect} />
+                            <span className='f20 green800'>{info?.orderFor?.label}</span>
+                            <CustomSelect options={info?.orderFor?.content} onOptionSelect={handleOptionSelect} />
                         </div>
                     </div>
                     :

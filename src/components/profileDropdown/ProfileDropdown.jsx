@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import './profileDropdown.css'
 import PagesText from "../../content/PagesText.json";
@@ -13,12 +13,14 @@ export default function ProfileDropdown(props) {
     const { lang, token } = useSelector((state) => state.baristica);
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const logout = () => {
         localStorage.setItem('baristicaToken', '')
         dispatch(setToken(''))
         dispatch(setUser(null))
         setStatus(false)
+        navigate('/')
     }
 
     return (

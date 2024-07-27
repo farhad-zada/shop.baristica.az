@@ -13,6 +13,7 @@ export default function CartDelivery(props) {
         setCartUserInfo((state) => {
             return { ...state, [name]: value }
         })
+
     }
     return (
         <div className='cartDelivery border24 cartActions'>
@@ -38,23 +39,36 @@ export default function CartDelivery(props) {
                             {info?.deliveryDate?.heading}
                         </h3>
                         {/* delivery date  */}
-                        <div className="flex j-between w-100">
+                        <div className="flex j-between wrap w-100">
                             {/* fix  */}
-                            <div className="w-48">
+                            <div className="w-48 flex column g8">
+                                <label className='green800 f20'>{info?.deliveryDate?.from}</label>
                                 <CustomInput
-                                    name='time'
+                                    name='from'
+                                    type='time'
                                     placeholder={info?.deliveryDate?.timeInput}
                                     onChange={onInputChange}
-                                    value={''}
+                                />
+                            </div>
+                            <div className="w-48 flex column g8">
+                                <label className='green800 f20'>{info?.deliveryDate?.to}</label>
+
+                                <CustomInput
+                                    name='to'
+                                    type='time'
+                                    placeholder={info?.deliveryDate?.timeInput}
+                                    onChange={onInputChange}
                                 />
                             </div>
                             {/* fix  */}
-                            <div className="w-48">
+                            <div className="w-100 mt12 flex column g8">
+                                <label className='green800 f20'>{info?.deliveryDate?.dateInput}</label>
+
                                 <CustomInput
-                                    name='date'
+                                    name='deliveryDate'
                                     placeholder={info?.deliveryDate?.dateInput}
                                     onChange={onInputChange}
-                                    value={''}
+                                    type='date'
                                 />
                             </div>
                         </div>
@@ -66,28 +80,28 @@ export default function CartDelivery(props) {
                         <div className="flex j-between wrap w-100">
                             <div className="w-100">
                                 <CustomInput
-                                    name='address'
+                                    name='deliveryAddress'
                                     placeholder={info?.deliveryLocation?.addressInput}
                                     onChange={onInputChange}
-                                    value={''}
+                                    value={cartUserInfo?.deliveryAddress ? cartUserInfo.deliveryAddress : ''}
                                 />
                             </div>
 
                             <div className="w-48 mt12">
                                 <CustomInput
-                                    name='entrance'
+                                    name='deliveryEntrance'
                                     placeholder={info?.deliveryLocation?.entranceInput}
                                     onChange={onInputChange}
-                                    value={''}
+                                    value={cartUserInfo?.deliveryEntrance ? cartUserInfo.deliveryEntrance : ''}
                                 />
                             </div>
 
                             <div className="w-48 mt12">
                                 <CustomInput
-                                    name='apartament'
+                                    name='deliveryApartament'
                                     placeholder={info?.deliveryLocation?.apartamentInput}
                                     onChange={onInputChange}
-                                    value={''}
+                                    value={cartUserInfo?.deliveryApartament ? cartUserInfo.deliveryApartament : ''}
                                 />
                             </div>
                         </div>

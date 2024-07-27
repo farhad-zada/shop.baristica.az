@@ -38,7 +38,6 @@ function App() {
   useEffect(() => {
     const lang = localStorage.getItem("lang");
 
-    console.log(document.cookie)
     if (!lang) {
       localStorage.setItem("lang", "az");
       dispatch(setLang(lang));

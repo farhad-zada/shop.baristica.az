@@ -14,7 +14,7 @@ export default function CartMainProduct(props) {
 
     const { product, key, lang } = props
 
-    const [productTypes, setProductTypes] = useState({
+    const [preparingTypes, setPreparingType] = useState({
         "az": [
             { "text": "Fincan üçün (orta)", "value": "forCupMiddle" },
             { "text": "Cezvə üçün (incə)", "value": "forTurkMiddle" },
@@ -84,7 +84,7 @@ export default function CartMainProduct(props) {
 
                 <div className="cartMain-product_head-left flex a-center">
                     <div className="cartMain-product_head-img border16">
-                        <img src={product?.image} alt="" />
+                        <img src={product?.selectedOption.image} alt="" />
                     </div>
                     <div className="cartMain-product_head-info">
                         {/* product name  */}
@@ -108,7 +108,7 @@ export default function CartMainProduct(props) {
 
             <div className="cartMain-product_body mt12 flex j-between">
                 <div className="cartMain-product_type w-48">
-                    <CustomSelect options={lang ? productTypes[lang] : []} onOptionSelect={handleOptionSelect} />
+                    <CustomSelect options={lang ? preparingTypes[lang] : []} onOptionSelect={handleOptionSelect} />
                 </div>
                 <div className="cartMain-product_counter">
                     <CustomCounter initialValue={product?.cartCount} onChange={handleCounterChange} />

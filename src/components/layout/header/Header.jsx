@@ -17,7 +17,7 @@ const { headerPageLinks } = header;
 
 export default function Header() {
   const [profileDropdown, setProfileDropdown] = useState(false)
-  const { lang, compareProducts, cartProducts } = useSelector((state) => state.baristica);
+  const { lang, compareProducts, cartProducts, token } = useSelector((state) => state.baristica);
 
   return (
     <header>
@@ -44,9 +44,15 @@ export default function Header() {
             <span className="headerCart-count white f12">{compareProducts?.length}</span>
             <img src={CompareIcon} alt="" />
           </Link>
-          <Link to={'/favorites'}>
+          {
+            token
+            ?
+            <Link to={'/favorites'}>
             <img src={FavoritesIcon} alt="" />
           </Link>
+          :
+          <></>
+          }
           <span onClick={() => setProfileDropdown(!profileDropdown)}>
             <img src={ProfileIcon} alt="" />
           </span>

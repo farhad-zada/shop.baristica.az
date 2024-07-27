@@ -104,7 +104,7 @@ export default function CartMain(props) {
                 </div>
             </div>
 
-            <div className="cartMain-repeat_order">
+            {/* <div className="cartMain-repeat_order">
                 <div className="flex j-between a-center">
                     <div className="cartMain-repeat_order-checkbox">
                         <CustomCheckbox
@@ -118,7 +118,7 @@ export default function CartMain(props) {
                     </div>
                 </div>
                 <p className='f18 gray600 text-center'>{info?.repeatOrder?.hint}</p>
-            </div>
+            </div> */}
         </div>
     )
 }

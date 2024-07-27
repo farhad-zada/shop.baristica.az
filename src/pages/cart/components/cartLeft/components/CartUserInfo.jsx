@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PersonIcon from '../../../../../assets/images/icons/person.svg'
 import CustomInput from '../../../../../components/form/customInput/CustomInput'
 import CustomSelect from '../../../../../components/form/customSelect/CustomSelect'
@@ -6,7 +6,7 @@ import CustomSelect from '../../../../../components/form/customSelect/CustomSele
 import { ArrowUpward, ArrowDownward, Person } from '../../../../../assets/images/icons/icons'
 
 export default function CartUserInfo(props) {
-    const { info, cartUserInfo, setCartUserInfo } = props
+    const { info, cartUserInfo, setCartUserInfo, user, token } = props
 
     const [showContent, setShowContent] = useState(true)
 
@@ -22,6 +22,18 @@ export default function CartUserInfo(props) {
             return { ...state, orderTo: value }
         })
     };
+
+    useEffect(() => {
+        if (user && cartUserInfo.orderTo === 'me') {
+            setCartUserInfo({
+                name: user?.name,
+                lastName: user?.lastName ? user?.lastName : '',
+                email: user?.email ? user?.email : '',
+                phoneNumber: user?.phone ? user?.phone : '',
+                orderTo: 'me'
+            })
+        }
+    }, [user])
 
     return (
         <div className='cartUser-info border24 cartActions'>

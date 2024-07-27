@@ -7,7 +7,7 @@ import DotsIcon from '../../assets/images/icons/dots.svg'
 import Pagination from '../pagination/Pagination';
 
 export default function ProductsCatalog(props) {
-    const { content, products } = props
+    const { content, products,setProducts } = props
 
     const { lang } = useSelector((state) => state.baristica);
 
@@ -24,7 +24,7 @@ export default function ProductsCatalog(props) {
                     <div className="productsCatalog-products flex j-between wrap">
                         {
                             products && products.map((product,key) => (
-                                <ProductCard product={product} key={key} />
+                                <ProductCard product={product} key={key} setProducts={setProducts} />
                             ))
                         }
 

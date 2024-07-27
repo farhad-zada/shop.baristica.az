@@ -6,31 +6,33 @@ import './productCard.css'
 import CompareIcon from '../../../assets/images/icons/compare.svg'
 import FavoritesIcon from '../../../assets/images/icons/favorites.svg'
 
-import { CartIcon } from '../../../assets/images/icons/icons'
+import { CartIcon, Favorited } from '../../../assets/images/icons/icons'
 import PagesText from '../../../content/PagesText.json'
 
 import { addToCart } from '../../../utils/cartActions/cartActions'
 import { getPrice } from '../../../utils/price/price'
 import { editCompareArray } from '../../../utils/compare/compare.util'
-import { changeCompare, setCart } from '../../../redux/slice'
+import { changeCompare, changeFavorites, setCart } from '../../../redux/slice'
 import { useNavigate } from 'react-router-dom'
 import { OptionsBlock } from './components/OptionsBlock'
+import FavoritesService from '../../../services/favories.service'
 
 const { home } = PagesText;
 const { body } = home;
 
 export default function ProductCard(props) {
-    const { favorite, product } = props
-    const { lang, token } = useSelector((state) => state.baristica);
+    const { favorite, product, setProducts } = props
+    const { lang, token, favoritesProducts } = useSelector((state) => state.baristica);
 
     const [productForCart, setProductForCart] = useState({ ...product, cartCount: 1 })
-
 
     const [options, setOptions] = useState(product?.options)
     const [selectedOption, setSelectedOption] = useState(null)
     const [price, setPrice] = useState(0)
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    
+    const favoritesService = new FavoritesService()
 
     const counter = (e, type) => {
         e.stopPropagation()
@@ -58,6 +60,29 @@ export default function ProductCard(props) {
         dispatch(changeCompare(product))
     }
 
+    const postFavorite = async (product) => {
+        try {
+            const response = await favoritesService.postFavorite(token, product._id)
+            console.log(response)
+        } catch (error) {
+            
+        }
+    }
+
+    const setFavorites = (e, product) => {
+        e.stopPropagation();
+        dispatch(changeFavorites(product));
+
+        if (setProducts) {
+            setProducts((state) => state.map((el) =>
+                el._id === product._id ? { ...el, favorited: !el.favorited } : el
+            ));
+        }
+        if(!product?.favorited){
+            postFavorite(product)
+        }
+    };
+
     return (
         <div className='productCard pointer' onClick={() => { navigate(`/products/${product?._id}`) }}>
 
@@ -73,8 +98,17 @@ export default function ProductCard(props) {
                     {
                         token
                             ?
-                            <span className={favorite ? 'productCard-favorite_icon pointer active' : 'productCard-favorite_icon pointer'}>
-                                <img src={FavoritesIcon} alt="" />
+                            <span
+                                className={favorite ? 'productCard-favorite_icon pointer active' : 'productCard-favorite_icon pointer'}
+                                onClick={(e) => setFavorites(e, product)}
+                            >
+                                {
+                                    product?.favorited
+                                        ?
+                                        Favorited
+                                        :
+                                        <img src={FavoritesIcon} alt="" />
+                                }
                             </span>
                             :
                             <></>
@@ -84,7 +118,7 @@ export default function ProductCard(props) {
             </div>
 
             <div className="productCard-img flex a-center j-center">
-                <img src={product?.image} alt="" />
+                <img src={selectedOption?.image} alt="" />
             </div>
 
             <div className="productCard-body">

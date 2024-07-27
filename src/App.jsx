@@ -16,7 +16,7 @@ import UsersService from "./services/users.service";
 import Loading from "./components/loading/Loading";
 
 function App() {
-  const { lang, token } = useSelector((state) => state.baristica);
+  const {  token } = useSelector((state) => state.baristica);
   const [loading, setLoading] = useState(false)
   const dispatch = useDispatch()
 
@@ -38,6 +38,7 @@ function App() {
   useEffect(() => {
     const lang = localStorage.getItem("lang");
 
+    console.log(document.cookie)
     if (!lang) {
       localStorage.setItem("lang", "az");
       dispatch(setLang(lang));

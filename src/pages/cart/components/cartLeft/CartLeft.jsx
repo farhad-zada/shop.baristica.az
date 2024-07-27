@@ -11,16 +11,15 @@ import CartOrderInfo from './components/CartOrderInfo';
 
 const { cart } = PagesText
 export default function CartLeft() {
-  const { lang } = useSelector((state) => state.baristica);
+  const { lang, token, user } = useSelector((state) => state.baristica);
 
   const [cartUserInfo, setCartUserInfo] = useState({
     name: '',
     lastName: '',
     email: '',
     phoneNumber: '',
-    orderTo: ''
+    orderTo: 'me'
   })
-
   return (
     <div className='cartLeft'>
       <h2 className='f16 green600 cartPage-head'>Baristica / {cart[lang]?.head?.pageName ? cart[lang]?.head.pageName : ''}</h2>
@@ -29,11 +28,15 @@ export default function CartLeft() {
         <span>{cart[lang]?.head?.pageName ? cart[lang]?.head.pageName : ''}</span>
       </h3>
 
-      <CartAuthorization authorization={lang ? cart[lang]?.authorization : {}} />
+      {
+        token ? <></> : <CartAuthorization authorization={lang ? cart[lang]?.authorization : {}} />
+      }
       <CartUserInfo
         info={lang ? cart[lang]?.userInfo : {}}
+        user={user}
         cartUserInfo={cartUserInfo}
         setCartUserInfo={setCartUserInfo}
+        token={token}
       />
       <CartDelivery info={lang ? cart[lang]?.delivery : {}} />
       <CartOrderInfo info={lang ? cart[lang]?.orderInfo : {}} />

@@ -36,7 +36,7 @@ export default function Catalog() {
     <div className='favorites'>
       <Loading status={loading} />
       <CatalogHead content={catalog} />
-      <ProductsCatalog content={catalog} products={products} />
+      <ProductsCatalog content={catalog} products={products} setProducts={setProducts} />
       <Subscriptions />
     </div>
   )

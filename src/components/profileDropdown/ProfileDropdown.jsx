@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import './profileDropdown.css'
 import PagesText from "../../content/PagesText.json";
 import { useDispatch, useSelector } from 'react-redux';
-import { setToken } from '../../redux/slice';
+import { setToken, setUser } from '../../redux/slice';
 
 const { header } = PagesText;
 const { profileDropdown } = header;
@@ -17,6 +17,7 @@ export default function ProfileDropdown(props) {
     const logout = () => {
         localStorage.setItem('baristicaToken', '')
         dispatch(setToken(''))
+        dispatch(setUser(null))
         setStatus(false)
     }
 

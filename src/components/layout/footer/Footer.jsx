@@ -47,8 +47,8 @@ export default function Footer() {
                     <div className="footerCeneter-menu" key={elem?.title}>
                         <h6 className="white f18">{elem?.title}</h6>
                         <ul>
-                            {elem?.list.map((item) => (
-                                <li key={item}><Link className="gray300 f16" to={item?.link}>{item?.label}</Link></li>
+                            {elem?.list.map((item, key) => (
+                                <li key={key}><Link className="gray300 f16" to={item?.link}>{item?.label}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -67,7 +67,7 @@ export default function Footer() {
             <div className="footerBottom-right">
                 <ul className="footerBottom-menu flex">
                     { lang && footer[lang].bottom_menu?.map((elem) => (
-                        <li key={elem}>
+                        <li key={elem.title}>
                             <Link className="gray300 f16" to={elem.link}>{elem.title}</Link>
                         </li>
                     ))}

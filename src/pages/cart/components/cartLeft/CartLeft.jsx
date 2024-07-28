@@ -10,7 +10,7 @@ import CartDelivery from './components/CartDelivery';
 import CartOrderInfo from './components/CartOrderInfo';
 
 const { cart } = PagesText
-export default function CartLeft() {
+export default function CartLeft({comment}) {
   const { lang, token, user, cartProducts } = useSelector((state) => state.baristica);
 
   const [cartUserInfo, setCartUserInfo] = useState({
@@ -40,7 +40,7 @@ export default function CartLeft() {
         token={token}
       />
       <CartDelivery info={lang ? cart[lang]?.delivery : {}} setCartUserInfo={setCartUserInfo} cartUserInfo={cartUserInfo} />
-      <CartOrderInfo info={lang ? cart[lang]?.orderInfo : {}} cart={cartProducts} />
+      <CartOrderInfo info={lang ? cart[lang]?.orderInfo : {}} cart={cartProducts} comment={comment}  cartUserInfo={cartUserInfo}/>
       
     </div>
   )

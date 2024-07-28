@@ -19,7 +19,7 @@ const BlogsBanner = () => {
             <div className="container">
                 <div className="blogsBanner-nav flex a-center">
                     <p className='gray600'>Baristica /</p>
-                    <p className='gray600'>&nbsp;{head[lang].nav}</p>
+                    <p className='gray600'>&nbsp;{head[lang]?.nav}</p>
                 </div>
                 <div className='blogsBanner-title'><h1 className='green800 f72'>{lang ? head[lang].title : ''}</h1></div>
                 <div className='blogsBanner-tabs flex a-center'>

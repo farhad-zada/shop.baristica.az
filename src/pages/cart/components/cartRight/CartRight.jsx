@@ -8,12 +8,12 @@ import OrderComment from './components/OrderComment';
 
 const { cart } = PagesText
 
-export default function CartRight() {
+export default function CartRight({comment,setComment}) {
   const { lang, cartProducts } = useSelector((state) => state.baristica);
   return (
     <div className='cartRight w-48'>
         <CartMain info={cart[lang]?.cartMain} lang={lang} cart={cartProducts} />
-        <OrderComment info={cart[lang]?.orderComment} />
+        <OrderComment info={cart[lang]?.orderComment} comment={comment} setComment={setComment} />
     </div>
   )
 }

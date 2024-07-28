@@ -4,10 +4,9 @@ import { ArrowDownward, ArrowUpward, CartComment } from '../../../../../assets/i
 import CustomTextArea from '../../../../../components/form/customTextArea/CustomTextArea'
 
 export default function OrderComment(props) {
-    const { info } = props
+    const { info, comment, setComment } = props
     const [showContent, setShowContent] = useState(true)
 
-    const [comment, setComment] = useState('')
 
     const handleCommentChange = (e) => {
         const { value } = e.target

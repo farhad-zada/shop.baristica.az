@@ -977,41 +977,15 @@
         "head": {
             "az": {
                 "nav": "Şəxsi kabinet",
-                "title": "Xoş gəldiz",
+                "title": "Xoş gəldiniz",
                 "stats": {
                     "title": "Mənim statistikam",
-                    "labels": [
-                        {
-                            "id": 0,
-                            "label": "Sifarişlər verilib:",
-                            "value": "245"
-                        },
-                        {
-                            "id": 1,
-                            "label": "Saytda olan müddət:",
-                            "value": "365 gün"
-                        },
-                        {
-                            "id": 2,
-                            "label": "Endirimlərim:",
-                            "value": "20%"
-                        },
-                        {
-                            "id": 3,
-                            "label": "Xərclənib:",
-                            "value": "1654.99 AZN"
-                        },
-                        {
-                            "id": 4,
-                            "label": "Qənaət olunan məbləğ:",
-                            "value": "1600 AZN"
-                        },
-                        {
-                            "id": 5,
-                            "label": "Neçə kiloqram:",
-                            "value": "15 kq"
-                        }
-                    ]
+                    "ordersCompleted": "Sifarişlər verilib:",
+                    "inWebsite": "Saytda olan müddət:",
+                    "myDiscount": "Endirimlərim:",
+                    "totalSpent": "Xərclənib:",
+                    "savedMoney": "Qənaət olunan məbləğ:",
+                    "weight": "Neçə kiloqram:"
                 }
             },
             "ru": {
@@ -1019,38 +993,12 @@
                 "title": "Добро пожаловать",
                 "stats": {
                     "title": "Моя статистика",
-                    "labels": [
-                        {
-                            "id": 0,
-                            "label": "Оформлено заказов:",
-                            "value": "245"
-                        },
-                        {
-                            "id": 1,
-                            "label": "На сайте:",
-                            "value": "365 дней"
-                        },
-                        {
-                            "id": 2,
-                            "label": "Моя скидка:",
-                            "value": "20%"
-                        },
-                        {
-                            "id": 3,
-                            "label": "Всего потрачено:",
-                            "value": "1654.99 AZN"
-                        },
-                        {
-                            "id": 4,
-                            "label": "Сколько сэкономлено:",
-                            "value": "1600 AZN"
-                        },
-                        {
-                            "id": 5,
-                            "label": "Сколько кг:",
-                            "value": "15 кг"
-                        }
-                    ]
+                    "ordersCompleted": "Сделанные заказы:",
+                    "inWebsite": "Время на сайте:",
+                    "myDiscount": "Мои скидки:",
+                    "totalSpent": "Потрачено:",
+                    "savedMoney": "Сэкономленные деньги:",
+                    "weight": "Сколько килограмм:"
                 }
             },
             "en": {
@@ -1058,38 +1006,12 @@
                 "title": "Welcome",
                 "stats": {
                     "title": "My statistics",
-                    "labels": [
-                        {
-                            "id": 0,
-                            "label": "Orders placed:",
-                            "value": "245"
-                        },
-                        {
-                            "id": 1,
-                            "label": "In website:",
-                            "value": "365 days"
-                        },
-                        {
-                            "id": 2,
-                            "label": "My discounts:",
-                            "value": "20%"
-                        },
-                        {
-                            "id": 3,
-                            "label": "Total spent:",
-                            "value": "1654.99 AZN"
-                        },
-                        {
-                            "id": 4,
-                            "label": "Total saved:",
-                            "value": "1600 AZN"
-                        },
-                        {
-                            "id": 5,
-                            "label": "How many kg:",
-                            "value": "15 kg"
-                        }
-                    ]
+                    "ordersCompleted": "Orders completed:",
+                    "inWebsite": "Time on website:",
+                    "myDiscount": "My discounts:",
+                    "totalSpent": "Total spent:",
+                    "savedMoney": "Money saved:",
+                    "weight": "How many kilograms:"
                 }
             }
         },
@@ -1705,7 +1627,7 @@
                 "deliveryDate": {
                     "heading": "Nə vaxt çatdırmaq",
                     "timeInput": "Vaxt",
-                    "from":"From",
+                    "from": "From",
                     "to": "To",
                     "dateInput": "Tarix"
                 },
@@ -1798,7 +1720,7 @@
                 "heading": "Доставка",
                 "deliveryDate": {
                     "heading": "Когда доставить",
-                    "from":"С",
+                    "from": "С",
                     "to": "До",
                     "timeInput": "Время",
                     "dateInput": "Дата"
@@ -1893,7 +1815,7 @@
                 "deliveryDate": {
                     "heading": "When to deliver",
                     "timeInput": "Time",
-                    "from":"From",
+                    "from": "From",
                     "to": "To",
                     "dateInput": "Date"
                 },

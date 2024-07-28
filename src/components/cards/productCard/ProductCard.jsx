@@ -17,16 +17,27 @@ import { useNavigate } from 'react-router-dom'
 import { OptionsBlock } from './components/OptionsBlock'
 import FavoritesService from '../../../services/favories.service'
 import Loading from '../../loading/Loading'
+import SuccessModal from '../../successModal/SuccessModal'
 
 const { home } = PagesText;
 const { body } = home;
 
 export default function ProductCard(props) {
-    const { favorite, product, setProducts } = props
+    const {
+        favorite,
+        product,
+        setProducts,
+        setSuccessData,
+        setSuccessModal,
+        setLoading
+
+    } = props
     const { lang, token, favoritesProducts } = useSelector((state) => state.baristica);
 
     const [productForCart, setProductForCart] = useState({ ...product, cartCount: 1 })
-    const [loading, setLoading] = useState(false)
+
+
+
     const [options, setOptions] = useState(product?.options)
     const [selectedOption, setSelectedOption] = useState(null)
     const [price, setPrice] = useState(0)
@@ -53,6 +64,14 @@ export default function ProductCard(props) {
     const dispatchCart = (e, product) => {
         const cart = addToCart(e, product)
         dispatch(setCart(cart))
+        setSuccessModal(true)
+        setSuccessData({
+            message: {
+                az: 'Məhsul səbətə əlavə olundu',
+                ru: 'Продукт был добавлен в корзину',
+                en: 'The product have been added to the cart'
+            }
+        })
     }
 
     const addToCompare = (e) => {
@@ -65,6 +84,14 @@ export default function ProductCard(props) {
         setLoading(true)
         try {
             const response = await favoritesService.postFavorite(token, product._id)
+            setSuccessModal(true)
+            setSuccessData({
+                message: {
+                    az: 'Məhsul favorilərə əlavə olundu',
+                    ru: 'Продукт был добавлен в избранные',
+                    en: 'The product have been added to the favorites'
+                }
+            })
             setLoading(false)
         } catch (error) {
             setLoading(false)
@@ -75,6 +102,14 @@ export default function ProductCard(props) {
         setLoading(true)
         try {
             const response = await favoritesService.deleteFavorite(token, product._id)
+            setSuccessModal(true)
+            setSuccessData({
+                message: {
+                    az: 'Məhsul favorilərdən silindi',
+                    ru: 'Продукт был удален из избранных',
+                    en: 'The product have been deleted from the favorites'
+                }
+            })
             setLoading(false)
         } catch (error) {
             setLoading(false)
@@ -99,7 +134,8 @@ export default function ProductCard(props) {
 
     return (
         <div className='productCard pointer' onClick={() => { navigate(`/products/${product?._id}`) }}>
-            <Loading status={loading} />
+
+
             <div className="productCard-head flex j-between a-center">
                 <div className="productCard-info flex a-center">
 

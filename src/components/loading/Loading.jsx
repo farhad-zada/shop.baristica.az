@@ -10,15 +10,15 @@ function Loading({  status }) {
     
     const {loading} = pageText
 
-    const scrollToTopAfterLoading = () => {
-        window.scroll(0, 0);
-    }
+    // const scrollToTopAfterLoading = () => {
+    //     window.scroll(0, 0);
+    // }
 
-    useEffect(() => {
-        if (status == true) {
-            scrollToTopAfterLoading();
-        }
-    })
+    // useEffect(() => {
+    //     if (status == true) {
+    //         scrollToTopAfterLoading();
+    //     }
+    // })
 
     return (
         <div className={status ? "modal active" : 'modal'}>

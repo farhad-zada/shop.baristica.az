@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="container">
-        <div className="footerTop flex a-center j-between w-100">
+        <div className="footerTop footerElem flex a-center j-between w-100">
             <div className="footerTop-left">
                 <div className="footerTop-socials flex a-center">
                     <Link className="social" to="facebook.com">
@@ -40,8 +40,7 @@ export default function Footer() {
                 </form>
             </div>
         </div>
-        <hr/>
-        <div className="footerCenter flex a-start j-between w-100">
+        <div className="footerCenter footerElem flex a-start j-between w-100">
             <div className="footerCenter-left flex a-start">
                 { lang && footer[lang]?.menu?.map((elem) => (
                     <div className="footerCeneter-menu" key={elem?.title}>
@@ -59,8 +58,7 @@ export default function Footer() {
                 <p className="f16 gray300">{lang ? footer[lang].side_info.text : ''}</p>
             </div>
         </div>
-        <hr />
-        <div className="footerBottom flex a-center j-between">
+        <div className="footerBottom footerElem flex a-center j-between">
             <div className="footerBottom-left">
                 <h6 className="white f16">© 2023 «Baristica»</h6>
             </div>

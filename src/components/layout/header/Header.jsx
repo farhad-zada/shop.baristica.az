@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className="container flex j-between">
+      <div className="container flex j-between a-center">
         <div className="headerLeft flex a-center">
           <Link to={'/'} className="headerLogo">
             <img src={Logo} alt="" />
@@ -35,6 +35,9 @@ export default function Header() {
               ))}
           </nav>
         </div>
+        <Link to={'/'} className="getDiscount f14 border16">
+          Получить скидку
+        </Link>
         <div className="headerActions flex">
           <ProfileDropdown status={profileDropdown} setStatus={setProfileDropdown} />
           <span>

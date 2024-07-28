@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from "react-redux";
 import { CartIcon } from '../../../../assets/images/icons/icons';
 import PagesText from "../../../../content/PagesText.json";
@@ -10,6 +10,8 @@ const { head } = profile;
 const ProfileHead = (props) => {
     const { user } = props
     const { lang } = useSelector((state) => state.baristica);
+
+
     return (
         <div className='profileHead'>
             <div className='container'>
@@ -29,12 +31,35 @@ const ProfileHead = (props) => {
                             <h6 className='f30 white'>{lang ? head[lang].stats.title : ''}</h6>
                         </div>
                         <div className='profileHead_stats-grid'>
-                            {lang && head[lang].stats.labels?.map((label) => (
-                                <div className='profileHead_stat border16' key={label.id}>
-                                    <p className='f14 gray600'>{label.label}</p>
-                                    <span className='f24 green800'>{label.value}</span>
-                                </div>
-                            ))}
+                            <div className="profileHead_stat border16">
+                                <p className='f14 gray600'>{lang ? head[lang].stats.ordersCompleted : ''}</p>
+                                <span className='f24 green800'>{user?.statistics?.ordersCompleted ? user.statistics.ordersCompleted : '0'}</span>
+                            </div>
+
+                            <div className="profileHead_stat border16">
+                                <p className='f14 gray600'>{lang ? head[lang].stats.inWebsite : '0'}</p>
+                                <span className='f24 green800'>{user?.statistics?.inWebsite ? user.statistics.inWebsite : '0'} days</span>
+                            </div>
+
+                            <div className="profileHead_stat border16">
+                                <p className='f14 gray600'>{lang ? head[lang].stats.myDiscount : ''}</p>
+                                <span className='f24 green800'>{user?.statistics?.myDiscount ? user.statistics.myDiscount : '0'} %</span>
+                            </div>
+
+                            <div className="profileHead_stat border16">
+                                <p className='f14 gray600'>{lang ? head[lang].stats.totalSpent : ''}</p>
+                                <span className='f24 green800'>{user?.statistics?.totalSpent ? user.statistics.totalSpent : '0'} AZN</span>
+                            </div>
+
+                            <div className="profileHead_stat border16">
+                                <p className='f14 gray600'>{lang ? head[lang].stats.savedMoney : ''}</p>
+                                <span className='f24 green800'>{user?.statistics?.savedMoney ? user.statistics.savedMoney : '0'} AZN</span>
+                            </div>
+
+                            <div className="profileHead_stat border16">
+                                <p className='f14 gray600'>{lang ? head[lang].stats.weight : ''}</p>
+                                <span className='f24 green800'>{user?.statistics?.weight ? user.statistics.weight : '0'} kg</span>
+                            </div>
                         </div>
                     </div>
                 </div>

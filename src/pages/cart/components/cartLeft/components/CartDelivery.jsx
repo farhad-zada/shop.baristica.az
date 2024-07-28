@@ -89,19 +89,19 @@ export default function CartDelivery(props) {
 
                             <div className="w-48 mt12">
                                 <CustomInput
-                                    name='deliveryEntrance'
+                                    name='deliveryEnterance'
                                     placeholder={info?.deliveryLocation?.entranceInput}
                                     onChange={onInputChange}
-                                    value={cartUserInfo?.deliveryEntrance ? cartUserInfo.deliveryEntrance : ''}
+                                    value={cartUserInfo?.deliveryEnterance ? cartUserInfo.deliveryEnterance : ''}
                                 />
                             </div>
 
                             <div className="w-48 mt12">
                                 <CustomInput
-                                    name='deliveryApartament'
+                                    name='deliveryApartment'
                                     placeholder={info?.deliveryLocation?.apartamentInput}
                                     onChange={onInputChange}
-                                    value={cartUserInfo?.deliveryApartament ? cartUserInfo.deliveryApartament : ''}
+                                    value={cartUserInfo?.deliveryApartment ? cartUserInfo.deliveryApartment : ''}
                                 />
                             </div>
                         </div>

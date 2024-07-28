@@ -10,6 +10,7 @@ import { Pagination, Scrollbar, A11y } from "swiper/modules";
 import ProductCard from "../../../../../components/cards/productCard/ProductCard";
 
 export default function HomeProductsElements(props) {
+  const { products, setProducts } = props
   return (
     <div className="homeProducts-elements">
       <Swiper
@@ -19,15 +20,14 @@ export default function HomeProductsElements(props) {
         navigation
         pagination={{ clickable: true }}
       >
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
+        {
+          products && products.map((product, key) => (
+            <SwiperSlide key={key}>
+              <ProductCard product={product} setProducts={setProducts} />
+            </SwiperSlide>
+          ))
+        }
+
       </Swiper>
     </div>
   );

@@ -48,12 +48,12 @@ const ProfileHead = (props) => {
 
                             <div className="profileHead_stat border16">
                                 <p className='f14 gray600'>{lang ? head[lang].stats.totalSpent : ''}</p>
-                                <span className='f24 green800'>{user?.statistics?.totalSpent ? user.statistics.totalSpent : '0'} AZN</span>
+                                <span className='f24 green800'>{user?.statistics?.totalSpent ? +user.statistics.totalSpent / 100 : '0'} AZN</span>
                             </div>
 
                             <div className="profileHead_stat border16">
                                 <p className='f14 gray600'>{lang ? head[lang].stats.savedMoney : ''}</p>
-                                <span className='f24 green800'>{user?.statistics?.savedMoney ? user.statistics.savedMoney : '0'} AZN</span>
+                                <span className='f24 green800'>{user?.statistics?.savedMoney ? +user.statistics.savedMoney / 100 : '0'} AZN</span>
                             </div>
 
                             <div className="profileHead_stat border16">

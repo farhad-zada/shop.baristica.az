@@ -30,7 +30,6 @@ export default function HomeBanner() {
                 modules={[Pagination, Scrollbar, A11y]}
                 spaceBetween={24}
                 slidesPerView={3}
-                navigation
                 pagination={{ clickable: true }}
                 breakpoints={{
                   0: {

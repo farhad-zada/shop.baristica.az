@@ -4,7 +4,7 @@ import ProfileInnerBody from './components/profileInnerBody/ProfileInnerBody'
 import "./profileInner.css"
 import { useSelector } from 'react-redux'
 
-const ProfileInner = () => {
+const ProfileAddress = () => {
   const { user } = useSelector((state) => state.baristica);
 
   return (
@@ -15,4 +15,4 @@ const ProfileInner = () => {
   )
 }
 
-export default ProfileInner
+export default ProfileAddress

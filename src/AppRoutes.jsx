@@ -14,7 +14,9 @@ import {
   CartPage,
   ProductDetailPage,
   CancelPage,
-  SuccessPage
+  SuccessPage,
+  ProfileOrderPage,
+  ProfileAddressPage
 } from "./pages/pages";
 
 export default function AppRoutes({ token }) {
@@ -30,6 +32,8 @@ export default function AppRoutes({ token }) {
       <Route path="/cancel" element={<CancelPage />} />
       <Route path="/success" element={<SuccessPage />} />
       <Route path="/quiz" element={<QuizPage />} />
+      <Route path="/personal_orders" element={<ProfileOrderPage />} />
+      <Route path="/personal_address" element={<ProfileAddressPage />} />
       {
         token ? <Route path="/favorites" element={<FavoritesPage />} /> : <></>
       }

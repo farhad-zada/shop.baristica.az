@@ -26,6 +26,22 @@ export default function HomeProductsElements(props) {
         slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
+        breakpoints={{
+          // when window width is >= 640px
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+          562 :{
+            slidesPerView: 2,
+            spaceBetween: 24,
+          },
+          // when window width is < 640px
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+          },
+        }}
       >
         {
           products && products.map((product, key) => (

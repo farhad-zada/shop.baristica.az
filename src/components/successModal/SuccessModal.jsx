@@ -36,7 +36,7 @@ export default function SuccessModal({ data, status, setStatus }) {
                 <div className="flex j-center modal-content_img">
                     <img src={SuccessIcon} alt="" />
                 </div>
-                <p className='green800 f20'>
+                <p className='green800 f20 text-center'>
                     {data?.message && lang ? data?.message[lang] : ''}
                 </p>
                 <div className='w-100 flex j-center'>

@@ -173,11 +173,11 @@ export default function ProductCard(props) {
 
             <div className="productCard-body">
 
-                <h3 className='blueAccent f18'>для эспрессо</h3>
+                <h3 className='blueAccent f18 fS16'>для эспрессо</h3>
                 {/* product name  */}
-                <h2 className='green800 f20'>{product?.name[lang] ? product?.name[lang] : ''}</h2>
+                <h2 className='green800 f20 fS18'>{product?.name[lang] ? product?.name[lang] : ''}</h2>
                 {/* product description  */}
-                <p className='gray600 f16'>{product?.description[lang] ? product?.description[lang] : ''}</p>
+                <p className='gray600 f16 fS14'>{product?.description[lang] ? product?.description[lang] : ''}</p>
                 {/* actual price  */}
                 {
                     product?.discount > 0
@@ -189,7 +189,7 @@ export default function ProductCard(props) {
 
                 <div className="productCard-price flex j-between a-center">
                     {/* price with discount  */}
-                    <span className='green800 f30'>
+                    <span className='green800 f30 fS24'>
                         {getPrice(price, product?.discountType, +product?.discount).toFixed(2)} ₼
                     </span>
 
@@ -204,11 +204,11 @@ export default function ProductCard(props) {
             </div>
 
             <div className="productCard-foot flex a-center" onClick={(e) => { e.stopPropagation() }}>
-                <button type='button' className="add-to_cart flex a-center white f16" onClick={(e) => dispatchCart(e, { ...productForCart, selectedOption: selectedOption })}>
+                <button type='button' className="add-to_cart flex a-center white f16 fS14" onClick={(e) => dispatchCart(e, { ...productForCart, selectedOption: selectedOption })}>
                     {CartIcon}
                     <span >{body[lang]?.products?.btn}</span>
                 </button>
-                <div className="add-counter flex a-center f24 green800" >
+                <div className="add-counter flex a-center f24 fS22 green800" >
                     <span className='pointer' onClick={(e) => counter(e, 'dec')}>-</span>
                     <span>{productForCart?.cartCount}</span>
                     <span className='pointer' onClick={(e) => counter(e, 'inc')}>+</span>

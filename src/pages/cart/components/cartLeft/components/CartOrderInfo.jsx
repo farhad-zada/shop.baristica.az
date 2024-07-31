@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { RocketIcon } from '../../../../../assets/images/icons/icons'
 import CustomCheckbox from '../../../../../components/form/customCheckbox/CustomCheckBox'
@@ -7,15 +7,28 @@ import { calculateTotalDiscount, calculateTotalPrice } from '../../../../../util
 import OrdersService from '../../../../../services/orders.service';
 
 import Loading from '../../../../../components/loading/Loading'
+import DeliveryService from '../../../../../services/delivery.service';
+import { setCart } from '../../../../../redux/slice';
 
 export default function CartOrderInfo(props) {
   const [checked, setChecked] = useState(false);
   const [loading, setLoading] = useState(false)
-  const { lang, token, cartProducts } = useSelector((state) => state.baristica);
+  const { lang, token, cartProducts,deliveryPrice } = useSelector((state) => state.baristica);
 
-  const { info, cart, cartUserInfo, comment } = props
+  const { info, cart, cartUserInfo, comment, deliveryMethod } = props
 
   const ordersService = new OrdersService()
+  const deliveryService = new DeliveryService()
+
+  const dispatch = useDispatch()
+
+  const getDeliveryPrice = async () => {
+    try {
+      const response = await deliveryService.getDeliveryPrice()
+    } catch (error) {
+      
+    }
+  }
 
   const handleCheckboxChange = () => {
     setChecked(!checked);
@@ -28,6 +41,7 @@ export default function CartOrderInfo(props) {
       const productId = product._id;
       const selectedOptionId = product.selectedOption._id;
       const cartCount = product.cartCount;
+      const selectedPreparingType = product.selectedPreparingType
 
       if (!groupedProducts[productId]) {
         groupedProducts[productId] = {
@@ -40,10 +54,12 @@ export default function CartOrderInfo(props) {
 
       if (existingOption) {
         existingOption.quantity += cartCount;
+        existingOption.coffeeProcessingType = selectedPreparingType ? selectedPreparingType : product.coffeeProcessingTypes[0]._id
       } else {
         groupedProducts[productId].options.push({
           id: selectedOptionId,
-          quantity: cartCount
+          quantity: cartCount,
+          coffeeProcessingType: selectedPreparingType ? selectedPreparingType : product.coffeeProcessingTypes[0]._id
         });
       }
     });
@@ -57,41 +73,67 @@ export default function CartOrderInfo(props) {
     setLoading(true)
     const orders = groupProducts(cartProducts)
 
-    const data = {
-      language: lang,
-      order: {
-        customer: {
-          name: cartUserInfo?.name,
-          lastname: cartUserInfo?.lastName,
-          phone: cartUserInfo?.phone,
-          email: cartUserInfo?.email
-        },
-        orderFor: cartUserInfo?.orderFor,
-        deliveryMethod: 'pickup',
-        deliveryHours: {
-          from: cartUserInfo?.from,
-          to: cartUserInfo?.to
-        },
-        deliveryDate: cartUserInfo?.deliveryDate,
-        deliveryAddress: cartUserInfo?.deliveryAddress,
-        deliveryEnterance: cartUserInfo?.deliveryEnterance,
-        deliveryApartment: cartUserInfo?.deliveryApartment,
-        items: orders.items,
-        coupon: 'Baristica',
-        comment: comment
+    let data = {}
+    if (deliveryMethod === 'delivery') {
+      data = {
+        language: lang,
+        order: {
+          customer: {
+            name: cartUserInfo?.name,
+            lastname: cartUserInfo?.lastName,
+            phone: cartUserInfo?.phone,
+            email: cartUserInfo?.email
+          },
+          orderFor: cartUserInfo?.orderFor,
+          deliveryMethod: deliveryMethod,
+          deliveryHours: {
+            from: cartUserInfo?.from,
+            to: cartUserInfo?.to
+          },
+          deliveryDate: cartUserInfo?.deliveryDate,
+          deliveryAddress: cartUserInfo?.deliveryAddress,
+          deliveryEnterance: cartUserInfo?.deliveryEnterance,
+          deliveryApartment: cartUserInfo?.deliveryApartment,
+          items: orders.items,
+          coupon: 'Baristica',
+          comment: comment
+        }
+      }
+    } else{
+      data = {
+        language: lang,
+        order: {
+          customer: {
+            name: cartUserInfo?.name,
+            lastname: cartUserInfo?.lastName,
+            phone: cartUserInfo?.phone,
+            email: cartUserInfo?.email
+          },
+          orderFor: cartUserInfo?.orderFor,
+          deliveryMethod: deliveryMethod,
+          items: orders.items,
+          coupon: 'Baristica',
+          comment: comment
+        }
       }
     }
+
     try {
       const response = await ordersService.postOrder(token, data)
       const redirectUrl = response.data.epoint.redirect_url
       window.open(redirectUrl)
       setLoading(false)
-
+      dispatch(setCart([]))
+      localStorage.setItem('cart', [])
     } catch (error) {
       setLoading(false)
 
     }
   }
+
+  useEffect(() => {
+    getDeliveryPrice()
+  },[])
 
   return (
     <div className='cartOrder-info border24'>

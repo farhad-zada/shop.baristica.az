@@ -34,7 +34,7 @@ export const OptionsBlock = ({ options, selectedOption, setSelectedOption, setPr
 
     if (weightOptions.length > 0) {
         return (
-            <div className="productCard-mass flex green800 f18">
+            <div className="productCard-mass flex green800 f18 fS16">
                 {
                     weightOptions.map((option, index) => (
                         <span

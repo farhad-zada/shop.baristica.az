@@ -6,8 +6,6 @@ import { calculateTotalDiscount, calculateTotalPrice } from '../../../../../../u
 import { CartIcon, ArrowRightCart } from '../../../../../../assets/images/icons/icons'
 import CartMainProduct from './cartMainProduct/CartMainProduct'
 import CustomInput from '../../../../../../components/form/customInput/CustomInput'
-import CustomCheckbox from '../../../../../../components/form/customCheckbox/CustomCheckBox'
-import CustomSelect from '../../../../../../components/form/customSelect/CustomSelect'
 
 export default function CartMain(props) {
     const { info, lang, cart } = props

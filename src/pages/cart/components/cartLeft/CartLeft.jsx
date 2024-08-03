@@ -20,6 +20,9 @@ export default function CartLeft({comment}) {
     phone: '',
     orderFor: 'me'
   })
+
+  const [delivery, setDelivery] = useState('delivery')
+
   
   return (
     <div className='cartLeft'>
@@ -39,8 +42,8 @@ export default function CartLeft({comment}) {
         setCartUserInfo={setCartUserInfo}
         token={token}
       />
-      <CartDelivery info={lang ? cart[lang]?.delivery : {}} setCartUserInfo={setCartUserInfo} cartUserInfo={cartUserInfo} />
-      <CartOrderInfo info={lang ? cart[lang]?.orderInfo : {}} cart={cartProducts} comment={comment}  cartUserInfo={cartUserInfo}/>
+      <CartDelivery info={lang ? cart[lang]?.delivery : {}} setCartUserInfo={setCartUserInfo} cartUserInfo={cartUserInfo} lang={lang} delivery={delivery} setDelivery={setDelivery} />
+      <CartOrderInfo info={lang ? cart[lang]?.orderInfo : {}} cart={cartProducts} comment={comment}  cartUserInfo={cartUserInfo} deliveryMethod={delivery}/>
       
     </div>
   )

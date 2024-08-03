@@ -17,9 +17,9 @@ export default function CartUserInfo(props) {
         })
     }
 
-    const handleOptionSelect = (value) => {
+    const handleOptionSelect = (option) => {
         setCartUserInfo((state) => {
-            return { ...state, orderFor: value }
+            return { ...state, orderFor: option.value }
         })
     };
 

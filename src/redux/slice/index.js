@@ -6,6 +6,7 @@ const initialState = {
   compareProducts: [],
   favoritesProducts: [],
   cartProducts: [],
+  deliveryPrice: '',
   user: null
 };
 
@@ -27,6 +28,9 @@ const baristicaSlice = createSlice({
     },
     setFavorites: (state, action) => {
       state.favoritesProducts = action.payload
+    },
+    setDeliveryPrice: (state,action) => {
+      state.deliveryPrice = action.payload
     },
     changeFavorites: (state, action) => {
       const { payload } = action;
@@ -59,5 +63,5 @@ const baristicaSlice = createSlice({
   },
 });
 
-export const { setLang, setCompare, changeCompare, setCart, setToken, setUser, changeFavorites, setFavorites } = baristicaSlice.actions;
+export const { setLang, setCompare, changeCompare, setCart, setToken, setUser, changeFavorites, setFavorites,setDeliveryPrice } = baristicaSlice.actions;
 export default baristicaSlice.reducer;

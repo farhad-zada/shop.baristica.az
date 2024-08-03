@@ -21,7 +21,7 @@ export default function ProductMainInfo(props) {
 
     const [counterValue,setCounterValue] = useState(1)
 
-    const onOptionSelect = (value) => {
+    const onOptionSelect = (option) => {
 
     }
 

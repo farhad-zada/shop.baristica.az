@@ -2,6 +2,12 @@
     background-color: rgba(249, 250, 251, 1);
     padding: 0 40px !important;
 }
+.profileInnerBody-tabs a{
+    display: inline-block;
+    padding: 32px 0;
+    margin-right: 40px;
+    font-weight: 700;
+}
 .profileInnerBody{
     background-color: rgba(249, 250, 251, 1);
 }

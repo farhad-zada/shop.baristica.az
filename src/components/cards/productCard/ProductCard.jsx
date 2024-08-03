@@ -17,16 +17,27 @@ import { useNavigate } from 'react-router-dom'
 import { OptionsBlock } from './components/OptionsBlock'
 import FavoritesService from '../../../services/favories.service'
 import Loading from '../../loading/Loading'
+import SuccessModal from '../../successModal/SuccessModal'
 
 const { home } = PagesText;
 const { body } = home;
 
 export default function ProductCard(props) {
-    const { favorite, product, setProducts } = props
+    const {
+        favorite,
+        product,
+        setProducts,
+        setSuccessData,
+        setSuccessModal,
+        setLoading
+
+    } = props
     const { lang, token, favoritesProducts } = useSelector((state) => state.baristica);
 
     const [productForCart, setProductForCart] = useState({ ...product, cartCount: 1 })
-    const [loading, setLoading] = useState(false)
+
+
+
     const [options, setOptions] = useState(product?.options)
     const [selectedOption, setSelectedOption] = useState(null)
     const [price, setPrice] = useState(0)
@@ -53,6 +64,14 @@ export default function ProductCard(props) {
     const dispatchCart = (e, product) => {
         const cart = addToCart(e, product)
         dispatch(setCart(cart))
+        setSuccessModal(true)
+        setSuccessData({
+            message: {
+                az: 'Məhsul səbətə əlavə olundu',
+                ru: 'Продукт был добавлен в корзину',
+                en: 'The product have been added to the cart'
+            }
+        })
     }
 
     const addToCompare = (e) => {
@@ -65,6 +84,14 @@ export default function ProductCard(props) {
         setLoading(true)
         try {
             const response = await favoritesService.postFavorite(token, product._id)
+            setSuccessModal(true)
+            setSuccessData({
+                message: {
+                    az: 'Məhsul favorilərə əlavə olundu',
+                    ru: 'Продукт был добавлен в избранные',
+                    en: 'The product have been added to the favorites'
+                }
+            })
             setLoading(false)
         } catch (error) {
             setLoading(false)
@@ -75,6 +102,14 @@ export default function ProductCard(props) {
         setLoading(true)
         try {
             const response = await favoritesService.deleteFavorite(token, product._id)
+            setSuccessModal(true)
+            setSuccessData({
+                message: {
+                    az: 'Məhsul favorilərdən silindi',
+                    ru: 'Продукт был удален из избранных',
+                    en: 'The product have been deleted from the favorites'
+                }
+            })
             setLoading(false)
         } catch (error) {
             setLoading(false)
@@ -99,7 +134,8 @@ export default function ProductCard(props) {
 
     return (
         <div className='productCard pointer' onClick={() => { navigate(`/products/${product?._id}`) }}>
-            <Loading status={loading} />
+
+
             <div className="productCard-head flex j-between a-center">
                 <div className="productCard-info flex a-center">
 
@@ -137,11 +173,11 @@ export default function ProductCard(props) {
 
             <div className="productCard-body">
 
-                <h3 className='blueAccent f18'>для эспрессо</h3>
+                <h3 className='blueAccent f18 fS16'>для эспрессо</h3>
                 {/* product name  */}
-                <h2 className='green800 f20'>{product?.name[lang] ? product?.name[lang] : ''}</h2>
+                <h2 className='green800 f20 fS18'>{product?.name[lang] ? product?.name[lang] : ''}</h2>
                 {/* product description  */}
-                <p className='gray600 f16'>{product?.description[lang] ? product?.description[lang] : ''}</p>
+                <p className='gray600 f16 fS14'>{product?.description[lang] ? product?.description[lang] : ''}</p>
                 {/* actual price  */}
                 {
                     product?.discount > 0
@@ -153,7 +189,7 @@ export default function ProductCard(props) {
 
                 <div className="productCard-price flex j-between a-center">
                     {/* price with discount  */}
-                    <span className='green800 f30'>
+                    <span className='green800 f30 fS24'>
                         {getPrice(price, product?.discountType, +product?.discount).toFixed(2)} ₼
                     </span>
 
@@ -168,11 +204,11 @@ export default function ProductCard(props) {
             </div>
 
             <div className="productCard-foot flex a-center" onClick={(e) => { e.stopPropagation() }}>
-                <button type='button' className="add-to_cart flex a-center white f16" onClick={(e) => dispatchCart(e, { ...productForCart, selectedOption: selectedOption })}>
+                <button type='button' className="add-to_cart flex a-center white f16 fS14" onClick={(e) => dispatchCart(e, { ...productForCart, selectedOption: selectedOption })}>
                     {CartIcon}
                     <span >{body[lang]?.products?.btn}</span>
                 </button>
-                <div className="add-counter flex a-center f24 green800" >
+                <div className="add-counter flex a-center f24 fS22 green800" >
                     <span className='pointer' onClick={(e) => counter(e, 'dec')}>-</span>
                     <span>{productForCart?.cartCount}</span>
                     <span className='pointer' onClick={(e) => counter(e, 'inc')}>+</span>

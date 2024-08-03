@@ -13,7 +13,7 @@ const CustomSelect = ({ options, onOptionSelect }) => {
         setSelectedOption(option.text);
         setIsOpen(false);
         if (onOptionSelect) {
-            onOptionSelect(option.value);
+            onOptionSelect(option);
         }
     };
 

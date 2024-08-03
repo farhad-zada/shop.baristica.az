@@ -15,36 +15,15 @@ export default function CartMainProduct(props) {
     const { product, key, lang } = props
 
     const [preparingTypes, setPreparingType] = useState({
-        "az": [
-            { "text": "Fincan üçün (orta)", "value": "forCupMiddle" },
-            { "text": "Cezvə üçün (incə)", "value": "forTurkMiddle" },
-            { "text": "French Press üçün (iri)", "value": "forFrenchPress" },
-            { "text": "Kafel kofenanı üçün (iri)", "value": "forTileMachine" },
-            { "text": "Kemeks üçün (iri)", "value": "forKemeks" },
-            { "text": "Pour Over üçün (orta)", "value": "forPourover" },
-            { "text": "AeroPress üçün (orta)", "value": "forAeropress" },
-            { "text": "Dənələrdə", "value": "forAeropress" }
-        ],
-        "en": [
-            { "text": "For cup (medium)", "value": "forCupMiddle" },
-            { "text": "For cezve (fine)", "value": "forTurkMiddle" },
-            { "text": "For French press (coarse)", "value": "forFrenchPress" },
-            { "text": "For tile coffee maker (coarse)", "value": "forTileMachine" },
-            { "text": "For Chemex (coarse)", "value": "forKemeks" },
-            { "text": "For pour over (medium)", "value": "forPourover" },
-            { "text": "For AeroPress (medium)", "value": "forAeropress" },
-            { "text": "In beans", "value": "forAeropress" }
-        ],
-        "ru": [
-            { "text": "Для чашки (средний)", "value": "forCupMiddle" },
-            { "text": "Для турки (мелкий)", "value": "forTurkMiddle" },
-            { "text": "Для френч пресса (крупный)", "value": "forFrenchPress" },
-            { "text": "Для кафельной кофеварки (крупный)", "value": "forTileMachine" },
-            { "text": "Для кемекса (крупный)", "value": "forKemeks" },
-            { "text": "Для пуровера (средний)", "value": "forPourover" },
-            { "text": "Для аэропресса (средний)", "value": "forAeropress" },
-            { "text": "В зернах", "value": "forAeropress" }
-        ]
+        az: product?.coffeeProcessingTypes.map((product) => {
+            return { text: product.name['az'], _id: product._id }
+        }),
+        ru: product?.coffeeProcessingTypes.map((product) => {
+            return { text: product.name['ru'], _id: product._id }
+        }),
+        en: product?.coffeeProcessingTypes.map((product) => {
+            return { text: product.name['en'], _id: product._id }
+        })
     })
 
 
@@ -65,10 +44,16 @@ export default function CartMainProduct(props) {
         }
     };
 
-    const handleOptionSelect = (value) => {
+    const handleOptionSelect = (option) => {
+        let cart = JSON.parse(localStorage.getItem('cart'))
+        let productIndex = cart.findIndex((cartProduct) => cartProduct._id === product._id &&
+            product.selectedOption._id === product.selectedOption._id)
+        cart[productIndex] = { ...product, selectedPreparingType: option._id }
 
+        dispatch(setCart(cart))
+        localStorage.setItem('cart', JSON.stringify(cart))
     };
-
+    
     const deleteProduct = (product) => {
         const cart = deleteFromCart(product)
         dispatch(setCart(cart))

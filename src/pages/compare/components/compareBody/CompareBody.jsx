@@ -1,5 +1,5 @@
 // CompareProducts.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import './compareBody.css';
@@ -8,13 +8,20 @@ import ProgressBar from '../../../../components/progressBar/ProgressBar';
 
 import PageText from '../../../../content/PagesText.json'
 import { useSelector } from 'react-redux';
+import Loading from '../../../../components/loading/Loading';
+import SuccessModal from '../../../../components/successModal/SuccessModal';
 
 const { compare } = PageText
 
 const CompareBody = () => {
     const { lang, compareProducts } = useSelector((state) => state.baristica);
+    const [loading, setLoading] = useState(false)
+    const [successModal, setSuccessModal] = useState(false)
+    const [successData, setSuccessData] = useState({})
     return (
         <div className="compareBody">
+            <Loading status={loading} />
+            <SuccessModal status={successModal} setStatus={setSuccessModal} data={successData} />
             <div className="container">
                 <div className="compareBody-products">
                     <Swiper
@@ -26,7 +33,13 @@ const CompareBody = () => {
                         {
                             compareProducts && compareProducts.map((product, key) => (
                                 <SwiperSlide>
-                                    <ProductCard product={product} key={key} />
+                                    <ProductCard
+                                        product={product}
+                                        key={key}
+                                        setSuccessData={setSuccessData}
+                                        setSuccessModal={setSuccessModal}
+                                        setLoading={setLoading}
+                                    />
                                 </SwiperSlide>
                             ))
                         }

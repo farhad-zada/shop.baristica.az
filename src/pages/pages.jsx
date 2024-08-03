@@ -13,6 +13,8 @@ import Cart from './cart/Cart'
 import ProductDetail from './productDetail/ProductDetail'
 import Cancel from './cancel/Cancel'
 import Success from './success/Success'
+import ProfileOrder from './profile/components/profileInner/ProfileOrder'
+import ProfileAddress from './profile/components/profileInner/ProfileAddress'
 
 export const HomePage = () => {
     return (
@@ -71,6 +73,18 @@ export const QuizPage = () => {
 export const ProfilePage = () => {
     return (
         <Profile />
+    )
+}
+
+export const ProfileOrderPage = () => {
+    return (
+        <ProfileOrder />
+    )
+}
+
+export const ProfileAddressPage = () => {
+    return (
+        <ProfileAddress />
     )
 }
 

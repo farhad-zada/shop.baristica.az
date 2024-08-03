@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "https://farhad-zada.github.io/shop.baristica.az/static/css/main.6012caab.css",
-    "main.js": "https://farhad-zada.github.io/shop.baristica.az/static/js/main.38384d03.js",
+    "main.css": "https://farhad-zada.github.io/shop.baristica.az/static/css/main.04d52951.css",
+    "main.js": "https://farhad-zada.github.io/shop.baristica.az/static/js/main.44d563e4.js",
     "static/media/interesting.png": "https://farhad-zada.github.io/shop.baristica.az/static/media/interesting.9c1717bd441a3eff2986.png",
     "static/media/blogImg.png": "https://farhad-zada.github.io/shop.baristica.az/static/media/blogImg.59dca4285464b2ae5588.png",
     "static/media/loginBanner.png": "https://farhad-zada.github.io/shop.baristica.az/static/media/loginBanner.ee577a7469f6ac524ad5.png",
@@ -30,11 +30,11 @@
     "static/media/countFilter.svg": "https://farhad-zada.github.io/shop.baristica.az/static/media/countFilter.3e27d113187e7396515f1308697506ae.svg",
     "static/media/arrowDown.svg": "https://farhad-zada.github.io/shop.baristica.az/static/media/arrowDown.19720c5472f423083dbe3b3ed9a3a95d.svg",
     "static/media/arrowUp.svg": "https://farhad-zada.github.io/shop.baristica.az/static/media/arrowUp.2daf36a18eda0cdffdd0a5cdeca8af40.svg",
-    "main.6012caab.css.map": "https://farhad-zada.github.io/shop.baristica.az/static/css/main.6012caab.css.map",
-    "main.38384d03.js.map": "https://farhad-zada.github.io/shop.baristica.az/static/js/main.38384d03.js.map"
+    "main.04d52951.css.map": "https://farhad-zada.github.io/shop.baristica.az/static/css/main.04d52951.css.map",
+    "main.44d563e4.js.map": "https://farhad-zada.github.io/shop.baristica.az/static/js/main.44d563e4.js.map"
   },
   "entrypoints": [
-    "static/css/main.6012caab.css",
-    "static/js/main.38384d03.js"
+    "static/css/main.04d52951.css",
+    "static/js/main.44d563e4.js"
   ]
 }
